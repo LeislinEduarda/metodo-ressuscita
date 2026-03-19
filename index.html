@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTGK16VC79"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
+  // 1) Inicializa
   gtag('js', new Date());
 
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // 2) Define consentimento padrão (sem banner, para validação)
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted'
+  });
 
-  // Força a decoração de links para o domínio do checkout
-  gtag('set', 'linker', { domains: ['lastlink.com'] });
-
+  // 3) Config do GA4
   gtag('config', 'G-XTGK16VC79');
 </script>
 </script>
