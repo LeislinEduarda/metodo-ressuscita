@@ -7,10 +7,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
 
-  // 1) Inicializa
+  // Inicializa
   gtag('js', new Date());
 
-  // 2) Define consentimento padrão (sem banner, para validação)
+  // Consentimento padrão (para validação / sem banner)
   gtag('consent', 'default', {
     ad_storage: 'granted',
     analytics_storage: 'granted',
@@ -18,7 +18,10 @@
     ad_personalization: 'granted'
   });
 
-  // 3) Config do GA4
+  // Cross-domain para o checkout
+  gtag('set', 'linker', { domains: ['lastlink.com'] });
+
+  // Config GA4
   gtag('config', 'G-XTGK16VC79');
 </script>
 </script>
@@ -339,11 +342,12 @@
             </div>
 
             <a
-              href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_hero"
-              class="cta"
-            >
-              Quero reiniciar meu Instagram
-            </a>
+  href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_hero"
+  class="cta"
+  onclick="gtag('event','go_to_checkout',{button:'botao_hero'});"
+>
+  Quero reiniciar meu Instagram
+</a>
           </div>
         </div>
       </section>
@@ -384,11 +388,12 @@
               </div>
 
               <a
-                href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_segundadobra"
-                class="cta"
-              >
-                Quero começar meu reinício
-              </a>
+  href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_segundadobra"
+  class="cta"
+  onclick="gtag('event','go_to_checkout',{button:'botao_segundadobra'});"
+>
+  Quero começar meu reinício
+</a>
             </div>
           </div>
         </article>
@@ -445,11 +450,12 @@
               </div>
 
               <a
-                href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_terceiradobra"
-                class="cta"
-              >
-                Quero acessar o Método Reiniciar
-              </a>
+  href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_terceiradobra"
+  class="cta"
+  onclick="gtag('event','go_to_checkout',{button:'botao_terceiradobra'});"
+>
+  Quero acessar o Método Reiniciar
+</a>
             </div>
           </div>
         </article>
@@ -535,12 +541,13 @@
                 <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
               </div>
 
-              <a
-                href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_quartadobra"
-                class="cta"
-              >
-                Quero começar meu reinício
-              </a>
+             <a
+  href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_quartadobra"
+  class="cta"
+  onclick="gtag('event','go_to_checkout',{button:'botao_quartadobra'});"
+>
+  Quero começar meu reinício
+</a>
             </div>
           </div>
         </article>
@@ -614,11 +621,12 @@
           </div>
 
           <a
-            href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_quintadobra"
-            class="cta"
-          >
-            Quero reiniciar meu Instagram
-          </a>
+  href="https://lastlink.com/p/C085A3074/checkout-payment?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=botao_quintadobra"
+  class="cta"
+  onclick="gtag('event','go_to_checkout',{button:'botao_quintadobra'});"
+>
+  Quero reiniciar meu Instagram
+</a>
         </div>
       </section>
 
