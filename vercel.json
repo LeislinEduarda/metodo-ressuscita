@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/instagram",
+      "destination": "https://www.leislin.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=reiniciar&utm_content=linkbio_pagina",
+      "permanent": true
+    },
+    {
+      "source": "/tiktok",
+      "destination": "https://www.leislin.com.br/?utm_source=tiktok&utm_medium=bio&utm_campaign=reiniciar&utm_content=linkbio_pagina",
+      "permanent": true
+    }
+  ]
+}
