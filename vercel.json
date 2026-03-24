@@ -10,5 +10,15 @@
       "destination": "https://www.leislin.com.br/?utm_source=tiktok&utm_medium=bio&utm_campaign=reiniciar&utm_content=linkbio_pagina",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/fotos-com-ia",
+      "destination": "https://fotos-com-ia.vercel.app"
+    },
+    {
+      "source": "/fotos-com-ia/:path*",
+      "destination": "https://fotos-com-ia.vercel.app/:path*"
+    }
   ]
 }
