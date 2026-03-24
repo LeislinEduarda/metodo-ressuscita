@@ -19,6 +19,14 @@
     {
       "source": "/fotos-com-ia/:path*",
       "destination": "https://fotos-com-ia.vercel.app/:path*"
+    },
+    {
+      "source": "/isca-seguidor-01",
+      "destination": "https://isca-seguidor-01.vercel.app"
+    },
+    {
+      "source": "/isca-seguidor-01/:path*",
+      "destination": "https://isca-seguidor-01.vercel.app/:path*"
     }
   ]
 }
