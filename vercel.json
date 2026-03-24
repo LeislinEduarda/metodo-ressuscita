@@ -22,11 +22,11 @@
     },
     {
       "source": "/isca-seguidor-01",
-      "destination": "https://isca-seguidor-01.vercel.app"
+      "destination": "https://isca-seguidores-01.vercel.app"
     },
     {
       "source": "/isca-seguidor-01/:path*",
-      "destination": "https://isca-seguidor-01.vercel.app/:path*"
+      "destination": "https://isca-seguidores-01.vercel.app/:path*"
     }
   ]
 }
