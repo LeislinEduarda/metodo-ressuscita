@@ -1,636 +1,800 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTGK16VC79"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-
-  // Inicializa
   gtag('js', new Date());
-
-  // Consentimento padrão (para validação / sem banner)
   gtag('consent', 'default', {
     ad_storage: 'granted',
     analytics_storage: 'granted',
     ad_user_data: 'granted',
     ad_personalization: 'granted'
   });
-
-  // Cross-domain para o checkout
   gtag('set', 'linker', { domains: ['lastlink.com'] });
-
-  // Config GA4
   gtag('config', 'G-XTGK16VC79');
 </script>
-</script>
-  <link rel="preconnect" href="https://lastlink.com">
-  <link rel="dns-prefetch" href="//lastlink.com">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Método de Reinício</title>
 
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vtpfue9s9w");
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vtpfue9s9w");
 </script>
 
-  <style>
-    :root {
-      --bg: #f7f7f8;
-      --surface: #ffffff;
-      --surface-soft: #f0f0f2;
-      --text: #1f1f1f;
-      --muted: #6b6f76;
-      --border: #e5e7eb;
-      --accent: #16a34a;
-      --accent-hover: #15803d;
-      --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
-      --radius: 18px;
-      --max: 760px;
-    }
+<link rel="preconnect" href="https://lastlink.com">
+<link rel="dns-prefetch" href="//lastlink.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --lilac: #9B7FD4;
+  --lilac-light: #EDE8F8;
+  --lilac-dark: #6B4FA8;
+  --bordeaux: #7D2248;
+  --bordeaux-light: #F5E6ED;
+  --emerald: #1B6B52;
+  --emerald-light: #E2F0EB;
+  --emerald-mid: #2D9970;
+  --off-white: #FAF9F7;
+  --dark: #1A1A1A;
+  --muted: #6B6B6B;
+  --border: rgba(0,0,0,0.09);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 1.7;
+}
+section { padding: 72px 24px; max-width: 680px; margin: 0 auto; }
 
-    * {
-      box-sizing: border-box;
-    }
+/* LABELS */
+.label {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--lilac-dark);
+}
+.label.bd { color: var(--bordeaux); }
+.label.em { color: var(--emerald); }
 
-    html {
-      scroll-behavior: smooth;
-    }
+h2 {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+p { margin-bottom: 16px; color: var(--dark); font-size: 15px; }
+strong { font-weight: 700; }
 
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    .page {
-      min-height: 100vh;
-      padding: 20px 16px 56px;
-    }
-
-    .container {
-      max-width: var(--max);
-      margin: 0 auto;
-    }
-
-    .hero {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      padding: 26px 20px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 14px;
-      font-size: clamp(1.95rem, 7vw, 3.3rem);
-      line-height: 1.04;
-      letter-spacing: -0.05em;
-      font-weight: 700;
-    }
-
-    .subheadline {
-      margin: 0;
-      font-size: 0.98rem;
-      line-height: 1.45;
-      color: var(--muted);
-      max-width: 62ch;
-    }
-
-    .hero-image {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 250px;
-  margin: 16px auto 18px;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  border-radius: 0;
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, #1A0A2E 0%, #3D1060 50%, #7D2248 100%);
+  padding: 96px 32px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.22;
+  color: white;
+  max-width: 620px;
+  margin: 0 auto 24px;
+}
+.hero h1 em { font-style: italic; color: #C8A8F0; }
+.hero-sub {
+  font-size: clamp(16px, 2.5vw, 19px);
+  color: rgba(255,255,255,0.78);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.65;
+  font-style: italic;
 }
 
-    .cta-wrap {
-      margin-top: 18px;
-    }
+/* OPORTUNIDADE */
+.oportunidade { background: white; }
+.proof-cards { display: flex; flex-direction: column; gap: 16px; margin: 32px 0; }
+.proof-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+.proof-img {
+  width: 100%;
+  height: 156px;
+  background: var(--lilac-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proof-img-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.proof-img-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--lilac);
+  display: flex; align-items: center; justify-content: center;
+}
+.proof-img-icon svg { width: 18px; height: 18px; fill: white; }
+.proof-img-label { font-size: 11px; color: var(--lilac-dark); opacity: 0.7; }
+.proof-body { padding: 14px 18px 18px; }
+.proof-handle { font-weight: 700; color: var(--lilac-dark); font-size: 13px; margin-bottom: 5px; }
+.proof-text { font-size: 14px; color: var(--dark); margin: 0; line-height: 1.55; font-style: italic; }
+.callout {
+  background: var(--emerald-light);
+  border-left: 3px solid var(--emerald-mid);
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  margin: 24px 0;
+}
+.callout p { margin: 0; font-size: 15px; }
 
-    .cta-stack {
-      display: grid;
-      gap: 10px;
-    }
+/* DOR */
+.dor { background: var(--off-white); }
+.dor-quotes { display: flex; flex-direction: column; gap: 10px; margin: 24px 0; }
+.dor-quote {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+.dor-quote::before { content: '"'; color: var(--bordeaux); font-size: 22px; margin-right: 3px; font-style: normal; }
+.promise-box {
+  background: linear-gradient(135deg, #1A0A2E, #3D1060);
+  border-radius: 14px;
+  padding: 30px;
+  margin: 32px 0;
+}
+.promise-box h3 { font-size: 18px; color: #C8A8F0; font-style: italic; margin-bottom: 12px; }
+.promise-box p { color: rgba(255,255,255,0.82); margin: 0; font-size: 15px; line-height: 1.65; }
 
-    .price-line {
-      text-align: center;
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.4;
-    }
+/* ENTREGAVEIS */
+.entregaveis { background: white; }
+.step-list { display: flex; flex-direction: column; margin: 28px 0; }
+.step-item {
+  display: flex;
+  gap: 18px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--lilac), var(--lilac-dark));
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.step-content { flex: 1; }
+.step-title { font-weight: 700; font-size: 16px; color: var(--dark); margin-bottom: 6px; line-height: 1.35; }
+.step-desc { font-size: 14px; color: var(--muted); margin: 0 0 10px; line-height: 1.6; font-style: italic; }
+.step-badge {
+  display: inline-block;
+  background: var(--lilac-light);
+  color: var(--lilac-dark);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(155,127,212,0.22);
+}
 
-    .price-line span {
-      display: block;
-      font-weight: 500;
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-top: 2px;
-    }
+/* BONUS */
+.bonus {
+  background: linear-gradient(160deg, #1A0A2E 0%, #2D0F50 60%, #4A1028 100%);
+  padding: 72px 24px;
+}
+.bonus-inner { max-width: 680px; margin: 0 auto; }
+.bonus .label { color: #C8A8F0; }
+.bonus h2 { color: white; margin-bottom: 6px; }
+.bonus-subtitle { font-style: italic; color: rgba(255,255,255,0.6); font-size: 16px; margin-bottom: 36px; }
+.bonus-grid { display: flex; flex-direction: column; gap: 12px; }
+.bonus-item {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+.bonus-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(180deg, #C8A8F0, #2D9970);
+}
+.bonus-gift { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.bonus-text { flex: 1; }
+.bonus-title { font-weight: 700; font-size: 14px; color: white; line-height: 1.4; margin-bottom: 3px; }
+.bonus-desc { font-size: 13px; color: rgba(255,255,255,0.52); line-height: 1.5; margin: 0; font-style: italic; }
+.bonus-val { font-size: 13px; font-weight: 700; color: #7EDBB8; white-space: nowrap; padding-top: 2px; }
+.bonus-total {
+  margin-top: 28px;
+  text-align: center;
+  padding: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,168,240,0.28);
+  border-radius: 12px;
+}
+.bonus-total-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 6px; font-weight: 700; }
+.bonus-total-num { font-size: 46px; font-weight: 700; color: white; line-height: 1; }
+.bonus-total-sub { font-style: italic; font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px; }
 
-    .sub-gancho {
-      text-align: center;
-      font-size: 0.97rem;
-      color: var(--text);
-      font-weight: 600;
-      line-height: 1.45;
-    }
+/* PROVA */
+.prova { background: white; }
+.colagem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 28px 0;
+}
+.colagem-item { flex: 1; }
+.colagem-img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--lilac-light);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--lilac-dark);
+  text-align: center;
+  line-height: 1.5;
+  gap: 6px;
+  border: 1px dashed rgba(155,127,212,0.4);
+}
+.colagem-label {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--lilac-dark);
+  margin-top: 8px;
+}
+.colagem-separador { font-size: 22px; color: var(--bordeaux); flex-shrink: 0; }
+.numeros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 28px 0;
+}
+.numero-card {
+  background: var(--lilac-light);
+  border-radius: 10px;
+  padding: 18px 14px;
+  text-align: center;
+}
+.numero-val { display: block; font-size: 26px; font-weight: 700; color: var(--lilac-dark); line-height: 1; margin-bottom: 5px; }
+.numero-label { font-size: 12px; color: var(--muted); line-height: 1.35; }
+.crescimento-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--off-white);
+  border: 1px dashed rgba(0,0,0,0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  gap: 6px;
+  margin: 24px 0;
+  line-height: 1.5;
+}
 
-    .cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      text-align: center;
-      text-decoration: none;
-      background: var(--accent);
-      color: #ffffff;
-      padding: 16px 18px;
-      border-radius: 16px;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
-      box-shadow: 0 6px 20px rgba(17, 17, 17, 0.12);
-    }
+/* VALOR / EMPILHAMENTO */
+.valor { background: var(--off-white); }
+.valor-lista {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  margin: 28px 0;
+}
+.valor-separador-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--lilac-dark);
+  background: var(--lilac-light);
+  padding: 10px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.valor-separador-label.presente { color: var(--emerald); background: var(--emerald-light); }
+.valor-linha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.valor-linha:hover { background: var(--off-white); }
+.valor-linha-icone { font-size: 18px; flex-shrink: 0; width: 28px; text-align: center; }
+.valor-linha-nome { flex: 1; font-size: 14px; color: var(--dark); line-height: 1.45; }
+.valor-linha-preco { font-size: 13px; font-weight: 700; color: var(--lilac-dark); white-space: nowrap; }
+.valor-linha-preco.presente { color: var(--emerald); }
+.valor-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  border-top: 2px solid var(--dark);
+  background: white;
+}
+.valor-total span:first-child { font-weight: 700; font-size: 15px; }
+.valor-total-preco { font-size: 22px; font-weight: 700; color: var(--muted); text-decoration: line-through; }
+.valor-chamada { font-style: italic; font-size: 18px; text-align: center; color: var(--dark); margin-top: 8px; }
 
-    .cta:hover {
-      background: var(--accent-hover);
-      transform: translateY(-1px);
-    }
+/* PRECO */
+.preco {
+  background: linear-gradient(160deg, #1A0A2E 0%, #3D1060 100%);
+  text-align: center;
+  padding: 80px 24px;
+}
+.preco-inner { max-width: 480px; margin: 0 auto; }
+.preco h2 { color: white; margin-bottom: 8px; }
+.preco-sub { font-style: italic; color: rgba(255,255,255,0.6); font-size: 15px; margin-bottom: 36px; }
+.price-old { font-size: 17px; color: rgba(255,255,255,0.33); text-decoration: line-through; margin-bottom: 4px; }
+.price-new { font-size: 72px; font-weight: 700; color: white; line-height: 1; }
+.price-label { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 6px; margin-bottom: 36px; }
+.cta-btn {
+  display: block;
+  background: var(--emerald-mid);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 22px 32px;
+  border-radius: 100px;
+  border: none;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 14px;
+  cursor: pointer;
+  box-shadow: 0 6px 40px rgba(45,153,112,0.45);
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  text-align: center;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 48px rgba(45,153,112,0.55); }
+.cta-btn:active { transform: scale(0.98); }
+.cta-trust { font-size: 12px; color: rgba(255,255,255,0.38); }
 
-    .section {
-      display: grid;
-      gap: 14px;
-      margin-top: 16px;
-    }
+/* GARANTIA */
+.garantia { background: white; padding: 72px 24px; text-align: center; }
+.garantia-inner { max-width: 480px; margin: 0 auto; }
+.garantia h2 { margin-bottom: 8px; }
+.garantia-lead { font-style: italic; color: var(--muted); margin-bottom: 36px; font-size: 15px; }
+.selo-svg { display: block; width: 210px; height: 210px; margin: 0 auto 28px; }
+.garantia-body { font-style: italic; color: var(--muted); font-size: 15px; max-width: 380px; margin: 0 auto; line-height: 1.65; }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px 22px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-    }
-
-    .card h2 {
-      margin: 0 0 14px;
-      font-size: 1.22rem;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-    }
-
-    .card h3 {
-      margin: 18px 0 8px;
-      font-size: 1.02rem;
-      line-height: 1.35;
-      letter-spacing: -0.01em;
-    }
-
-    .card p {
-      margin: 0 0 14px;
-      color: var(--text);
-      font-size: 1rem;
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .highlight {
-      font-weight: 700;
-    }
-
-    .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 18px 0;
-    }
-
-    .steps {
-      display: grid;
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .step {
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-    }
-
-    .step-number {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--muted);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .step h3 {
-      margin: 0 0 8px;
-      font-size: 1.03rem;
-    }
-
-    .step p {
-      margin: 0;
-      color: var(--text);
-    }
-
-    .list-block {
-      margin-top: 16px;
-    }
-
-    .list-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 10px;
-    }
-
-    .clean-list {
-      margin: 0;
-      padding-left: 0;
-      list-style: none;
-    }
-
-    .clean-list li {
-      margin: 0 0 8px;
-      color: var(--text);
-    }
-
-    .final {
-      margin-top: 18px;
-      background: linear-gradient(180deg, #ffffff 0%, #f9f9fa 100%);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px 22px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .final p {
-      margin: 0 0 18px;
-      font-size: 1.08rem;
-      line-height: 1.5;
-    }
-
-    @media (min-width: 768px) {
-      .page {
-        padding-top: 28px;
-      }
-
-      .hero,
-      .card,
-      .final {
-        padding: 34px;
-      }
-
-      .hero-image {
-        height: 260px;
-        margin: 18px 0 20px;
-      }
-
-      .section {
-        gap: 16px;
-      }
-    }
-  </style>
+/* FAQ */
+.faq { background: var(--off-white); }
+.faq-list { display: flex; flex-direction: column; gap: 10px; margin: 28px 0; }
+.faq-item { background: white; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+.faq-q {
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+.faq-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--lilac-light);
+  color: var(--lilac-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+.faq-item.open .faq-icon { background: var(--lilac); color: white; }
+.faq-a { display: none; padding: 0 20px 18px; font-style: italic; font-size: 14px; color: var(--muted); line-height: 1.7; }
+.faq-item.open .faq-a { display: block; }
+</style>
 </head>
 <body>
-  <main class="page">
-    <div class="container">
 
-      <section class="hero">
-        <h1>Reinicie o seu Instagram e volte a ganhar seguidores em até 15 dias</h1>
+<!-- HERO -->
+<div class="hero">
+  <h1>Eu fui uma das primeiras do Brasil a testar uma estratégia de reels que explodiu na gringa e me fez ganhar <em>63 mil novos seguidores em 6 meses</em></h1>
+  <p class="hero-sub">O Método Série Assinatura é um sistema pronto para copiar e colar. Feito para quem cria conteúdo por necessidade e quer que o Instagram traga seguidores e clientes sem se preocupar com tendências ou com o que postar.</p>
+</div>
 
-        <p class="subheadline">
-          Com o mesmo Método Reiniciar que me trouxe 63 mil novos seguidores.
-        </p>
-
-        <!-- Troque o src pela sua imagem do hero -->
-        <img
-          src="heroimg.webp"
-          alt="Método Reiniciar para voltar a ganhar seguidores no Instagram"
-          class="hero-image"
-        >
-
-        <div class="cta-wrap">
-          <div class="cta-stack">
-            <div class="price-line">
-              12x de R$ 10,33 ou R$ 97 à vista
-              <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
-            </div>
-
-            <a
-  href="https://lastlink.com/p/C085A3074/checkout-payment"
-  class="cta"
-  onclick="gtag('event','go_to_checkout',{button:'botao_hero'});"
->
-  Quero reiniciar meu Instagram
-</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-
-        <article class="card">
-          <h2>Postar mais do mesmo pode estar afastando seu perfil do Ciclo de Crescimento</h2>
-
-          <p>Quando um perfil para de crescer, a reação mais comum é aumentar o volume.</p>
-          <p>Postar mais.</p>
-          <p>Testar mais.</p>
-          <p>Mudar mais.</p>
-          <p>Tentar compensar no esforço.</p>
-          <p>Só que, quando você aumenta o volume do que já não funciona, <span class="highlight">ensina o Instagram a te entregar menos.</span></p>
-          <p>E aí começa um ciclo silencioso: você posta mais, a entrega diminui, o conteúdo perde força, a frustração aumenta, e você começa a mexer cada vez mais no que está fazendo.</p>
-          <p>Até chegar no ponto em que o conteúdo já não parece mais seu.</p>
-          <p>E crescer começa a parecer muito mais difícil do que realmente precisava ser.</p>
-          <p>O problema é que esse esforço não te coloca de volta no crescimento. Ele só te prende mais no travamento.</p>
-          <p>O que faz um perfil voltar a crescer é entrar em um novo ciclo.</p>
-          <p>Um ciclo em que o conteúdo certo faz duas coisas ao mesmo tempo: ajuda o Instagram a voltar a te entregar para novas pessoas interessadas no que você fala e ajuda você a voltar a criar com clareza, constância e tranquilidade.</p>
-          <p>É exatamente isso que eu ensino no <span class="highlight">Método Reiniciar</span>.</p>
-          <p>Porque ele não serve só para postar. Ele serve para reiniciar seu perfil e reiniciar a sua forma de criar conteúdo.</p>
-          <p>Quando você entra nesse método, o conteúdo fica mais fácil de produzir, mais fácil de repetir e mais fácil de sustentar.</p>
-          <p>E é isso que faz o perfil voltar ao que ele precisava desde o início: <span class="highlight">um Ciclo de Crescimento.</span></p>
-
-          <div class="divider"></div>
-
-          <p class="sub-gancho">
-            Você não precisa de mais esforço aleatório. Você precisa de reinício com direção.
-          </p>
-
-          <div class="cta-wrap">
-            <div class="cta-stack">
-              <div class="price-line">
-                12x de R$ 10,33 ou R$ 97 à vista
-                <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
-              </div>
-
-              <a
-  href="https://lastlink.com/p/C085A3074/checkout-payment"
-  class="cta"
-  onclick="gtag('event','go_to_checkout',{button:'botao_segundadobra'});"
->
-  Quero começar meu reinício
-</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>O crescimento volta quando você para de tentar acertar um vídeo viral toda vez</h2>
-
-          <p>O que recoloca um perfil no <span class="highlight">Ciclo de Crescimento</span> não é sair caçando ideias soltas.</p>
-          <p>Nem tentar descobrir qual vai ser o próximo conteúdo que finalmente vai viralizar.</p>
-          <p>Porque toda vez que isso não acontece, você volta para o zero.</p>
-          <p>Novo tema.</p>
-          <p>Novo gancho.</p>
-          <p>Nova tentativa.</p>
-          <p>Nova frustração.</p>
-          <p>O crescimento volta quando você encontra um formato que pode repetir sem se perder.</p>
-          <p>Um formato que pega um tema forte e transforma isso em uma sequência de conteúdos que o Instagram entende melhor, entrega melhor e mostra para novas pessoas que realmente podem se interessar pelo que você fala.</p>
-          <p>É isso que eu ensino no <span class="highlight">Método Reiniciar</span>.</p>
-          <p>Porque, em vez de depender de um post isolado para crescer, você começa a construir uma sequência em que <span class="highlight">um conteúdo puxa o outro.</span></p>
-          <p>Isso muda duas coisas ao mesmo tempo.</p>
-          <p><span class="highlight">Para o perfil:</span> mais chance de continuar sendo entregue.</p>
-          <p><span class="highlight">Para você:</span> mais clareza para criar sem travar.</p>
-          <p>Você para de correr atrás de um viral. Para de começar do zero. E para de carregar o peso de ter que inventar tudo de novo.</p>
-          <p>É isso que faz o crescimento voltar: <span class="highlight">um conteúdo mais simples de fazer e forte o suficiente para crescer em sequência.</span></p>
-        </article>
-
-        <article class="card">
-          <h2>O que você vai encontrar no Método Reiniciar</h2>
-
-          <div class="list-block">
-            <ul class="clean-list">
-              <li><strong>✔ Diagnóstico do seu perfil</strong> para entender em que estado ele está hoje e por que ele parou de crescer.</li>
-              <li><strong>✔ O erro que mata qualquer perfil</strong> para você saber exatamente o que nunca mais fazer se quiser voltar a ganhar seguidores.</li>
-              <li><strong>✔ Os 4 combinados do reinício</strong> as regras que vão guiar seus próximos 15 dias e impedir você de voltar ao mesmo ciclo de travamento.</li>
-              <li><strong>✔ O Método Reiniciar em 5 passos</strong> meu passo a passo para tirar um perfil da estagnação e colocar ele de volta no Ciclo de Crescimento.</li>
-              <li><strong>✔ O formato de conteúdo para voltar a ganhar seguidores</strong> a estrutura que facilita a entrega, simplifica a criação e ajuda seu perfil a voltar a crescer.</li>
-              <li><strong>✔ O cronograma completo dos 15 dias</strong> para você saber exatamente o que fazer em cada etapa sem montar tudo sozinha.</li>
-              <li><strong>✔ Exemplos práticos de conteúdo</strong> para aplicar o método no seu perfil com mais clareza e mais rapidez.</li>
-              <li><strong>✔ Materiais de apoio para executar rapidamente</strong> tudo o que você precisa para colocar o método em prática sem se perder.</li>
-              <li><strong>✔ Meu passo a passo para gravar vídeos sem perder o dia inteiro nisso</strong> uma forma mais simples, leve e rápida de produzir seus conteúdos.</li>
-            </ul>
-          </div>
-
-          <div class="divider"></div>
-
-          <p class="sub-gancho">
-            Curso rápido e direto ao ponto: você consegue assistir tudo em cerca de 20 minutos e já começar a reiniciar seu perfil no mesmo dia.
-          </p>
-
-          <div class="cta-wrap">
-            <div class="cta-stack">
-              <div class="price-line">
-                12x de R$ 10,33 ou R$ 97 à vista
-                <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
-              </div>
-
-              <a
-  href="https://lastlink.com/p/C085A3074/checkout-payment"
-  class="cta"
-  onclick="gtag('event','go_to_checkout',{button:'botao_terceiradobra'});"
->
-  Quero acessar o Método Reiniciar
-</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>O que pode acontecer nos próximos 15 dias</h2>
-
-          <div class="steps">
-            <div class="step">
-              <span class="step-number">Hoje</span>
-              <h3>Você assiste as aulas em cerca de 20 minutos</h3>
-              <p>e entende exatamente o que está travando seu perfil.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Ainda hoje</span>
-              <h3>Em 1 ou 2 horas, você já consegue organizar tudo</h3>
-              <p>gravar os primeiros vídeos e começar a reiniciar seu Instagram.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Dia 1</span>
-              <h3>Você para de postar no escuro</h3>
-              <p>e entende por que seu perfil parou de ganhar seguidores.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Dia 3</span>
-              <h3>Seu conteúdo começa a mandar sinais novos para o Instagram</h3>
-              <p>e o perfil entra em um novo caminho de leitura e entrega.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Dia 7</span>
-              <h3>O perfil começa a reagir</h3>
-              <p>e o conteúdo fica mais fácil de repetir.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Dia 10</span>
-              <h3>Seu Instagram começa a chegar em novas pessoas</h3>
-              <p>e volta a ter força para atrair seguidores.</p>
-            </div>
-
-            <div class="step">
-              <span class="step-number">Dia 15</span>
-              <h3>Seu perfil entra de novo no Ciclo de Crescimento</h3>
-              <p>e volta a ganhar seguidores.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>Seu acesso ao Método Reiniciar</h2>
-
-          <p class="highlight">12x de R$ 10,33 ou R$ 97 à vista</p>
-
-          <div class="list-block">
-            <ul class="clean-list">
-              <li>✔ Acesso imediato</li>
-              <li>✔ 1 ano de acesso ao conteúdo</li>
-              <li>✔ 1 ano de acesso a todas as atualizações</li>
-              <li>✔ Suporte direto comigo e com os alunos</li>
-              <li>✔ Garantia incondicional de 15 dias</li>
-            </ul>
-          </div>
-
-          <p><span class="highlight">Acesso imediato. Coloque em prática em 20 minutos.</span></p>
-          <p>Você pode entrar hoje, assistir tudo em cerca de 20 minutos e começar a aplicar o método no seu perfil ainda hoje.</p>
-
-          <div class="divider"></div>
-
-          <h3>Seu risco é zero</h3>
-          <p>Se você entrar, aplicar e sentir que o <span class="highlight">Método Reiniciar</span> não te ajudou a sair da estagnação e reiniciar seu perfil, é só cancelar dentro de 15 dias.</p>
-          <p class="highlight">Risco todo meu.</p>
-          <p>Eu confio no meu método porque ele foi construído testando primeiro no meu próprio perfil.</p>
-          <p>E os números não mentem.</p>
-
-          <div class="cta-wrap">
-            <div class="cta-stack">
-              <div class="price-line">
-                12x de R$ 10,33 ou R$ 97 à vista
-                <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
-              </div>
-
-             <a
-  href="https://lastlink.com/p/C085A3074/checkout-payment"
-  class="cta"
-  onclick="gtag('event','go_to_checkout',{button:'botao_quartadobra'});"
->
-  Quero começar meu reinício
-</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>Para quem é o Método Reiniciar</h2>
-
-          <div class="list-block">
-            <ul class="clean-list">
-              <li><strong>✔ sente que o perfil parou de ganhar seguidores</strong> e não quer continuar postando sem entender o que está travando o crescimento</li>
-              <li><strong>✔ já pensou em criar outro Instagram do zero</strong> porque o perfil atual parece parado, enfraquecido ou sem reação</li>
-              <li><strong>✔ está cansada de tentar acertar um vídeo viral</strong> e voltar para o zero toda vez que ele não cresce</li>
-              <li><strong>✔ quer parar de postar coisas aleatórias</strong> e começar a criar com uma linha mais clara, simples e estratégica</li>
-              <li><strong>✔ quer voltar a ganhar seguidores sem precisar mudar tudo</strong> nem o nicho, nem o perfil, nem o jeito de falar</li>
-              <li><strong>✔ precisa de um jeito mais fácil de criar conteúdo</strong> sem perfeccionismo, sem excesso de dúvida e sem perder o dia inteiro com isso</li>
-              <li><strong>✔ quer saber exatamente o que postar nos próximos dias</strong> para sair do escuro e voltar a sentir que o perfil está andando</li>
-              <li><strong>✔ quer um plano rápido de assistir e simples de aplicar</strong> para começar hoje mesmo a reiniciar o perfil</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="card">
-          <h2>Perguntas frequentes</h2>
-
-          <h3>Eu crio meu conteúdo sozinha e não tenho equipe. O Método Reiniciar funciona pra mim?</h3>
-          <p>Sim. O método foi pensado justamente para quem cria sozinha, sem equipe e sem tempo para complicar o processo. A ideia não é fazer você produzir mais, e sim te mostrar como reiniciar seu perfil com um conteúdo mais simples de criar e mais fácil de sustentar.</p>
-
-          <h3>Eu nunca consegui fazer meu perfil crescer. Isso funciona pra mim?</h3>
-          <p>Sim. Muitas vezes o problema não é falta de esforço — é falta de direção. O Método Reiniciar te mostra como sair do aleatório e entrar em um formato de conteúdo que facilite o crescimento.</p>
-
-          <h3>Meu perfil ainda é pequeno. O Método Reiniciar funciona mesmo assim?</h3>
-          <p>Funciona. Você não precisa ter muitos seguidores para reiniciar o crescimento. Precisa de um conteúdo mais claro, mais repetível e mais fácil para o Instagram entender e entregar.</p>
-
-          <h3>Meu assunto parece difícil de transformar em conteúdo. Isso funciona pra mim?</h3>
-          <p>Sim. Na maioria das vezes, o problema não é o tema. É a forma de comunicar. O método te ajuda a encontrar um formato mais replicável dentro do que você já fala, sem precisar mudar seu nicho.</p>
-
-          <h3>Vou precisar postar muito mais para isso funcionar?</h3>
-          <p>Não. O método não foi criado para aumentar seu volume de posts, e sim para melhorar o tipo de conteúdo que você posta. A ideia é simplificar sua criação, não te sobrecarregar.</p>
-
-          <h3>E se eu travar para gravar ou não souber o que postar?</h3>
-          <p>Você não sai com mais dúvida. Sai com mais clareza. Além do método, você recebe cronograma, exemplos práticos, materiais de apoio e meu passo a passo para gravar vídeos sem perder o dia inteiro nisso.</p>
-
-          <h3>Em quanto tempo eu consigo assistir e começar a aplicar?</h3>
-          <p>É um curso rápido. Em cerca de 20 minutos, você entende tudo o que precisa. E em 1 ou 2 horas, já consegue gravar os primeiros vídeos e começar a reiniciar seu perfil.</p>
-
-          <h3>E se eu comprar e sentir que isso não funcionou pra mim?</h3>
-          <p>Você tem <span class="highlight">15 dias de garantia incondicional</span>. Se sentir que o <span class="highlight">Método Reiniciar</span> não te ajudou a reiniciar seu perfil, é só cancelar dentro desse prazo.</p>
-        </article>
-      </section>
-
-      <section class="final" id="comprar">
-        <p>
-          <strong>Reinicie seu Instagram hoje</strong><br>
-          Entre agora, coloque em prática em 20 minutos e comece seu novo Ciclo de Crescimento.
-        </p>
-
-        <div class="cta-stack">
-          <div class="price-line">
-            12x de R$ 10,33 ou R$ 97 à vista
-            <span>Acesso imediato. Coloque em prática em 20 minutos.</span>
-          </div>
-
-          <div class="list-block" style="text-align:left;">
-            <ul class="clean-list">
-              <li>✔ Acesso imediato</li>
-              <li>✔ 1 ano de acesso</li>
-              <li>✔ Atualizações incluídas</li>
-              <li>✔ Suporte direto comigo e com os alunos</li>
-              <li>✔ Garantia incondicional de 15 dias</li>
-            </ul>
-          </div>
-
-          <a
-  href="https://lastlink.com/p/C085A3074/checkout-payment"
-  class="cta"
-  onclick="gtag('event','go_to_checkout',{button:'botao_quintadobra'});"
->
-  Quero reiniciar meu Instagram
-</a>
-        </div>
-      </section>
-
+<!-- OPORTUNIDADE -->
+<section class="oportunidade">
+  <div class="label">A oportunidade</div>
+  <h2>Esse formato já está sendo usado por criadores de nichos completamente diferentes</h2>
+  <p>De saúde mental a finanças, de negócios a educação. De perfis com 50 mil a perfis com milhões de seguidores. O resultado é sempre o mesmo: crescimento consistente, previsível e sem depender de um único vídeo.</p>
+  <div class="proof-cards">
+    <div class="proof-card">
+      <div class="proof-img" style="height:auto;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/emonthebrain.webp" alt="Perfil @emonthebrain" style="width:100%;display:block;border-radius:0;">
+      </div>
+      <div class="proof-body">
+        <div class="proof-handle">@emonthebrain</div>
+        <p class="proof-text">Neurocientista que repete o mesmo formato de reels sobre o cérebro em episódios. Mesmo gancho, assunto novo.</p>
+      </div>
     </div>
-  </main>
+    <div class="proof-card">
+      <div class="proof-img" style="height:auto;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/stevenwommack.webp" alt="Perfil @stevenwommack" style="width:100%;display:block;border-radius:0;">
+      </div>
+      <div class="proof-body">
+        <div class="proof-handle">@stevenwommack</div>
+        <p class="proof-text">Tutoriais de vídeo mobile com o mesmo formato de série desde o início. Mesma estrutura, técnica diferente.</p>
+      </div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-img" style="height:auto;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/gali_kash.webp" alt="Perfil @gali_kash" style="width:100%;display:block;border-radius:0;">
+      </div>
+      <div class="proof-body">
+        <div class="proof-handle">@gali_kash</div>
+        <p class="proof-text">Empresária do setor de seguros com o formato de série. 102 mil seguidores com menos de 10 posts publicados.</p>
+      </div>
+    </div>
+  </div>
+  <div class="callout">
+    <p>Nenhum desses criadores ensinou o método. Eles usam, crescem e não revelam o que está por trás. Fui estudar, testar. E agora estou ensinando <strong>pela primeira vez no Brasil.</strong></p>
+  </div>
+  <p>No Brasil esse formato ainda está chegando. <strong>Quem adotar agora vai ter a vantagem de quem chegou primeiro,</strong> no próprio nicho, com o próprio público, antes que todo mundo descubra.</p>
+</section>
+
+<!-- DOR -->
+<section class="dor">
+  <div class="label bd">O problema real</div>
+  <h2>Você já sabe que precisa postar. O que te trava é outra coisa.</h2>
+  <p>Você abre o aplicativo, fica pensando no que falar, regrava, não gosta, desiste. Fecha e espera um dia mais tranquilo.</p>
+  <div class="dor-quotes">
+    <div class="dor-quote">Minha área tem muitos temas. Como vou saber o que as pessoas querem ver?</div>
+    <div class="dor-quote">Eu não sei falar com a câmera. Acho que não sou interessante o suficiente.</div>
+    <div class="dor-quote">O que adianta postar se não ganho seguidores e não vendo nada pelo Instagram?</div>
+  </div>
+  <p>Semanas sem postar. A certeza crescendo de que sua área é chata demais ou que você não tem jeito para isso.</p>
+  <p><strong>O problema nunca foi você. Nem sua área. Nem sua criatividade.</strong></p>
+  <div class="promise-box">
+    <h3>É exatamente isso que o Método Série Assinatura entrega</h3>
+    <p>Um sistema de reels em episódios onde você cria o formato uma vez e repete. Cada vídeo mais fácil que o anterior, cada episódio aproveitando o crescimento do anterior. Sem criar do zero. Sem depender de tendência. Sem travar na câmera.</p>
+  </div>
+</section>
+
+<!-- ENTREGAVEIS -->
+<section class="entregaveis">
+  <div class="label">O método</div>
+  <h2>Um sistema completo em 5 passos, do zero ao primeiro episódio postado</h2>
+  <div class="step-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Como escolher o tema da sua série e nunca mais travar no "o que postar"</div>
+        <p class="step-desc">Você define uma ideia mãe que se repete em episódios infinitos. Prompt pronto para qualquer nicho em minutos.</p>
+        <span class="step-badge">Valor: R$47</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Como definir os primeiros 5 episódios e nunca abrir a câmera sem saber o que falar</div>
+        <p class="step-desc">Você mapeia os assuntos antes de gravar. Prompt pronto que adapta as ideias ao seu nicho sem pensar do zero.</p>
+        <span class="step-badge">Valor: R$47</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Como criar o molde do roteiro. O episódio 1 vira a estrutura de todos os outros</div>
+        <p class="step-desc">Você faz o trabalho duro uma vez. Depois só troca o assunto e grava.</p>
+        <span class="step-badge">Valor: R$67</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">Como gravar em bloco. Uma tarde resolve semanas de conteúdo</div>
+        <p class="step-desc">Vários episódios de uma vez, sem depender de humor ou dia perfeito. Checklist completo incluído.</p>
+        <span class="step-badge">Valor: R$37</span>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <div class="step-title">Como postar por 15 dias seguidos e treinar o algoritmo a te distribuir</div>
+        <p class="step-desc">O plano de postagem que cria o padrão que o algoritmo precisa para entregar seus vídeos para mais pessoas.</p>
+        <span class="step-badge">Valor: R$47</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<div class="bonus">
+  <div class="bonus-inner">
+    <div class="label">E ainda tem mais</div>
+    <h2>Cinco presentes incluídos no acesso</h2>
+    <p class="bonus-subtitle">Cada um resolve um problema que te atrasa, antes mesmo de você perceber que tinha.</p>
+    <div class="bonus-grid">
+      <div class="bonus-item">
+        <div class="bonus-gift">🎁</div>
+        <div class="bonus-text">
+          <div class="bonus-title">De flopou para 700k views com uma mudança simples</div>
+          <p class="bonus-desc">Uma decisão antes de postar que muda completamente o alcance do vídeo. Você vai ver exatamente qual é.</p>
+        </div>
+        <div class="bonus-val">R$67</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-gift">🎁</div>
+        <div class="bonus-text">
+          <div class="bonus-title">A nova ferramenta do Instagram que gerou mais de 5 mil seguidores</div>
+          <p class="bonus-desc">Recurso nativo que poucos criadores estão usando. Potencializa o alcance desde o primeiro episódio.</p>
+        </div>
+        <div class="bonus-val">R$37</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-gift">🎁</div>
+        <div class="bonus-text">
+          <div class="bonus-title">9 hacks de design para carrosséis que param o scroll</div>
+          <p class="bonus-desc">Testados e aprovados. Sem designer, sem Photoshop, sem dom artístico.</p>
+        </div>
+        <div class="bonus-val">R$27</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-gift">🎁</div>
+        <div class="bonus-text">
+          <div class="bonus-title">Como dizer "não gostei" para o ChatGPT sem refazer tudo</div>
+          <p class="bonus-desc">O comando que ajusta o roteiro no seu tom sem reescrever do zero.</p>
+        </div>
+        <div class="bonus-val">R$27</div>
+      </div>
+      <div class="bonus-item">
+        <div class="bonus-gift">🎁</div>
+        <div class="bonus-text">
+          <div class="bonus-title">Personalizando o ChatGPT para escrever com a sua voz</div>
+          <p class="bonus-desc">Configure uma vez e pare de soar como robô nos roteiros.</p>
+        </div>
+        <div class="bonus-val">R$27</div>
+      </div>
+    </div>
+    <div class="bonus-total">
+      <div class="bonus-total-label">Valor total de tudo</div>
+      <div class="bonus-total-num">R$425</div>
+      <div class="bonus-total-sub">em sistema, método e presentes</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROVA -->
+<section class="prova">
+  <div class="label bd">Quem criou isso</div>
+  <h2>Há dois anos eu era subvalorizada.</h2>
+  <p>Tinha uma agência, atendia clientes que não sabiam criar conteúdo e me contratavam exatamente por isso. Mas na prática, não seguiam nada do que eu recomendava. Eu sabia o que funcionava. Eles não executavam. E eu ficava presa nessa equação.</p>
+  <p><strong>Decidi fazer por mim o que eu recomendava para eles.</strong></p>
+  <div class="colagem">
+    <div class="colagem-item">
+      <div class="colagem-img" style="background:none;border:none;padding:0;overflow:hidden;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/antes_1.webp" alt="Antes" style="width:100%;height:100%;object-fit:cover;border-radius:10px;display:block;">
+      </div>
+      <div class="colagem-label">antes</div>
+    </div>
+    <div class="colagem-separador">→</div>
+    <div class="colagem-item">
+      <div class="colagem-img" style="background:none;border:none;padding:0;overflow:hidden;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/depois_1.webp" alt="Hoje" style="width:100%;height:100%;object-fit:cover;border-radius:10px;display:block;">
+      </div>
+      <div class="colagem-label">hoje</div>
+    </div>
+  </div>
+  <p>Comecei a criar conteúdo por necessidade, exatamente como você. Sem ser influencer, sem equipe, sem abrir mão do meu negócio para ficar na frente da câmera. O que mudou tudo foi parar de criar conteúdo avulso e começar a criar em série.</p>
+  <div class="numeros-grid">
+    <div class="numero-card">
+      <span class="numero-val">198K</span>
+      <span class="numero-label">seguidores no Instagram</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">98K</span>
+      <span class="numero-label">seguidores no TikTok</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">~20K</span>
+      <span class="numero-label">alunos</span>
+    </div>
+    <div class="numero-card">
+      <span class="numero-val">1h/sem</span>
+      <span class="numero-label">para gravar 7 episódios</span>
+    </div>
+  </div>
+  <p>A última série que fiz me deu 63 mil novos seguidores em 6 meses. Foram 72 episódios no total. 7 vídeos por semana. 1h para gravar todos. 1h para editar. O mesmo gancho em todos os episódios. Sem surtar. Sem me reinventar a cada episódio.</p>
+  <div style="margin:24px 0;">
+    <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/crescimento.webp" alt="Screenshot do crescimento com a Série Assinatura" style="width:100%;display:block;border-radius:10px;height:auto;">
+  </div>
+  <p>Mas antes de chegar aqui, eu passei pelo mesmo que você provavelmente está passando agora. Sabia que precisava criar. Travava. Fechava o aplicativo. Prometia que amanhã seria diferente.</p>
+  <p><strong>Sei exatamente o que é isso. E foi por isso que criei o Método Série Assinatura.</strong></p>
+</section>
+
+<!-- VALOR / EMPILHAMENTO -->
+<section class="valor">
+  <div class="label">Tudo que você recebe</div>
+  <h2>O sistema completo</h2>
+  <div class="valor-lista">
+    <div class="valor-separador-label">✦ O método</div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🎯</span>
+      <span class="valor-linha-nome">Como escolher o tema da sua série e nunca mais travar</span>
+      <span class="valor-linha-preco">R$47</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🎬</span>
+      <span class="valor-linha-nome">Como definir os primeiros 5 episódios. Câmera nunca mais no escuro</span>
+      <span class="valor-linha-preco">R$47</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">📝</span>
+      <span class="valor-linha-nome">Como criar o molde do roteiro. Trabalho duro feito uma vez só</span>
+      <span class="valor-linha-preco">R$67</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">⚡</span>
+      <span class="valor-linha-nome">Como gravar em bloco. Uma tarde, semanas de conteúdo</span>
+      <span class="valor-linha-preco">R$37</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">📈</span>
+      <span class="valor-linha-nome">Como postar 15 dias e treinar o algoritmo a te distribuir</span>
+      <span class="valor-linha-preco">R$47</span>
+    </div>
+    <div class="valor-separador-label presente">🎁 De presente</div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🚀</span>
+      <span class="valor-linha-nome">100k para 700k views com uma mudança simples antes de publicar</span>
+      <span class="valor-linha-preco presente">R$67</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">✨</span>
+      <span class="valor-linha-nome">A ferramenta nativa do Instagram que gerou +5 mil seguidores</span>
+      <span class="valor-linha-preco presente">R$37</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🎨</span>
+      <span class="valor-linha-nome">9 hacks de design para carrosséis que param o scroll</span>
+      <span class="valor-linha-preco presente">R$27</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🤖</span>
+      <span class="valor-linha-nome">Como ajustar o ChatGPT sem reescrever tudo do zero</span>
+      <span class="valor-linha-preco presente">R$27</span>
+    </div>
+    <div class="valor-linha">
+      <span class="valor-linha-icone">🎙️</span>
+      <span class="valor-linha-nome">Personalizando o ChatGPT para escrever com a sua voz</span>
+      <span class="valor-linha-preco presente">R$27</span>
+    </div>
+    <div class="valor-total">
+      <span>Valor total</span>
+      <span class="valor-total-preco">R$425</span>
+    </div>
+  </div>
+  <p class="valor-chamada">Tudo isso por apenas...</p>
+</section>
+
+<!-- PRECO -->
+<div class="preco">
+  <div class="preco-inner">
+    <h2 style="color:white;">Acesso imediato e vitalício</h2>
+    <p class="preco-sub">Em 20 minutos você assiste tudo e já pode colocar em prática no mesmo dia.</p>
+    <div class="price-old">de R$425</div>
+    <div class="price-new">R$97</div>
+    <div class="price-label">acesso imediato e vitalício</div>
+    <a href="https://lastlink.com/p/C085A3074/checkout-payment" class="cta-btn" onclick="gtag('event','go_to_checkout',{button:'botao'});">Quero o Método agora →</a>
+    <div class="cta-trust">pagamento seguro &nbsp;·&nbsp; acesso imediato &nbsp;·&nbsp; garantia de 15 dias</div>
+  </div>
+</div>
+
+<!-- GARANTIA -->
+<section class="garantia">
+  <div class="garantia-inner">
+    <div class="label em">Sem risco</div>
+    <h2>Garantia incondicional</h2>
+    <p class="garantia-lead">Você tem 15 dias para acessar tudo, testar o método e ver por conta própria.</p>
+    <svg class="selo-svg" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="ct" d="M 105,105 m -72,0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+      </defs>
+      <circle cx="105" cy="105" r="102" fill="none" stroke="#1B6B52" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="105" cy="105" r="92" fill="#E2F0EB" stroke="#1B6B52" stroke-width="1.5"/>
+      <circle cx="105" cy="105" r="81" fill="white" stroke="#1B6B52" stroke-width="1"/>
+      <circle cx="105" cy="84" r="21" fill="#1B6B52"/>
+      <polyline points="95,84 103,92 118,77" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text font-family="'Open Sans', sans-serif" font-size="26" font-weight="700" fill="#1B6B52" text-anchor="middle" x="105" y="122">15 dias</text>
+      <text font-family="'Open Sans', sans-serif" font-size="12" fill="#1B6B52" text-anchor="middle" x="105" y="142" font-style="italic">de garantia</text>
+      <text font-family="'Open Sans', sans-serif" font-size="9" fill="#1B6B52" letter-spacing="2.2" font-weight="700">
+        <textPath href="#ct" startOffset="5%">SATISFAÇÃO GARANTIDA · DEVOLUÇÃO TOTAL · SEM PERGUNTAS ·</textPath>
+      </text>
+    </svg>
+    <p class="garantia-body">Se por qualquer motivo sentir que não foi pra você, me manda uma mensagem e devolvo tudo. <strong>Sem perguntas, sem burocracia, sem condição.</strong> O risco é todo meu. A decisão é sua.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="label">Perguntas frequentes</div>
+  <h2>Dúvidas antes de entrar</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">"Minha área tem muitos temas. Como vou saber se funciona para mim?" <div class="faq-icon">+</div></div>
+      <div class="faq-a">O método começa escolhendo uma ideia mãe, um tema fixo que você repete em episódios. Não importa se você é nutricionista, advogada, designer, coach ou dona de loja. O formato funciona porque é de estrutura, não de assunto. Você só muda o recheio. O molde é sempre o mesmo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"Não tenho muito tempo. Quanto vou precisar por semana?" <div class="faq-icon">+</div></div>
+      <div class="faq-a">1h para criar os roteiros de 7 episódios. 1h para gravar todos de uma vez. 1h para editar a semana inteira. São 3 horas por semana e 7 episódios prontos. Você posta sem precisar abrir o aplicativo sem saber o que postar.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"E se eu comprar e não conseguir executar?" <div class="faq-icon">+</div></div>
+      <div class="faq-a">Por isso a garantia é de 15 dias. Você acessa tudo, testa o método e vê por conta própria. Se por qualquer motivo não for pra você, devolvo tudo, sem perguntas. Mas se você seguir o método, o mais provável é que você não queira parar.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        item.querySelector('.faq-icon').textContent = '−';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
