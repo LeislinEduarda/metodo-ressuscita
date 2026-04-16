@@ -81,22 +81,23 @@ strong { font-weight: 700; }
 
 /* HERO */
 .hero {
-  background: linear-gradient(160deg, #1A0A2E 0%, #3D1060 50%, #7D2248 100%);
-  padding: 96px 32px;
+  background: var(--off-white);
+  padding: 80px 32px 72px;
   text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 .hero h1 {
   font-size: clamp(28px, 5vw, 44px);
   font-weight: 700;
   line-height: 1.22;
-  color: white;
+  color: var(--dark);
   max-width: 620px;
   margin: 0 auto 24px;
 }
-.hero h1 em { font-style: italic; color: #C8A8F0; }
+.hero h1 em { font-style: italic; color: var(--lilac-dark); }
 .hero-sub {
   font-size: clamp(16px, 2.5vw, 19px);
-  color: rgba(255,255,255,0.78);
+  color: var(--muted);
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.65;
@@ -442,49 +443,9 @@ strong { font-weight: 700; }
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Eu fui uma das primeiras do Brasil a testar uma estratégia de reels que explodiu na gringa e me fez ganhar <em>63 mil novos seguidores em 6 meses</em></h1>
-  <p class="hero-sub">O Método Série Assinatura é um sistema pronto para copiar e colar. Feito para quem cria conteúdo por necessidade e quer que o Instagram traga seguidores e clientes sem se preocupar com tendências ou com o que postar.</p>
+  <h1>Eu criei 70 reels com um único molde de roteiro, gastei 3 horas por semana e gerei <em>7.7 milhões de views</em></h1>
+  <p class="hero-sub">70 episódios. 1h para roteirizar, 1h para gravar, 1h para editar. O Método Reels em Série é o meu jeito de destravar a entrega e gerar views toda semana. Feito para quem cria reels por necessidade e precisa de um sistema pronto para copiar e colar.</p>
 </div>
-
-<!-- OPORTUNIDADE -->
-<section class="oportunidade">
-  <div class="label">A oportunidade</div>
-  <h2>Esse formato já está sendo usado por criadores de nichos completamente diferentes</h2>
-  <p>De saúde mental a finanças, de negócios a educação. De perfis com 50 mil a perfis com milhões de seguidores. O resultado é sempre o mesmo: crescimento consistente, previsível e sem depender de um único vídeo.</p>
-  <div class="proof-cards">
-    <div class="proof-card">
-      <div class="proof-img" style="height:auto;">
-        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/emonthebrain.webp" alt="Perfil @emonthebrain" style="width:100%;display:block;border-radius:0;">
-      </div>
-      <div class="proof-body">
-        <div class="proof-handle">@emonthebrain</div>
-        <p class="proof-text">Neurocientista que repete o mesmo formato de reels sobre o cérebro em episódios. Mesmo gancho, assunto novo.</p>
-      </div>
-    </div>
-    <div class="proof-card">
-      <div class="proof-img" style="height:auto;">
-        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/stevenwommack.webp" alt="Perfil @stevenwommack" style="width:100%;display:block;border-radius:0;">
-      </div>
-      <div class="proof-body">
-        <div class="proof-handle">@stevenwommack</div>
-        <p class="proof-text">Tutoriais de vídeo mobile com o mesmo formato de série desde o início. Mesma estrutura, técnica diferente.</p>
-      </div>
-    </div>
-    <div class="proof-card">
-      <div class="proof-img" style="height:auto;">
-        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/gali_kash.webp" alt="Perfil @gali_kash" style="width:100%;display:block;border-radius:0;">
-      </div>
-      <div class="proof-body">
-        <div class="proof-handle">@gali_kash</div>
-        <p class="proof-text">Empresária do setor de seguros com o formato de série. 102 mil seguidores com menos de 10 posts publicados.</p>
-      </div>
-    </div>
-  </div>
-  <div class="callout">
-    <p>Nenhum desses criadores ensinou o método. Eles usam, crescem e não revelam o que está por trás. Fui estudar, testar. E agora estou ensinando <strong>pela primeira vez no Brasil.</strong></p>
-  </div>
-  <p>No Brasil esse formato ainda está chegando. <strong>Quem adotar agora vai ter a vantagem de quem chegou primeiro,</strong> no próprio nicho, com o próprio público, antes que todo mundo descubra.</p>
-</section>
 
 <!-- DOR -->
 <section class="dor">
@@ -494,14 +455,45 @@ strong { font-weight: 700; }
   <div class="dor-quotes">
     <div class="dor-quote">Minha área tem muitos temas. Como vou saber o que as pessoas querem ver?</div>
     <div class="dor-quote">Eu não sei falar com a câmera. Acho que não sou interessante o suficiente.</div>
-    <div class="dor-quote">O que adianta postar se não ganho seguidores e não vendo nada pelo Instagram?</div>
+    <div class="dor-quote">Posto e não entrega para ninguém, parece que o Instagram está me sabotando.</div>
   </div>
   <p>Semanas sem postar. A certeza crescendo de que sua área é chata demais ou que você não tem jeito para isso.</p>
   <p><strong>O problema nunca foi você. Nem sua área. Nem sua criatividade.</strong></p>
-  <div class="promise-box">
-    <h3>É exatamente isso que o Método Série Assinatura entrega</h3>
-    <p>Um sistema de reels em episódios onde você cria o formato uma vez e repete. Cada vídeo mais fácil que o anterior, cada episódio aproveitando o crescimento do anterior. Sem criar do zero. Sem depender de tendência. Sem travar na câmera.</p>
+  <p>Toda semana que você começa do zero é mais uma semana que o Instagram não te conhece. E o Instagram só entrega quem ele já conhece.</p>
+  <p>Sem padrão, sem entrega. Sem entrega, sem views. E sem views, parece que o problema é você.</p>
+  <p>O que você precisa é de um molde de roteiro que você cria uma vez, troca o assunto e grava. Toda semana. Sem começar do zero. Sem depender de inspiração. Sem esperar o dia perfeito.</p>
+  <p style="font-weight:700;font-size:16px;color:var(--lilac-dark);">É exatamente isso que o Método Reels em Série entrega.</p>
+</section>
+
+<!-- OPORTUNIDADE -->
+<section class="oportunidade">
+  <div class="label">A oportunidade</div>
+  <h2>Reels em Série estão sendo usados por criadores de fora para destravar sua entrega</h2>
+  <p>De saúde mental a finanças, de negócios a educação. De perfis com 50 mil a perfis com milhões de seguidores. O resultado é sempre o mesmo: o algoritmo aprende, a entrega destrava e as views empilham a cada episódio.</p>
+  <div class="proof-cards">
+    <div class="proof-card">
+      <div class="proof-img" style="height:auto;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/emonthebrain.webp" alt="Perfil @emonthebrain" style="width:100%;display:block;border-radius:0;">
+      </div>
+      <div class="proof-body">
+        <div class="proof-handle">@emonthebrain</div>
+        <p class="proof-text">Neurocientista que repete o mesmo formato de reels sobre o cérebro em episódios. Mesmo gancho, assunto novo. Milhões de views por série.</p>
+      </div>
+    </div>
+    <div class="proof-card">
+      <div class="proof-img" style="height:auto;">
+        <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/stevenwommack.webp" alt="Perfil @stevenwommack" style="width:100%;display:block;border-radius:0;">
+      </div>
+      <div class="proof-body">
+        <div class="proof-handle">@stevenwommack</div>
+        <p class="proof-text">Tutoriais de vídeo mobile com o mesmo formato de série desde o início. Mesma estrutura, técnica diferente. Milhões de views por série.</p>
+      </div>
+    </div>
   </div>
+  <div class="callout">
+    <p>Nenhum desses criadores ensinou o método. Eles usam, crescem e não revelam o que está por trás. Fui estudar, testar. E agora estou ensinando <strong>pela primeira vez no Brasil.</strong></p>
+  </div>
+  <p>No Brasil esse formato ainda está chegando. <strong>Quem adotar agora vai ter a vantagem de quem chegou primeiro.</strong> O algoritmo vai te conhecer e você vai ser a referência copiada no seu nicho.</p>
 </section>
 
 <!-- ENTREGAVEIS -->
@@ -513,7 +505,7 @@ strong { font-weight: 700; }
       <div class="step-num">1</div>
       <div class="step-content">
         <div class="step-title">Como escolher o tema da sua série e nunca mais travar no "o que postar"</div>
-        <p class="step-desc">Você define uma ideia mãe que se repete em episódios infinitos. Prompt pronto para qualquer nicho em minutos.</p>
+        <p class="step-desc">Você define uma ideia mãe que se repete em episódios infinitos. O algoritmo começa a te reconhecer desde o primeiro episódio.</p>
         <span class="step-badge">Valor: R$47</span>
       </div>
     </div>
@@ -521,31 +513,32 @@ strong { font-weight: 700; }
       <div class="step-num">2</div>
       <div class="step-content">
         <div class="step-title">Como definir os primeiros 5 episódios e nunca abrir a câmera sem saber o que falar</div>
-        <p class="step-desc">Você mapeia os assuntos antes de gravar. Prompt pronto que adapta as ideias ao seu nicho sem pensar do zero.</p>
+        <p class="step-desc">Você mapeia os assuntos antes de gravar. Câmera nunca mais no escuro, roteiro nunca mais em branco.</p>
         <span class="step-badge">Valor: R$47</span>
       </div>
     </div>
-    <div class="step-item">
-      <div class="step-num">3</div>
+    <div class="step-item" style="background: var(--lilac-light); border-radius: 12px; padding: 28px 20px; border: 2px solid var(--lilac); margin: 4px 0;">
+      <div class="step-num" style="background: linear-gradient(135deg, var(--bordeaux), #A83060); flex-shrink:0;">3</div>
       <div class="step-content">
-        <div class="step-title">Como criar o molde do roteiro. O episódio 1 vira a estrutura de todos os outros</div>
-        <p class="step-desc">Você faz o trabalho duro uma vez. Depois só troca o assunto e grava.</p>
-        <span class="step-badge">Valor: R$67</span>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--bordeaux);margin-bottom:6px;">O coração do método</div>
+        <div class="step-title" style="font-size:18px;">Como criar o molde do roteiro. O episódio 1 vira a estrutura de todos os outros</div>
+        <p class="step-desc">Você faz o trabalho duro uma vez. O roteiro vira o molde de todos os outros episódios. Só troca o assunto, grava e publica. É aqui que o algoritmo aprende o seu padrão e as views começam a empilhar.</p>
+        <span class="step-badge" style="background:var(--bordeaux);color:white;border-color:var(--bordeaux);">Valor: R$67</span>
       </div>
     </div>
     <div class="step-item">
       <div class="step-num">4</div>
       <div class="step-content">
-        <div class="step-title">Como gravar em bloco. Uma tarde resolve semanas de conteúdo</div>
-        <p class="step-desc">Vários episódios de uma vez, sem depender de humor ou dia perfeito. Checklist completo incluído.</p>
+        <div class="step-title">Como ter um reels pronto em 30 minutos</div>
+        <p class="step-desc">Roteiro, gravação e edição em menos de meia hora. Sem depender de humor, energia ou dia perfeito.</p>
         <span class="step-badge">Valor: R$37</span>
       </div>
     </div>
     <div class="step-item">
       <div class="step-num">5</div>
       <div class="step-content">
-        <div class="step-title">Como postar por 15 dias seguidos e treinar o algoritmo a te distribuir</div>
-        <p class="step-desc">O plano de postagem que cria o padrão que o algoritmo precisa para entregar seus vídeos para mais pessoas.</p>
+        <div class="step-title">O meu jeito simples de ser entregue desde o primeiro episódio (modelo copia cola)</div>
+        <p class="step-desc">Um passo a passo para verificar se a sua série está pronta para publicar. Sem tentativa e erro, sem dúvida na hora de postar. Você segue, publica e o algoritmo começa a te conhecer desde o primeiro episódio.</p>
         <span class="step-badge">Valor: R$47</span>
       </div>
     </div>
@@ -556,16 +549,16 @@ strong { font-weight: 700; }
 <div class="bonus">
   <div class="bonus-inner">
     <div class="label">E ainda tem mais</div>
-    <h2>Cinco presentes incluídos no acesso</h2>
+    <h2>Dois presentes incluídos no acesso</h2>
     <p class="bonus-subtitle">Cada um resolve um problema que te atrasa, antes mesmo de você perceber que tinha.</p>
     <div class="bonus-grid">
       <div class="bonus-item">
         <div class="bonus-gift">🎁</div>
         <div class="bonus-text">
           <div class="bonus-title">De flopou para 700k views com uma mudança simples</div>
-          <p class="bonus-desc">Uma decisão antes de postar que muda completamente o alcance do vídeo. Você vai ver exatamente qual é.</p>
+          <p class="bonus-desc">Uma decisão antes de postar que muda completamente a entrega do reels. Você vai ver exatamente qual é.</p>
         </div>
-        <div class="bonus-val">R$67</div>
+        <div class="bonus-val">R$107</div>
       </div>
       <div class="bonus-item">
         <div class="bonus-gift">🎁</div>
@@ -573,36 +566,12 @@ strong { font-weight: 700; }
           <div class="bonus-title">A nova ferramenta do Instagram que gerou mais de 5 mil seguidores</div>
           <p class="bonus-desc">Recurso nativo que poucos criadores estão usando. Potencializa o alcance desde o primeiro episódio.</p>
         </div>
-        <div class="bonus-val">R$37</div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-gift">🎁</div>
-        <div class="bonus-text">
-          <div class="bonus-title">9 hacks de design para carrosséis que param o scroll</div>
-          <p class="bonus-desc">Testados e aprovados. Sem designer, sem Photoshop, sem dom artístico.</p>
-        </div>
-        <div class="bonus-val">R$27</div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-gift">🎁</div>
-        <div class="bonus-text">
-          <div class="bonus-title">Como dizer "não gostei" para o ChatGPT sem refazer tudo</div>
-          <p class="bonus-desc">O comando que ajusta o roteiro no seu tom sem reescrever do zero.</p>
-        </div>
-        <div class="bonus-val">R$27</div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-gift">🎁</div>
-        <div class="bonus-text">
-          <div class="bonus-title">Personalizando o ChatGPT para escrever com a sua voz</div>
-          <p class="bonus-desc">Configure uma vez e pare de soar como robô nos roteiros.</p>
-        </div>
-        <div class="bonus-val">R$27</div>
+        <div class="bonus-val">R$78</div>
       </div>
     </div>
     <div class="bonus-total">
       <div class="bonus-total-label">Valor total de tudo</div>
-      <div class="bonus-total-num">R$425</div>
+      <div class="bonus-total-num">R$430</div>
       <div class="bonus-total-sub">em sistema, método e presentes</div>
     </div>
   </div>
@@ -612,7 +581,7 @@ strong { font-weight: 700; }
 <section class="prova">
   <div class="label bd">Quem criou isso</div>
   <h2>Há dois anos eu era subvalorizada.</h2>
-  <p>Tinha uma agência, atendia clientes que não sabiam criar conteúdo e me contratavam exatamente por isso. Mas na prática, não seguiam nada do que eu recomendava. Eu sabia o que funcionava. Eles não executavam. E eu ficava presa nessa equação.</p>
+  <p>Tinha uma agência, atendia clientes que não sabiam criar reels e me contratavam exatamente por isso. Mas na prática, não seguiam nada do que eu recomendava. Eu sabia o que funcionava. Eles não executavam. E eu ficava presa nessa equação.</p>
   <p><strong>Decidi fazer por mim o que eu recomendava para eles.</strong></p>
   <div class="colagem">
     <div class="colagem-item">
@@ -629,7 +598,7 @@ strong { font-weight: 700; }
       <div class="colagem-label">hoje</div>
     </div>
   </div>
-  <p>Comecei a criar conteúdo por necessidade, exatamente como você. Sem ser influencer, sem equipe, sem abrir mão do meu negócio para ficar na frente da câmera. O que mudou tudo foi parar de criar conteúdo avulso e começar a criar em série.</p>
+  <p>Comecei a criar reels por necessidade, exatamente como você. Sem ser influencer, sem equipe, sem abrir mão do meu negócio para ficar na frente da câmera. O que mudou tudo foi parar de criar reels avulsos e começar a criar em série.</p>
   <div class="numeros-grid">
     <div class="numero-card">
       <span class="numero-val">198K</span>
@@ -648,23 +617,20 @@ strong { font-weight: 700; }
       <span class="numero-label">para gravar 7 episódios</span>
     </div>
   </div>
-  <p>A última série que fiz me deu 63 mil novos seguidores em 6 meses. Foram 72 episódios no total. 7 vídeos por semana. 1h para gravar todos. 1h para editar. O mesmo gancho em todos os episódios. Sem surtar. Sem me reinventar a cada episódio.</p>
-  <div style="margin:24px 0;">
-    <img src="https://raw.githubusercontent.com/LeislinEduarda/metodo-ressuscita/main/crescimento.webp" alt="Screenshot do crescimento com a Série Assinatura" style="width:100%;display:block;border-radius:10px;height:auto;">
-  </div>
-  <p>Mas antes de chegar aqui, eu passei pelo mesmo que você provavelmente está passando agora. Sabia que precisava criar. Travava. Fechava o aplicativo. Prometia que amanhã seria diferente.</p>
-  <p><strong>Sei exatamente o que é isso. E foi por isso que criei o Método Série Assinatura.</strong></p>
+  <p>O algoritmo começou a me conhecer. A entrega destravou. As views empilharam.</p>
+  <p>Nesses 2 anos a única coisa que foi mudando foi a série que eu escolho fazer.</p>
+  <p><strong>E foi por isso que criei o Método Reels em Série.</strong></p>
 </section>
 
 <!-- VALOR / EMPILHAMENTO -->
 <section class="valor">
-  <div class="label">Tudo que você recebe</div>
+  <div class="label">Tudo que você recebe quando entra hoje</div>
   <h2>O sistema completo</h2>
   <div class="valor-lista">
     <div class="valor-separador-label">✦ O método</div>
     <div class="valor-linha">
       <span class="valor-linha-icone">🎯</span>
-      <span class="valor-linha-nome">Como escolher o tema da sua série e nunca mais travar</span>
+      <span class="valor-linha-nome">Como escolher o tema da sua série e nunca mais travar no "o que postar"</span>
       <span class="valor-linha-preco">R$47</span>
     </div>
     <div class="valor-linha">
@@ -672,50 +638,35 @@ strong { font-weight: 700; }
       <span class="valor-linha-nome">Como definir os primeiros 5 episódios. Câmera nunca mais no escuro</span>
       <span class="valor-linha-preco">R$47</span>
     </div>
-    <div class="valor-linha">
+    <div class="valor-linha" style="background:var(--lilac-light);">
       <span class="valor-linha-icone">📝</span>
-      <span class="valor-linha-nome">Como criar o molde do roteiro. Trabalho duro feito uma vez só</span>
-      <span class="valor-linha-preco">R$67</span>
+      <span class="valor-linha-nome" style="font-weight:700;">Como criar o molde do roteiro. Trabalho duro feito uma vez só</span>
+      <span class="valor-linha-preco" style="color:var(--bordeaux);">R$67</span>
     </div>
     <div class="valor-linha">
       <span class="valor-linha-icone">⚡</span>
-      <span class="valor-linha-nome">Como gravar em bloco. Uma tarde, semanas de conteúdo</span>
+      <span class="valor-linha-nome">Como ter um reels pronto em 30 minutos</span>
       <span class="valor-linha-preco">R$37</span>
     </div>
     <div class="valor-linha">
-      <span class="valor-linha-icone">📈</span>
-      <span class="valor-linha-nome">Como postar 15 dias e treinar o algoritmo a te distribuir</span>
+      <span class="valor-linha-icone">📋</span>
+      <span class="valor-linha-nome">O meu jeito simples de ser entregue desde o primeiro episódio (modelo copia cola)</span>
       <span class="valor-linha-preco">R$47</span>
     </div>
     <div class="valor-separador-label presente">🎁 De presente</div>
     <div class="valor-linha">
       <span class="valor-linha-icone">🚀</span>
-      <span class="valor-linha-nome">100k para 700k views com uma mudança simples antes de publicar</span>
-      <span class="valor-linha-preco presente">R$67</span>
+      <span class="valor-linha-nome">De flopou para 700k views com uma mudança simples antes de publicar</span>
+      <span class="valor-linha-preco presente">R$107</span>
     </div>
     <div class="valor-linha">
       <span class="valor-linha-icone">✨</span>
-      <span class="valor-linha-nome">A ferramenta nativa do Instagram que gerou +5 mil seguidores</span>
-      <span class="valor-linha-preco presente">R$37</span>
-    </div>
-    <div class="valor-linha">
-      <span class="valor-linha-icone">🎨</span>
-      <span class="valor-linha-nome">9 hacks de design para carrosséis que param o scroll</span>
-      <span class="valor-linha-preco presente">R$27</span>
-    </div>
-    <div class="valor-linha">
-      <span class="valor-linha-icone">🤖</span>
-      <span class="valor-linha-nome">Como ajustar o ChatGPT sem reescrever tudo do zero</span>
-      <span class="valor-linha-preco presente">R$27</span>
-    </div>
-    <div class="valor-linha">
-      <span class="valor-linha-icone">🎙️</span>
-      <span class="valor-linha-nome">Personalizando o ChatGPT para escrever com a sua voz</span>
-      <span class="valor-linha-preco presente">R$27</span>
+      <span class="valor-linha-nome">A ferramenta nativa do Instagram que potencializa a entrega</span>
+      <span class="valor-linha-preco presente">R$78</span>
     </div>
     <div class="valor-total">
       <span>Valor total</span>
-      <span class="valor-total-preco">R$425</span>
+      <span class="valor-total-preco">R$430</span>
     </div>
   </div>
   <p class="valor-chamada">Tudo isso por apenas...</p>
@@ -726,10 +677,10 @@ strong { font-weight: 700; }
   <div class="preco-inner">
     <h2 style="color:white;">Acesso imediato e vitalício</h2>
     <p class="preco-sub">Em 20 minutos você assiste tudo e já pode colocar em prática no mesmo dia.</p>
-    <div class="price-old">de R$425</div>
+    <div class="price-old">de R$430</div>
     <div class="price-new">R$97</div>
     <div class="price-label">acesso imediato e vitalício</div>
-    <a href="https://lastlink.com/p/C085A3074/checkout-payment" class="cta-btn" onclick="gtag('event','go_to_checkout',{button:'botao'});">Quero o Método agora →</a>
+    <a href="https://lastlink.com/p/C085A3074/checkout-payment" class="cta-btn" onclick="gtag('event','go_to_checkout',{button:'botao'});">Garantir meu Acesso Agora →</a>
     <div class="cta-trust">pagamento seguro &nbsp;·&nbsp; acesso imediato &nbsp;·&nbsp; garantia de 15 dias</div>
   </div>
 </div>
@@ -758,43 +709,6 @@ strong { font-weight: 700; }
     <p class="garantia-body">Se por qualquer motivo sentir que não foi pra você, me manda uma mensagem e devolvo tudo. <strong>Sem perguntas, sem burocracia, sem condição.</strong> O risco é todo meu. A decisão é sua.</p>
   </div>
 </section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="label">Perguntas frequentes</div>
-  <h2>Dúvidas antes de entrar</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">"Minha área tem muitos temas. Como vou saber se funciona para mim?" <div class="faq-icon">+</div></div>
-      <div class="faq-a">O método começa escolhendo uma ideia mãe, um tema fixo que você repete em episódios. Não importa se você é nutricionista, advogada, designer, coach ou dona de loja. O formato funciona porque é de estrutura, não de assunto. Você só muda o recheio. O molde é sempre o mesmo.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">"Não tenho muito tempo. Quanto vou precisar por semana?" <div class="faq-icon">+</div></div>
-      <div class="faq-a">1h para criar os roteiros de 7 episódios. 1h para gravar todos de uma vez. 1h para editar a semana inteira. São 3 horas por semana e 7 episódios prontos. Você posta sem precisar abrir o aplicativo sem saber o que postar.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">"E se eu comprar e não conseguir executar?" <div class="faq-icon">+</div></div>
-      <div class="faq-a">Por isso a garantia é de 15 dias. Você acessa tudo, testa o método e vê por conta própria. Se por qualquer motivo não for pra você, devolvo tudo, sem perguntas. Mas se você seguir o método, o mais provável é que você não queira parar.</div>
-    </div>
-  </div>
-</section>
-
-<script>
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => {
-      const item = q.parentElement;
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-icon').textContent = '+';
-      });
-      if (!wasOpen) {
-        item.classList.add('open');
-        item.querySelector('.faq-icon').textContent = '−';
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
