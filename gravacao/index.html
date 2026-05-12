@@ -1,1 +1,1084 @@
-temporario
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>O jeito da Leislin de gravar reels · Antes de começar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.lastlink.com/upsell.min.js"></script>
+<script>
+var upsellRedirect = "https://escola.leislin.com.br";
+function setupDenyButtons() {
+    document.querySelectorAll('[id^="denyButton"]').forEach(button => {
+        button.onclick = function() {
+            const currentUrl = new URL(window.location.href);
+            const newUrl = new URL("https://escola.leislin.com.br");
+            currentUrl.searchParams.forEach((value, key) => {
+                newUrl.searchParams.append(key, value);
+            });
+            window.location.href = newUrl.toString();
+        };
+    });
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupDenyButtons);
+} else {
+    setupDenyButtons();
+}
+</script>
+
+<style>
+  :root {
+    --notion-bg: #FFFFFF;
+    --notion-text: #37352F;
+    --notion-text-mute: #787774;
+    --notion-text-light: #9B9A97;
+    --notion-divider: rgba(55, 53, 47, 0.09);
+    --notion-hover: rgba(55, 53, 47, 0.04);
+
+    --callout-default: #F1F1EF;
+    --callout-pink: #FAF1F5;
+    --callout-pink-text: #AD1A72;
+    --callout-pink-border: rgba(173, 26, 114, 0.2);
+    --callout-orange: #FBECDD;
+    --callout-orange-text: #C77E48;
+    --callout-green: #EEF3ED;
+    --callout-green-text: #4F6F52;
+    --callout-yellow: #FBF3DB;
+    --callout-yellow-text: #89632A;
+
+    --notion-pink: #E03E3E;
+    --notion-orange: #D9730D;
+    --notion-green: #448361;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #EBEBEA;
+    color: var(--notion-text);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .phone-shell {
+    max-width: 430px;
+    margin: 0 auto;
+    background: var(--notion-bg);
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Notion top nav */
+  .notion-nav {
+    height: 48px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--notion-bg);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+
+  .nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: var(--notion-text-mute);
+    cursor: pointer;
+  }
+
+  .nav-btn:active { background: var(--notion-hover); }
+  .nav-btn svg { width: 18px; height: 18px; display: block; }
+
+  .nav-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 4px;
+    font-size: 13.5px;
+    color: var(--notion-text-mute);
+    font-weight: 500;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .breadcrumb-emoji { font-size: 14px; flex-shrink: 0; }
+
+  .breadcrumb-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* PAGE CONTENT */
+  .page-content {
+    padding: 12px 24px 32px;
+    background: var(--notion-bg);
+  }
+
+  .page-icon {
+    font-size: 60px;
+    line-height: 1;
+    margin: 12px 0 16px;
+  }
+
+  .page-title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--notion-text);
+    margin-bottom: 4px;
+  }
+
+  .page-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--notion-text-light);
+    margin: 14px 0 22px;
+    flex-wrap: wrap;
+  }
+
+  .page-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .page-meta-icon { width: 13px; height: 13px; }
+  .page-meta-divider { color: var(--notion-text-light); opacity: 0.5; }
+
+  /* BLOCKS */
+  .block {
+    margin-bottom: 4px;
+    padding: 3px 2px;
+    line-height: 1.55;
+    color: var(--notion-text);
+    font-size: 16px;
+  }
+
+  .block strong { font-weight: 700; }
+
+  .block em {
+    font-style: italic;
+    color: var(--notion-pink);
+    font-weight: 600;
+  }
+
+  .berry-bg {
+    font-style: italic;
+    background: rgba(245, 200, 215, 0.55);
+    color: var(--callout-pink-text);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  .green-bg {
+    background: var(--callout-green);
+    padding: 0 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--callout-green-text);
+  }
+
+  .strike-px {
+    text-decoration: line-through;
+    text-decoration-color: var(--notion-pink);
+    text-decoration-thickness: 1.5px;
+    color: var(--notion-text-light);
+    font-style: italic;
+  }
+
+  .h3 {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 24px 0 4px;
+    padding: 3px 2px;
+    color: var(--notion-text);
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--notion-divider);
+    margin: 18px 0;
+  }
+
+  /* QUOTE */
+  .quote {
+    border-left: 3px solid var(--notion-text);
+    padding: 4px 0 4px 14px;
+    margin: 8px 0;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--notion-text);
+  }
+
+  .quote em {
+    font-style: italic;
+    color: var(--notion-pink);
+    font-weight: 600;
+  }
+
+  .quote-large {
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.35;
+  }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--callout-default);
+    border-radius: 4px;
+    padding: 16px 16px 16px 14px;
+    margin: 10px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    line-height: 1.5;
+    font-size: 15.5px;
+  }
+
+  .callout-icon {
+    font-size: 20px;
+    line-height: 1.2;
+    flex-shrink: 0;
+    width: 22px;
+    text-align: center;
+  }
+
+  .callout-body { flex: 1; min-width: 0; }
+  .callout-body strong { font-weight: 700; }
+
+  .callout.green { background: var(--callout-green); }
+  .callout.pink { background: var(--callout-pink); }
+
+  /* TODO */
+  .todo {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 4px 2px;
+    margin-bottom: 1px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .todo-checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1.5px solid var(--notion-text-mute);
+    flex-shrink: 0;
+    margin-top: 4px;
+    background: var(--notion-bg);
+    position: relative;
+  }
+
+  .todo-checkbox.checked {
+    background: var(--notion-text);
+    border-color: var(--notion-text);
+  }
+
+  .todo-checkbox.checked::after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 4.5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 1.8px 1.8px 0;
+    transform: rotate(45deg);
+  }
+
+  .todo.done .todo-text {
+    color: var(--notion-text-light);
+    text-decoration: line-through;
+  }
+
+  .todo.highlight {
+    background: var(--callout-yellow);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 6px 0 2px;
+    border: 1.5px solid rgba(137, 99, 42, 0.2);
+  }
+
+  .todo.highlight .todo-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--notion-text);
+  }
+
+  .todo.highlight .todo-checkbox {
+    margin-top: 5px;
+    border-color: var(--callout-yellow-text);
+  }
+
+  /* NUM LIST */
+  .num-list { margin: 4px 0 8px; }
+
+  .num-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 4px 2px;
+    margin-bottom: 1px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .num-marker {
+    color: var(--notion-text);
+    font-weight: 500;
+    flex-shrink: 0;
+    min-width: 22px;
+  }
+
+  .num-text { flex: 1; }
+
+  /* TOGGLE */
+  .toggle { margin: 2px 0; }
+
+  .toggle-summary {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--notion-text);
+    list-style: none;
+  }
+
+  .toggle-summary::-webkit-details-marker { display: none; }
+
+  .toggle-arrow {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-top: 6px;
+    color: var(--notion-text-mute);
+    transition: transform 0.15s ease;
+  }
+
+  .toggle[open] .toggle-arrow { transform: rotate(90deg); }
+
+  .toggle-content {
+    padding: 2px 0 6px 22px;
+    color: var(--notion-text);
+  }
+
+  .toggle-content p {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--notion-text-mute);
+  }
+
+  /* OFFER CARD */
+  .offer-card {
+    background: var(--callout-pink);
+    border-radius: 8px;
+    padding: 28px 26px 30px;
+    margin: 24px 0 14px;
+    position: relative;
+    border: 1.5px solid var(--callout-pink-border);
+  }
+
+  .offer-card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .offer-emoji { font-size: 24px; line-height: 1; }
+
+  .offer-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--callout-pink-text);
+  }
+
+  .offer-title {
+    font-size: 17.5px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--notion-text);
+    margin-bottom: 22px;
+  }
+
+  .offer-title em {
+    font-style: italic;
+    color: var(--callout-pink-text);
+    font-weight: 700;
+  }
+
+  .offer-includes {
+    list-style: none;
+    margin: 0 0 4px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .offer-includes li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14.5px;
+    line-height: 1.45;
+    color: var(--notion-text);
+    font-weight: 500;
+  }
+
+  .offer-includes-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--callout-pink-text);
+    color: white;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    line-height: 1;
+  }
+
+  .offer-includes-bonus {
+    margin-top: 4px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(173, 26, 114, 0.25);
+    color: var(--notion-text);
+  }
+
+  .offer-includes-icon.bonus {
+    background: transparent;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+  }
+
+  /* BONUS CARD */
+  .bonus-card {
+    background: var(--callout-yellow);
+    border-radius: 8px;
+    padding: 22px 22px 20px;
+    margin: 14px 0 4px;
+    border: 1.5px solid rgba(137, 99, 42, 0.18);
+    position: relative;
+  }
+
+  .bonus-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .bonus-emoji {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .bonus-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .bonus-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--callout-yellow-text);
+  }
+
+  .bonus-title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--notion-text);
+    letter-spacing: -0.01em;
+  }
+
+  .bonus-body {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--notion-text);
+    margin-bottom: 14px;
+  }
+
+  .bonus-body strong {
+    font-weight: 700;
+    color: var(--notion-text);
+  }
+
+  .bonus-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .bonus-chip {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(137, 99, 42, 0.22);
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--callout-yellow-text);
+    letter-spacing: -0.005em;
+  }
+
+  .bonus-footnote {
+    font-size: 12.5px;
+    color: var(--callout-yellow-text);
+    font-style: italic;
+    font-weight: 500;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(137, 99, 42, 0.22);
+  }
+
+  .offer-divider {
+    border: none;
+    border-top: 1px solid rgba(173, 26, 114, 0.18);
+    margin: 22px 0;
+  }
+
+  .offer-price-block {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  .offer-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .offer-price-currency {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--callout-pink-text);
+  }
+
+  .offer-price-num {
+    font-size: 78px;
+    font-weight: 800;
+    color: var(--notion-text);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    font-style: italic;
+  }
+
+  .offer-terms {
+    font-size: 13px;
+    color: var(--notion-text-mute);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .offer-payments {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--notion-text-mute);
+    font-weight: 500;
+  }
+
+  .offer-pay-emoji {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .offer-pay-label {
+    margin-left: 4px;
+  }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: var(--notion-text);
+    color: white;
+    font-family: inherit;
+    font-size: 15.5px;
+    font-weight: 600;
+    padding: 17px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+
+  .cta:active {
+    background: #1F1E1B;
+    transform: scale(0.985);
+  }
+
+  .cta-arrow { width: 14px; height: 14px; flex-shrink: 0; }
+
+  .cta-sub {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--notion-text-mute);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .cta-sub-icon {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: -1px;
+    margin-right: 3px;
+  }
+
+  /* DECLINE */
+  .decline-block {
+    margin: 18px 0 8px;
+    text-align: center;
+  }
+
+  .decline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--notion-text-mute);
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1.5px solid var(--notion-divider);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    line-height: 1.2;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .decline-btn:active {
+    background: var(--notion-hover);
+    transform: scale(0.985);
+  }
+
+  .decline-btn:hover {
+    color: var(--notion-text);
+    border-color: rgba(55, 53, 47, 0.2);
+  }
+
+  /* SIGNATURE */
+  .signature-block {
+    margin: 28px 0 8px;
+    padding: 3px 2px;
+    color: var(--notion-text-mute);
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  .signature-name {
+    font-weight: 700;
+    color: var(--notion-text);
+    font-style: normal;
+  }
+
+  /* BOTTOM TAB BAR */
+  .tab-bar {
+    height: 56px;
+    border-top: 1px solid var(--notion-divider);
+    background: var(--notion-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px 4px;
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 10px;
+    color: var(--notion-text-light);
+    font-size: 10px;
+    font-weight: 500;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .tab.active { color: var(--notion-text); }
+
+  .tab svg { width: 22px; height: 22px; display: block; }
+
+  /* DESKTOP framing */
+  @media (min-width: 600px) {
+    body {
+      padding: 32px 0;
+      background: linear-gradient(180deg, #E8E8E7 0%, #DEDEDD 100%);
+      min-height: 100vh;
+    }
+    .phone-shell {
+      border-radius: 38px;
+      overflow: hidden;
+      min-height: auto;
+      box-shadow:
+        0 0 0 10px #1A1A1A,
+        0 0 0 11px #2A2A2A,
+        0 30px 80px rgba(0, 0, 0, 0.3);
+    }
+    .status-bar, .notion-nav {
+      border-radius: 38px 38px 0 0;
+    }
+    .notion-nav {
+      padding-top: 8px;
+      height: 56px;
+    }
+  }
+
+  .block:last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<div class="phone-shell">
+
+  <!-- Notion top nav -->
+  <nav class="notion-nav">
+    <div class="nav-left">
+      <div class="nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </div>
+    </div>
+    <div class="nav-breadcrumb">
+      <span class="breadcrumb-emoji">📓</span>
+      <span class="breadcrumb-text">Escola da Leislin / Comece aqui</span>
+    </div>
+    <div class="nav-right">
+      <div class="nav-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+        </svg>
+      </div>
+      <div class="nav-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="5" cy="12" r="1.8"/>
+          <circle cx="12" cy="12" r="1.8"/>
+          <circle cx="19" cy="12" r="1.8"/>
+        </svg>
+      </div>
+    </div>
+  </nav>
+
+  <article class="page-content">
+
+    <div class="page-icon">🎬</div>
+
+    <h1 class="page-title">Antes de começar, uma coisa rápida</h1>
+
+    <div class="page-meta">
+      <span class="page-meta-item">
+        <svg class="page-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Última edição agora
+      </span>
+      <span class="page-meta-divider">·</span>
+      <span class="page-meta-item">
+        <svg class="page-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Leislin
+      </span>
+    </div>
+
+    <!-- OPENING -->
+    <p class="block">Antes de tudo, <strong><em>parabéns!</em></strong></p>
+
+    <p class="block">Você acabou de fazer a parte mais difícil. Parar de decidir o que postar todos os dias.</p>
+
+    <p class="block">O modelo que você acabou de levar é o mesmo que me entrega <strong>visualizações, seguidores e vendas</strong> todos os dias há mais de 24 semanas.</p>
+
+    <p class="block">Em <em>40 minutos</em> você vai estar saindo com seu primeiro episódio pronto. É só procurar no teu e-mail um remetente chamado <strong>Escola da Leislin</strong> (é por lá que você acessa o teu Notion pra sempre), abrir, seguir os 3 passos, e o primeiro episódio sai pronto.</p>
+
+    <p class="block">Depois disso, só falta uma coisa:</p>
+
+    <!-- TODO LIST -->
+    <h3 class="h3">Próximo passo</h3>
+
+    <div class="todo highlight">
+      <div class="todo-checkbox"></div>
+      <div class="todo-text"><strong>Gravar</strong> 🎬</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- TRANSITION -->
+    <p class="block">E é aqui que normalmente trava.</p>
+
+    <p class="block">Gravar reels parece difícil, parece chato, parece que não cabe na rotina. A gente posta um, posta outro, e na terceira semana já não dá mais conta.</p>
+
+    <div class="quote quote-large">
+      <em>E se eu te disser</em> que eu tenho uma forma mais fácil de gravar reels?
+    </div>
+
+    <!-- REVEAL -->
+    <p class="block">Eu gravo <strong>todos os reels da minha semana</strong> de uma vez só. Numa tarde. Num dia. E o resto da semana fica livre pra mim.</p>
+
+    <p class="block">Pra te mostrar como, <em>eu liguei a câmera e gravei eu gravando</em>. Você vai ver, do meu lado, exatamente como eu faço. Sem decorar nada, sem aquela cara de quem treinou cada frase.</p>
+
+    <div class="callout">
+      <div class="callout-icon">💡</div>
+      <div class="callout-body">
+        <span class="strike-px">Não é aula.</span> É um <strong>mini curso</strong> com o meu jeito de gravar, pra você consultar <span class="green-bg">pra sempre</span>.
+      </div>
+    </div>
+
+    <!-- IMAGINE -->
+    <h3 class="h3">Imagina…</h3>
+
+    <div class="num-list">
+      <div class="num-item">
+        <span class="num-marker">1.</span>
+        <span class="num-text">Sentar pra gravar uma vez na semana, e <strong>sair com todos os reels prontos antes do almoço</strong>.</span>
+      </div>
+      <div class="num-item">
+        <span class="num-marker">2.</span>
+        <span class="num-text">Não ter mais que <em>"arrumar tempo pra gravar hoje"</em> todos os dias. A semana inteira já tá feita.</span>
+      </div>
+      <div class="num-item">
+        <span class="num-marker">3.</span>
+        <span class="num-text">Ver, do meu lado, exatamente como eu faço. E <strong>descobrir que gravar pode ser muito mais simples do que parece</strong>.</span>
+      </div>
+    </div>
+
+    <!-- DELIVERABLES -->
+    <h3 class="h3">📂 O que tem dentro</h3>
+
+    <details class="toggle">
+      <summary class="toggle-summary">
+        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
+        <span>Tudo que eu penso antes de gravar os meus reels</span>
+      </summary>
+      <div class="toggle-content">
+        <p>Abro o que eu cuido, como eu estruturo na minha cabeça, e as dicas que eu gostaria de saber quando fosse gravar a minha primeira série.</p>
+      </div>
+    </details>
+
+    <details class="toggle">
+      <summary class="toggle-summary">
+        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
+        <span>A minha forma de gravar (eu gravando um reels, na prática)</span>
+      </summary>
+      <div class="toggle-content">
+        <p>Você vê exatamente como eu quase não erro, como eu não preciso decorar, e como isso torna minha vida mais fácil.</p>
+      </div>
+    </details>
+
+    <details class="toggle">
+      <summary class="toggle-summary">
+        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
+        <span>Os equipamentos que eu uso e porque eles valem o seu dinheiro</span>
+      </summary>
+      <div class="toggle-content">
+        <p>O setup completo. O que vale a pena, o que não vale, e por quê.</p>
+      </div>
+    </details>
+
+    <details class="toggle">
+      <summary class="toggle-summary">
+        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
+        <span>Como editar seus vídeos usando IA + CapCut em minutos</span>
+      </summary>
+      <div class="toggle-content">
+        <p>Gastando minutos pra editar um reels inteiro. Sem ficar preso horas em frente ao computador.</p>
+      </div>
+    </details>
+
+    <hr class="divider">
+
+    <!-- BRIDGE -->
+    <div class="quote">
+      <span style="text-decoration: line-through; text-decoration-color: var(--notion-pink); text-decoration-thickness: 1.5px; color: var(--notion-text-light); font-style: italic; display: block; margin-bottom: 4px; font-size: 15px;">o modelo resolve o que postar</span>
+      <strong style="font-size: 18px; line-height: 1.35;">mas <span class="berry-bg">gravar</span> ainda é o que vai te travar toda semana.</strong>
+    </div>
+
+    <!-- CONTINUITY -->
+    <div class="callout green">
+      <div class="callout-icon">🤝</div>
+      <div class="callout-body">
+        Você já tem o que postar. Agora é só ter o jeito mais fácil de gravar. <strong>Os dois rodam na mesma jornada.</strong>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- OFFER -->
+    <div class="offer-card" id="oferta">
+      <div class="offer-card-head">
+        <span class="offer-emoji">🎬</span>
+        <span class="offer-tag">Mini curso · oferta exclusiva</span>
+      </div>
+
+      <div class="offer-title">
+        <em>O jeito da Leislin de gravar reels</em>
+      </div>
+
+      <ul class="offer-includes">
+        <li>
+          <span class="offer-includes-icon">▶</span>
+          <span>Tudo que eu penso antes de gravar: o que eu cuido, como eu estruturo na minha cabeça, e as dicas que eu queria saber quando gravei minha primeira série</span>
+        </li>
+        <li>
+          <span class="offer-includes-icon">▶</span>
+          <span>A minha forma de gravar (eu gravando um reels, na prática) pra você ver como quase não erro, não decoro nada e torno minha vida mais fácil</span>
+        </li>
+        <li>
+          <span class="offer-includes-icon">▶</span>
+          <span>Os equipamentos que eu uso e porque eles valem o seu dinheiro</span>
+        </li>
+        <li>
+          <span class="offer-includes-icon">▶</span>
+          <span>Como editar seus vídeos usando IA + CapCut, gastando minutos pra editar um reels inteiro</span>
+        </li>
+        <li>
+          <span class="offer-includes-icon">▶</span>
+          <span>Acesso pra sempre, no celular ou computador</span>
+        </li>
+      </ul>
+
+      <hr class="offer-divider">
+
+      <div class="offer-price-block">
+        <div class="offer-price-row">
+          <span class="offer-price-currency">R$</span>
+          <span class="offer-price-num">27</span>
+        </div>
+        <div class="offer-terms">pagamento único · acesso vitalício</div>
+      </div>
+
+      <div id="llupsell-CFD57ECF7-" class="cta">
+        Quero gravar tão fácil quanto a Leislin
+        <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+
+      <div class="offer-payments">
+        <span class="offer-pay-emoji" title="Cartão">💳</span>
+        <span class="offer-pay-emoji" title="Pix">⚡</span>
+        <span class="offer-pay-label">Cartão ou Pix · acesso imediato</span>
+      </div>
+    </div>
+
+    <div class="decline-block">
+      <div id="denyButtone2ca732" class="decline-btn">
+        Não. Quero seguir só com o modelo
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- GUARANTEE -->
+    <div class="callout green">
+      <div class="callout-icon">🛡️</div>
+      <div class="callout-body">
+        <strong>Garantia de 7 dias.</strong>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- BOTTOM TAB BAR -->
+  <div class="tab-bar">
+    <div class="tab active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="21" y1="21" x2="16.5" y2="16.5"/>
+      </svg>
+      <span>Pesquisar</span>
+    </div>
+    <div class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12L12 4L21 12"/>
+        <path d="M5 10v10h14V10"/>
+      </svg>
+      <span>Início</span>
+    </div>
+    <div class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+      </svg>
+      <span>Notif.</span>
+    </div>
+    <div class="tab">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"/>
+        <line x1="5" y1="12" x2="19" y2="12"/>
+      </svg>
+      <span>Nova</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
