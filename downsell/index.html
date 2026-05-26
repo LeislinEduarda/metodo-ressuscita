@@ -1,1 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Última chance — Clube de Análise de Reels da Leislin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF8F5;
+    --bg-soft: #F4EFE8;
+    --text: #1A1A1A;
+    --text-soft: #4A4A4A;
+    --text-light: #8A8A8A;
+    --border: #EBE5DC;
+    --accent: #C13584;
+    --accent-soft: #FBEAF0;
+    --alert-bg: #FFF6E2;
+    --alert-text: #8B6B12;
+    --insta-gradient: linear-gradient(135deg, #FCAF45 0%, #F77737 25%, #E1306C 55%, #C13584 80%, #833AB4 100%);
+    --insta-gradient-hover: linear-gradient(135deg, #F77737 0%, #E1306C 35%, #C13584 70%, #833AB4 100%);
+  }
 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: left;
+  }
+
+  .alert-bar {
+    background: var(--alert-bg);
+    color: var(--alert-text);
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid #F5E5C1;
+    line-height: 1.5;
+  }
+
+  .container {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 40px 22px 60px;
+    text-align: left;
+  }
+
+  .block {
+    margin-bottom: 56px;
+  }
+
+  /* TIPOGRAFIA */
+  h1 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    color: var(--text);
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+    margin-bottom: 18px;
+    color: var(--text);
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 14px;
+    color: var(--text);
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: 18px;
+    color: var(--text-soft);
+    font-size: 16.5px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  strong {
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* SUBHEADLINE */
+  .hook-sub {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--text-soft);
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* RECONHECIMENTO DA HESITAÇÃO — pensamentos entre aspas */
+  .thoughts-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .thoughts-list li {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    border-left: 3px solid var(--accent);
+    font-style: italic;
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .makes-sense {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 24px 0 12px;
+  }
+
+  /* OFERTA EXPERIÊNCIA */
+  .offer-experience {
+    background: var(--bg-soft);
+    border-radius: 20px;
+    padding: 36px 24px;
+    margin: 28px 0;
+  }
+
+  .offer-experience .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+    background: var(--insta-gradient);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+
+  .offer-experience h2 {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .offer-experience .tagline {
+    color: var(--text);
+    font-size: 16.5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  /* CONFIRMAÇÃO DO TEMPO */
+  .you-keep {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 28px 0 16px;
+  }
+
+  /* STACK DE VALOR */
+  .value-stack {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .value-stack li {
+    background: white;
+    border-radius: 14px;
+    padding: 18px 18px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .value-stack .icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--insta-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    box-shadow: 0 4px 14px rgba(193, 53, 132, 0.22);
+  }
+
+  .value-stack .content {
+    flex: 1;
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--text);
+    padding-top: 4px;
+    text-align: left;
+  }
+
+  /* DURATION HIGHLIGHT */
+  .duration-highlight {
+    margin: 32px 0 8px;
+    padding: 28px 20px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .duration-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--insta-gradient);
+  }
+
+  .duration-highlight .duration-number {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1;
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+  }
+
+  .duration-highlight .duration-label {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+  }
+
+  .duration-highlight .duration-sub {
+    font-size: 14px;
+    color: var(--text-soft);
+    margin-top: 8px;
+  }
+
+  /* PREÇO */
+  .price-context {
+    font-size: 16px;
+    color: var(--text-soft);
+    margin: 32px 0 14px;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .price-box {
+    padding: 36px 20px 32px;
+    margin: 8px 0 0;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .price-reveal-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 14px;
+  }
+
+  .price-old {
+    font-size: 16px;
+    color: var(--text-light);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .price-old-second {
+    font-size: 15px;
+    color: var(--text-light);
+    text-decoration: line-through;
+    margin-bottom: 14px;
+  }
+
+  .price-new {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.1;
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 8px 0 6px;
+    letter-spacing: -1.2px;
+  }
+
+  .price-cash {
+    font-size: 14px;
+    color: var(--text-soft);
+    font-weight: 600;
+  }
+
+  /* GARANTIA */
+  .guarantee-card {
+    background: white;
+    border-radius: 18px;
+    padding: 32px 22px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 28px;
+    text-align: left;
+  }
+
+  .guarantee-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--insta-gradient);
+  }
+
+  .guarantee-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 18px;
+    font-size: 26px;
+  }
+
+  .guarantee-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .guarantee-card p {
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  /* FECHAMENTO — escassez real */
+  .closing-urgency {
+    background: var(--accent-soft);
+    border-radius: 18px;
+    padding: 28px 22px;
+    margin: 32px 0 0;
+    text-align: left;
+  }
+
+  .closing-urgency p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .closing-urgency p:last-child {
+    margin-bottom: 0;
+  }
+
+  .closing-urgency .last-chance {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 17px;
+  }
+
+  /* CTAs */
+  .cta-area {
+    text-align: center;
+    margin: 44px 0 24px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    width: 100%;
+    padding: 22px 20px;
+    background: var(--insta-gradient);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 6px 20px rgba(193, 53, 132, 0.22);
+  }
+
+  .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(193, 53, 132, 0.30);
+    background: var(--insta-gradient-hover);
+  }
+
+  .cta-button:active {
+    transform: translateY(0);
+  }
+
+  .cta-decline {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 13.5px;
+    color: var(--text-light);
+    text-decoration: underline;
+    text-decoration-color: #D6D0C6;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    font-style: italic;
+    line-height: 1.5;
+    padding: 0 12px;
+  }
+
+  .cta-decline:hover {
+    color: var(--text-soft);
+  }
+
+  .small-note {
+    font-size: 12.5px;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 14px;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 700px) {
+    .container { padding: 56px 28px 80px; max-width: 600px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 26px; }
+    .hook-sub { font-size: 20px; }
+    .offer-experience h2 { font-size: 24px; }
+    .duration-highlight .duration-number { font-size: 60px; }
+    .price-new { font-size: 52px; }
+    .value-stack .icon { width: 46px; height: 46px; font-size: 21px; }
+    .value-stack .content { font-size: 16.5px; }
+    .cta-button { font-size: 16px; padding: 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+  <main class="container">
+
+    <!-- HEADLINE -->
+    <section class="block">
+      <h1>Eu entendo. 12 meses parece muito pra quem ainda está testando.</h1>
+      <p class="hook-sub">Mas a oferta que você acabou de ver é boa demais pra eu deixar você sair sem ter <strong>mais uma chance</strong> de aproveitar ela.</p>
+    </section>
+
+    <!-- TRANSIÇÃO PARA A OFERTA -->
+    <section class="block">
+      <p>Por isso eu vou fazer diferente com você agora.</p>
+    </section>
+
+    <!-- OFERTA EXPERIÊNCIA -->
+    <section class="block">
+      <div class="offer-experience">
+        <h2>Eu vou te oferecer o Clube em uma versão mais leve.</h2>
+        <p class="tagline"><strong>Metade do tempo. Metade do preço.</strong></p>
+        <p style="margin-bottom: 0;">As mesmas análises individuais que você ia ter na versão completa, agora em um formato pra você testar sem pressão.</p>
+      </div>
+
+      <p class="you-keep">Você continua tendo direito a:</p>
+
+      <ul class="value-stack">
+        <li>
+          <div class="icon">✨</div>
+          <div class="content"><strong>A minha análise individual</strong> dos seus reels toda terça e quinta.</div>
+        </li>
+        <li>
+          <div class="icon">👁️</div>
+          <div class="content">A minha visão sobre <strong>nome de série, episódios, temas, comunicação, roteirização, edição e gravação</strong>.</div>
+        </li>
+        <li>
+          <div class="icon">✅</div>
+          <div class="content">A minha <strong>validação do seu gancho, tema e chamada para ação</strong>.</div>
+        </li>
+        <li>
+          <div class="icon">🔍</div>
+          <div class="content">Descoberta dos <strong>pontos cegos da sua criação de reels</strong>.</div>
+        </li>
+        <li>
+          <div class="icon">📖</div>
+          <div class="content">Acesso às análises <strong>de outras alunas</strong>, pra aprender com os acertos e erros delas.</div>
+        </li>
+        <li>
+          <div class="icon">👯</div>
+          <div class="content">O <strong>espaço de co-criação</strong> com as outras alunas do modelo.</div>
+        </li>
+      </ul>
+
+      <!-- 26 SEMANAS -->
+      <div class="duration-highlight">
+        <div class="duration-number">26</div>
+        <div class="duration-label">semanas ao meu lado</div>
+        <div class="duration-sub">Tempo mais que suficiente pra testar, ver o resultado e decidir.</div>
+      </div>
+
+      <!-- PREÇO -->
+      <p class="price-context">Em vez dos <strong>R$ 197 do plano anual</strong>...</p>
+
+      <div class="price-box">
+        <div class="price-reveal-label">Você acessa por</div>
+        <div class="price-old">De 12x R$ 20,98</div>
+        <div class="price-old-second">no plano anual</div>
+        <div class="price-new">12x R$ 10,45</div>
+        <div class="price-cash">(ou R$ 98 à vista, pelos 6 meses)</div>
+      </div>
+
+      <!-- GARANTIA -->
+      <div class="guarantee-card">
+        <div class="guarantee-icon">🎁</div>
+        <h3>A mesma garantia continua valendo.</h3>
+        <p>Se você entrar, pedir sua primeira análise e sentir que <strong>não valeu 10x mais</strong> do que pagou, eu te devolvo cada centavo. Você não perde nada testando.</p>
+      </div>
+
+      <!-- FECHAMENTO -->
+      <div class="closing-urgency">
+        <p><span class="last-chance">Essa é a sua última oportunidade de entrar no Clube por esse valor.</span></p>
+        <p>Se você fechar essa página agora, da próxima vez que tiver interesse no Clube, ele estará disponível apenas pelo valor oficial.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-area">
+      <a class="cta-button" href="https://lastlink.com/p/CE3292352/checkout-payment/">
+        ✅ SIM, QUERO TESTAR O CLUBE POR 6 MESES POR R$ 98
+      </a>
+      <p class="small-note">Acesso imediato após o pagamento</p>
+
+      <br>
+
+      <a class="cta-decline" href="https://escola.leislin.com.br/auth/login">
+        ❌ Não, prefiro mesmo tentar sozinha.
+      </a>
+    </section>
+
+  </main>
+
+</body>
+</html>
