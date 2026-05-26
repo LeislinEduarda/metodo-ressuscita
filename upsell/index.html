@@ -830,19 +830,42 @@
 
     <!-- CTA -->
     <section class="cta-area">
-      <button class="cta-button" type="button">
+      <button class="cta-button button-accept" type="button" id="llupsell-C7A734008-12">
         ✅ SIM, QUERO MINHAS 100+ ANÁLISES POR R$ 197
       </button>
       <p class="small-note">Adicionar ao meu pedido com 1 clique</p>
 
       <br>
 
-      <a class="cta-decline" href="#">
+      <a class="cta-decline" id="denyButton626f3bd">
         ❌ Prefiro seguir errando sozinha.
       </a>
     </section>
 
   </main>
+
+  <!-- Lastlink: redirect de aceite + downsell -->
+  <script src="https://cdn.lastlink.com/upsell.min.js"></script>
+  <script>
+    var upsellRedirect = "https://escola.leislin.com.br/auth/login";
+    function setupDenyButtons() {
+      document.querySelectorAll('[id^="denyButton"]').forEach(button => {
+        button.onclick = function() {
+          const currentUrl = new URL(window.location.href);
+          const newUrl = new URL("https://www.leislin.com.br/downsell");
+          currentUrl.searchParams.forEach((value, key) => {
+            newUrl.searchParams.append(key, value);
+          });
+          window.location.href = newUrl.toString();
+        };
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupDenyButtons);
+    } else {
+      setupDenyButtons();
+    }
+  </script>
 
 </body>
 </html>
