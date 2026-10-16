@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modelos de Stories — prontos pra você usar</title>
+
+<link rel="preconnect" href="https://lastlink.com">
+<link rel="dns-prefetch" href="//lastlink.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,700;1,800&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================
+     CORES — troque aqui pra ajustar ao verde exato da Lastlink
+     ========================================================== */
+  :root {
+    --green: #00B964;
+    --green-dark: #00904E;
+    --green-soft: #E8F8EF;
+    --green-line: #BDEBD2;
+    --white: #FFFFFF;
+    --bg-offwhite: #FFFFFF;  /* branco */
+    --bg-pink: #FFFFFF;
+    --bg-yellow: #FFFFFF;
+    --text: #2E0A5C;         /* roxo escuro (texto) */
+    --text-mute: #2E0A5C;
+    --pink: #8A2BE2;         /* roxo vibrante (destaques e botão) */
+    --pink-dark: #5E14CA;    /* sombra do botão */
+    --lavender: #E1DAF0;
+    --grad: linear-gradient(90deg, #D13AD8, #5E14CA);
+    --hairline: #E4E9E6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+
+  body {
+    font-family: 'Open Sans', system-ui, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; text-align: center; }
+  .block { padding: 72px 0; }
+  .bg-offwhite { background: var(--bg-offwhite); }
+  .bg-pink { background: var(--bg-pink); }
+  .bg-yellow { background: var(--bg-yellow); }
+
+  h1 {
+    font-size: clamp(34px, 6.4vw, 56px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: clamp(26px, 4.4vw, 38px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 18px;
+  }
+  h1 em, h2 em { font-style: italic; font-weight: 800; color: var(--text); }
+  em.pk, .pk { color: var(--pink) !important; }
+
+  .sub {
+    font-size: clamp(17px, 2.2vw, 19px);
+    color: var(--text-mute);
+    max-width: 560px;
+    margin: 0 auto 18px;
+  }
+  .hero-sub { font-size: clamp(20px, 3vw, 24px); font-weight: 700; color: var(--text); }
+  .sub strong { color: var(--text); font-weight: 700; }
+
+  .big-line {
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    max-width: 560px;
+    margin: 28px auto 0;
+  }
+  .big-line em { font-style: italic; font-weight: 800; color: var(--text); }
+
+  /* ========== ESPAÇOS DE IMAGEM ==========
+     Cada .media tenta carregar a imagem do src.
+     Se o arquivo ainda não existir, aparece o placeholder com a instrução. */
+  .media {
+    position: relative;
+    margin: 36px auto;
+    border-radius: 28px;
+    background: var(--white);
+    border: 2px dotted var(--text);
+    padding: 24px 20px;
+    overflow: hidden;
+  }
+  .media img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .12));
+  }
+  .media .ph { display: none; }
+  .media.empty {
+    border: 2px dotted var(--text);
+    min-height: 260px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .media.empty .ph {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+  .media.empty .ph b {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .media.tall.empty { min-height: 380px; }
+  .media.sales { max-width: 680px; margin: 32px auto 8px; }
+  .media.sales.empty { min-height: 0; aspect-ratio: 16 / 7; }
+
+  /* 3 reels lado a lado */
+  .reels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 36px auto;
+  }
+  .reels .media { margin: 0; padding: 10px; border-radius: 20px; }
+  .reels .media img { aspect-ratio: 9/16; object-fit: cover; border-radius: 12px; }
+  .reels .media.empty { min-height: 0; aspect-ratio: 9/16; }
+  .reels .media.empty .ph { font-size: 12px; padding: 0 6px; }
+
+  /* prints das alunas */
+  .proofs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 36px auto 0;
+  }
+  .proofs figure {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 12px;
+  }
+  .proofs img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--hairline);
+  }
+
+  /* ========== PREÇO + BOTÃO ========== */
+  .buy { max-width: 440px; margin: 0 auto; }
+  .price {
+    font-size: clamp(64px, 12vw, 92px);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price small {
+    font-size: .32em; font-weight: 700; color: var(--text);
+    vertical-align: top; position: relative; top: .5em; margin-right: 4px; letter-spacing: 0;
+  }
+  .terms {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    margin-bottom: 22px;
+  }
+
+  .cta {
+    display: block;
+    width: 100%;
+    background: var(--pink);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 22px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 0 var(--pink-dark);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { transform: translateY(3px); box-shadow: 0 2px 0 0 var(--pink-dark); }
+  .cta-solo { max-width: 440px; margin: 0 auto; }
+
+  .secure {
+    margin-top: 18px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--text-mute);
+  }
+  .secure svg { width: 13px; height: 13px; }
+
+  .price-box {
+    margin: 36px auto 0;
+    max-width: 480px;
+    border: 2px solid var(--pink);
+    border-radius: 28px;
+    padding: 30px 24px 26px;
+    background: var(--white);
+    color: var(--text);
+    box-shadow: 0 24px 50px -20px rgba(138, 43, 226, .35);
+  }
+
+
+  /* legenda dos prints */
+
+
+  /* ========== MURAL DE PROVAS (bagunçado) ========== */
+  .wall {
+    columns: 3 200px;
+    column-gap: 14px;
+    margin: 36px auto 0;
+    max-width: 680px;
+    text-align: left;
+  }
+  .shot {
+    break-inside: avoid;
+    margin: 0 0 14px;
+    background: var(--white);
+    border: 2px solid var(--pink);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 10px 24px -14px rgba(0,0,0,.25);
+  }
+  .shot img { width: 100%; height: auto; border-radius: 8px; }
+  .shot:nth-child(4n+1) { transform: rotate(-1.6deg); }
+  .shot:nth-child(4n+2) { transform: rotate(1.2deg) translateX(4px); }
+  .shot:nth-child(4n+3) { transform: rotate(-0.6deg); }
+  .shot:nth-child(4n)   { transform: rotate(1.8deg) translateX(-3px); }
+  .shot.empty {
+    border: 2px dotted var(--text);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .shot.empty.tall { min-height: 300px; }
+  .shot.empty.mid { min-height: 220px; }
+  .shot.empty.short { min-height: 150px; }
+
+
+  /* ========== MOCKUPS ==========
+     Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
+     Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
+  .mock { position: relative; margin: 36px auto 0; width: 100%; }
+  .mock img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .mock.wide { width: min(100vw - 24px, 960px); margin-left: 50%; transform: translateX(-50%); }
+  .mock.tall { max-width: 460px; }
+  .mock .ph { display: none; }
+  .mock.empty {
+    border: 2px dotted var(--pink); border-radius: 22px; background: var(--white);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .mock.empty.wide { transform: none; margin-left: auto; width: 100%; }
+  .mock.empty .ph { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; }
+  .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
+  .offer-card .mock { margin: 24px auto; }
+
+  .bar { width: 120px; height: 6px; border-radius: 6px; background: var(--grad); margin: 0 auto 22px; }
+  .perks .ck { background: var(--grad) !important; }
+
+  /* ========== CARD DA OFERTA ========== */
+  .offer-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--white);
+    border: none;
+    border-radius: 28px;
+    padding: 40px 28px 30px;
+    box-shadow: 0 30px 60px -28px rgba(138, 43, 226, .4);
+  }
+  .offer-card h2 { font-size: clamp(24px, 3.8vw, 32px); }
+  .offer-card .media { margin: 24px auto; }
+  .offer-card .media.empty { min-height: 0; aspect-ratio: 4 / 5; }
+  .perks {
+    list-style: none;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin: 22px auto 0;
+    width: fit-content;
+  }
+  .perks li { display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+  .perks .ck {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--pink); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800;
+  }
+  .pay { display: flex; justify-content: center; gap: 10px; margin-top: 22px; }
+  .pay-badge {
+    height: 36px; min-width: 62px; padding: 0 12px;
+    border: 1px solid var(--hairline); border-radius: 8px; background: var(--white);
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    font-size: 14px; color: #32BCAD;
+  }
+  .pay-badge b { color: var(--text); font-weight: 700; }
+
+  /* ========== HERO ========== */
+  .hero { padding: 64px 0 72px; }
+  .hero .media { margin: 32px auto 0; }
+
+  /* ========== RESPONSIVO ========== */
+  @media (max-width: 640px) {
+    .block { padding: 56px 0; }
+    .hero { padding: 48px 0 56px; }
+    .media { padding: 14px 12px; border-radius: 22px; }
+    .reels { gap: 8px; }
+    .reels .media { padding: 6px; border-radius: 14px; }
+    .proofs { gap: 8px; }
+    .proofs figure { padding: 6px; border-radius: 14px; }
+    .proofs img { border-radius: 9px; }
+    .offer-card { padding: 30px 18px 24px; border-radius: 24px; }
+    .wall { columns: 2; column-gap: 10px; }
+    .shot { padding: 5px; border-radius: 10px; margin-bottom: 10px; }
+    .perks li { font-size: 13.5px; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Nunca mais abri os stories <span class="pk">sem saber o que postar</span>. Os meus Modelos de Stories tão aqui 👇</h1>
+      <div class="bar"></div>
+      <!-- MOCKUP1 — proporção sugerida 2000x1257 -->
+      <figure class="mock wide" style="aspect-ratio:2000/1257">
+        <img src="mockup-stories1.webp" alt="Os Modelos de Stories no celular com as páginas do material" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 1</b>mockup-stories1.webp · 2000×1257</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ EU USO ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <h2>Eu não tô te vendendo um Modelo que eu acho que funciona. <span class="pk">Eu tô te entregando os que eu uso.</span></h2>
+      <p class="big-line">Eu sou a aluna número 1 dos meus próprios Modelos de Stories.</p>
+      <p class="sub" style="margin-top:22px"><strong>Cada modelo aqui dentro é um stories que eu postei de verdade</strong>, com os resultados reais de cada um.</p>
+      <!-- MOCKUP2 — proporção sugerida 2000x1040 -->
+      <figure class="mock wide" style="aspect-ratio:2000/1040">
+        <img src="mockup-stories2.webp" alt="Resultados reais dos stories" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 2</b>mockup-stories2.webp · 2000×1040</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ OS MODELOS POR DENTRO ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <h2>Eu selecionei a dedo os meus stories que mais funcionaram e <span class="pk">deixei prontos pra você pegar e usar.</span></h2>
+      <p class="sub">É só preencher com o seu trabalho e postar.</p>
+      <!-- MOCKUP3 — proporção sugerida 2000x1166 -->
+      <figure class="mock wide" style="aspect-ratio:2000/1166">
+        <img src="mockup-stories3.webp" alt="Os Modelos de Stories por dentro" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 3</b>mockup-stories3.webp · 2000×1166</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CARD DA OFERTA ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <div class="offer-card">
+        <h2>Eu já sei o que vou postar nos stories. <span class="pk">Agora você também pode saber</span> com os meus Modelos de Stories.</h2>
+
+      <!-- MOCKUP4 — proporção sugerida 2000x1560 -->
+      <figure class="mock " style="aspect-ratio:2000/1560">
+        <img src="mockup-stories4.webp" alt="Os Modelos de Stories completos" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 4</b>mockup-stories4.webp · 2000×1560</figcaption>
+      </figure>
+
+        <div class="price" style="margin-bottom:22px"><small>R$</small>47</div>
+
+        <a href="https://lastlink.com/p/C625497AE/checkout-payment/" class="cta">Quero os meus Modelos de Stories</a>
+
+        <ul class="perks">
+          <li><span class="ck">✓</span>Acesso imediato</li>
+          <li><span class="ck">✓</span>7 dias de garantia</li>
+          <li><span class="ck">✓</span>Funciona para qualquer assunto</li>
+        </ul>
+
+        <div class="pay">
+          <span class="pay-badge" aria-label="Visa">
+            <svg viewBox="0 0 48 16" width="44" height="15"><text x="24" y="13" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="900" font-style="italic" fill="#1A1F71">VISA</text></svg>
+          </span>
+          <span class="pay-badge" aria-label="Mastercard">
+            <svg viewBox="0 0 38 24" width="34" height="22"><circle cx="14" cy="12" r="9" fill="#EB001B"/><circle cx="24" cy="12" r="9" fill="#F79E1B"/><path d="M19 4.8a9 9 0 0 1 0 14.4a9 9 0 0 1 0-14.4z" fill="#FF5F00"/></svg>
+          </span>
+          <span class="pay-badge" aria-label="Pix">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l4.2 4.2-2.6 2.6a2.3 2.3 0 0 0-3.2 0L7.8 6.7zM2.5 12l4.2-4.2 2.6 2.6a2.3 2.3 0 0 0 0 3.2l-2.6 2.6zM21.5 12l-4.2 4.2-2.6-2.6a2.3 2.3 0 0 0 0-3.2l2.6-2.6zM12 21.5l-4.2-4.2 2.6-2.6a2.3 2.3 0 0 0 3.2 0l2.6 2.6z" fill="#32BCAD"/></svg>
+            <b>Pix</b>
+          </span>
+        </div>
+
+        <div class="secure">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 10V7a6 6 0 1 1 12 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+          Pagamento 100% seguro
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
