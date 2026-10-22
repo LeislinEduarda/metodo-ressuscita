@@ -2,1036 +2,507 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<title>O jeito da Leislin de gravar reels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modelo de Reels — Notion pronto pra copiar e colar</title>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1292839838840770');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1292839838840770&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<script>
+  fbq('track', 'ViewContent', {
+    content_name: 'Modelo de Reels',
+    content_category: 'Notion Template',
+    content_ids: ['modelo-reels'],
+    content_type: 'product',
+    value: 47.00,
+    currency: 'BRL'
+  });
+</script>
+
+<meta name="facebook-domain-verification" content="kf6hsknkhh7fbowbanvs73jkbbxv6s" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTGK16VC79"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted'
+  });
+  gtag('set', 'linker', { domains: ['lastlink.com'] });
+  gtag('config', 'G-XTGK16VC79');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "vtpfue9s9w");
+</script>
+
+<link rel="preconnect" href="https://lastlink.com">
+<link rel="dns-prefetch" href="//lastlink.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script src="https://cdn.lastlink.com/upsell.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <style>
+  /* ==========================================================
+     CORES — troque aqui pra ajustar ao verde exato da Lastlink
+     ========================================================== */
   :root {
-    --notion-bg: #FFFFFF;
-    --notion-text: #37352F;
-    --notion-text-mute: #787774;
-    --notion-text-light: #9B9A97;
-    --notion-divider: rgba(55, 53, 47, 0.09);
-    --notion-hover: rgba(55, 53, 47, 0.04);
-
-    --callout-default: #F1F1EF;
-    --callout-pink: #FAF1F5;
-    --callout-pink-text: #AD1A72;
-    --callout-pink-border: rgba(173, 26, 114, 0.2);
-    --callout-orange: #FBECDD;
-    --callout-orange-text: #C77E48;
-    --callout-green: #EEF3ED;
-    --callout-green-text: #4F6F52;
-    --callout-yellow: #FBF3DB;
-    --callout-yellow-text: #89632A;
-
-    --notion-pink: #E03E3E;
-    --notion-orange: #D9730D;
-    --notion-green: #448361;
+    --green: #00B964;
+    --green-dark: #00904E;
+    --green-soft: #E8F8EF;
+    --green-line: #BDEBD2;
+    --white: #FFFFFF;
+    --bg-offwhite: #FFFFFF;  /* branco */
+    --bg-pink: #FFFFFF;
+    --bg-yellow: #FFFFFF;
+    --text: #000000;
+    --text-mute: #000000;
+    --pink: #E91E63;
+    --pink-dark: #B0124A;         /* rosa forte dos destaques */
+    --hairline: #E4E9E6;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-  html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
 
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #EBEBEA;
-    color: var(--notion-text);
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: 'Open Sans', system-ui, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
   }
 
-  .phone-shell {
-    max-width: 430px;
-    margin: 0 auto;
-    background: var(--notion-bg);
-    min-height: 100vh;
-    position: relative;
-  }
+  img { max-width: 100%; display: block; }
 
-  /* Notion top nav */
-  .notion-nav {
-    height: 48px;
-    padding: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--notion-bg);
-    position: sticky;
-    top: 0;
-    z-index: 99;
-  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; text-align: center; }
+  .block { padding: 72px 0; }
+  .bg-offwhite { background: var(--bg-offwhite); }
+  .bg-pink { background: var(--bg-pink); }
+  .bg-yellow { background: var(--bg-yellow); }
 
-  .nav-left, .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-  }
-
-  .nav-btn {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    color: var(--notion-text-mute);
-    cursor: pointer;
-  }
-
-  .nav-btn:active { background: var(--notion-hover); }
-  .nav-btn svg { width: 18px; height: 18px; display: block; }
-
-  .nav-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 0 4px;
-    font-size: 13.5px;
-    color: var(--notion-text-mute);
-    font-weight: 500;
-    overflow: hidden;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .breadcrumb-emoji { font-size: 14px; flex-shrink: 0; }
-
-  .breadcrumb-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  /* PAGE CONTENT */
-  .page-content {
-    padding: 12px 24px 32px;
-    background: var(--notion-bg);
-  }
-
-  .page-icon {
-    font-size: 60px;
-    line-height: 1;
-    margin: 12px 0 16px;
-  }
-
-  .page-title {
-    font-size: 32px;
+  h1 {
+    font-size: clamp(34px, 6.4vw, 56px);
     font-weight: 800;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: var(--notion-text);
-    margin-bottom: 4px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
   }
-
-  .page-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--notion-text-light);
-    margin: 14px 0 22px;
-    flex-wrap: wrap;
-  }
-
-  .page-meta-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .page-meta-icon { width: 13px; height: 13px; }
-  .page-meta-divider { color: var(--notion-text-light); opacity: 0.5; }
-
-  /* BLOCKS */
-  .block {
-    margin-bottom: 4px;
-    padding: 3px 2px;
-    line-height: 1.55;
-    color: var(--notion-text);
-    font-size: 16px;
-  }
-
-  .block strong { font-weight: 700; }
-
-  .block em {
-    font-style: italic;
-    color: var(--notion-pink);
-    font-weight: 600;
-  }
-
-  .berry-bg {
-    font-style: italic;
-    background: rgba(245, 200, 215, 0.55);
-    color: var(--callout-pink-text);
-    padding: 0 4px;
-    border-radius: 3px;
-    font-weight: 600;
-  }
-
-  .green-bg {
-    background: var(--callout-green);
-    padding: 0 4px;
-    border-radius: 3px;
-    font-weight: 600;
-    color: var(--callout-green-text);
-  }
-
-  .strike-px {
-    text-decoration: line-through;
-    text-decoration-color: var(--notion-pink);
-    text-decoration-thickness: 1.5px;
-    color: var(--notion-text-light);
-    font-style: italic;
-  }
-
-  .h3 {
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 24px 0 4px;
-    padding: 3px 2px;
-    color: var(--notion-text);
-  }
-
-  .divider {
-    border: none;
-    border-top: 1px solid var(--notion-divider);
-    margin: 18px 0;
-  }
-
-  /* QUOTE */
-  .quote {
-    border-left: 3px solid var(--notion-text);
-    padding: 4px 0 4px 14px;
-    margin: 8px 0;
-    font-size: 17px;
-    line-height: 1.45;
-    color: var(--notion-text);
-  }
-
-  .quote em {
-    font-style: italic;
-    color: var(--notion-pink);
-    font-weight: 600;
-  }
-
-  .quote-large {
-    font-size: 19px;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 1.35;
-  }
-
-  /* CALLOUT */
-  .callout {
-    background: var(--callout-default);
-    border-radius: 4px;
-    padding: 16px 16px 16px 14px;
-    margin: 10px 0;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    line-height: 1.5;
-    font-size: 15.5px;
-  }
-
-  .callout-icon {
-    font-size: 20px;
-    line-height: 1.2;
-    flex-shrink: 0;
-    width: 22px;
-    text-align: center;
-  }
-
-  .callout-body { flex: 1; min-width: 0; }
-  .callout-body strong { font-weight: 700; }
-
-  .callout.green { background: var(--callout-green); }
-  .callout.pink { background: var(--callout-pink); }
-
-  /* TODO */
-  .todo {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    padding: 4px 2px;
-    margin-bottom: 1px;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .todo-checkbox {
-    width: 16px;
-    height: 16px;
-    border-radius: 3px;
-    border: 1.5px solid var(--notion-text-mute);
-    flex-shrink: 0;
-    margin-top: 4px;
-    background: var(--notion-bg);
-    position: relative;
-  }
-
-  .todo-checkbox.checked {
-    background: var(--notion-text);
-    border-color: var(--notion-text);
-  }
-
-  .todo-checkbox.checked::after {
-    content: "";
-    position: absolute;
-    top: 1.5px;
-    left: 4.5px;
-    width: 4px;
-    height: 8px;
-    border: solid white;
-    border-width: 0 1.8px 1.8px 0;
-    transform: rotate(45deg);
-  }
-
-  .todo.done .todo-text {
-    color: var(--notion-text-light);
-    text-decoration: line-through;
-  }
-
-  .todo.highlight {
-    background: var(--callout-yellow);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin: 6px 0 2px;
-    border: 1.5px solid rgba(137, 99, 42, 0.2);
-  }
-
-  .todo.highlight .todo-text {
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--notion-text);
-  }
-
-  .todo.highlight .todo-checkbox {
-    margin-top: 5px;
-    border-color: var(--callout-yellow-text);
-  }
-
-  /* NUM LIST */
-  .num-list { margin: 4px 0 8px; }
-
-  .num-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    padding: 4px 2px;
-    margin-bottom: 1px;
-    font-size: 16px;
-    line-height: 1.55;
-  }
-
-  .num-marker {
-    color: var(--notion-text);
-    font-weight: 500;
-    flex-shrink: 0;
-    min-width: 22px;
-  }
-
-  .num-text { flex: 1; }
-
-  /* TOGGLE */
-  .toggle { margin: 2px 0; }
-
-  .toggle-summary {
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-    padding: 4px 2px;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--notion-text);
-    list-style: none;
-  }
-
-  .toggle-summary::-webkit-details-marker { display: none; }
-
-  .toggle-arrow {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-    margin-top: 6px;
-    color: var(--notion-text-mute);
-    transition: transform 0.15s ease;
-  }
-
-  .toggle[open] .toggle-arrow { transform: rotate(90deg); }
-
-  .toggle-content {
-    padding: 2px 0 6px 22px;
-    color: var(--notion-text);
-  }
-
-  .toggle-content p {
-    font-size: 15px;
-    line-height: 1.55;
-    color: var(--notion-text-mute);
-  }
-
-  /* OFFER CARD */
-  .offer-card {
-    background: var(--callout-pink);
-    border-radius: 8px;
-    padding: 28px 26px 30px;
-    margin: 24px 0 14px;
-    position: relative;
-    border: 1.5px solid var(--callout-pink-border);
-  }
-
-  .offer-card-head {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  h2 {
+    font-size: clamp(26px, 4.4vw, 38px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
     margin-bottom: 18px;
   }
+  h1 em, h2 em { font-style: italic; font-weight: 800; color: var(--text); }
+  em.pk, .pk { color: var(--pink) !important; }
 
-  .offer-emoji { font-size: 24px; line-height: 1; }
+  .sub {
+    font-size: clamp(17px, 2.2vw, 19px);
+    color: var(--text-mute);
+    max-width: 560px;
+    margin: 0 auto 18px;
+  }
+  .hero-sub { font-size: clamp(20px, 3vw, 24px); font-weight: 700; color: var(--text); }
+  .sub strong { color: var(--text); font-weight: 700; }
 
-  .offer-tag {
-    font-size: 11px;
+  .big-line {
+    font-size: clamp(20px, 3vw, 24px);
     font-weight: 700;
-    letter-spacing: 0.16em;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    max-width: 560px;
+    margin: 28px auto 0;
+  }
+  .big-line em { font-style: italic; font-weight: 800; color: var(--text); }
+
+  /* ========== ESPAÇOS DE IMAGEM ==========
+     Cada .media tenta carregar a imagem do src.
+     Se o arquivo ainda não existir, aparece o placeholder com a instrução. */
+  .media {
+    position: relative;
+    margin: 36px auto;
+    border-radius: 28px;
+    background: var(--white);
+    border: 2px dotted var(--text);
+    padding: 24px 20px;
+    overflow: hidden;
+  }
+  .media img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .12));
+  }
+  .media .ph { display: none; }
+  .media.empty {
+    border: 2px dotted var(--text);
+    min-height: 260px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .media.empty .ph {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+  .media.empty .ph b {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .16em;
     text-transform: uppercase;
-    color: var(--callout-pink-text);
+    margin-bottom: 6px;
+  }
+  .media.tall.empty { min-height: 380px; }
+  .media.sales { max-width: 680px; margin: 32px auto 8px; }
+  .media.sales.empty { min-height: 0; aspect-ratio: 16 / 7; }
+
+  /* 3 reels lado a lado */
+  .reels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 36px auto;
+  }
+  .reels .media { margin: 0; padding: 10px; border-radius: 20px; }
+  .reels .media img { aspect-ratio: 9/16; object-fit: cover; border-radius: 12px; }
+  .reels .media.empty { min-height: 0; aspect-ratio: 9/16; }
+  .reels .media.empty .ph { font-size: 12px; padding: 0 6px; }
+
+  /* prints das alunas */
+  .proofs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 36px auto 0;
+  }
+  .proofs figure {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 12px;
+  }
+  .proofs img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--hairline);
   }
 
-  .offer-title {
-    font-size: 17.5px;
-    font-weight: 600;
-    line-height: 1.5;
-    color: var(--notion-text);
+  /* ========== PREÇO + BOTÃO ========== */
+  .buy { max-width: 440px; margin: 0 auto; }
+  .price {
+    font-size: clamp(64px, 12vw, 92px);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price small {
+    font-size: .32em; font-weight: 700; color: var(--text);
+    vertical-align: top; position: relative; top: .5em; margin-right: 4px; letter-spacing: 0;
+  }
+  .terms {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-mute);
     margin-bottom: 22px;
   }
 
-  .offer-title em {
-    font-style: italic;
-    color: var(--callout-pink-text);
-    font-weight: 700;
-  }
-
-  .offer-includes {
-    list-style: none;
-    margin: 0 0 4px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-  }
-
-  .offer-includes li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14.5px;
-    line-height: 1.45;
-    color: var(--notion-text);
-    font-weight: 500;
-  }
-
-  .offer-includes-icon {
-    flex-shrink: 0;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--callout-pink-text);
-    color: white;
-    font-size: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    line-height: 1;
-  }
-
-  .offer-includes-bonus {
-    margin-top: 4px;
-    padding-top: 12px;
-    border-top: 1px dashed rgba(173, 26, 114, 0.25);
-    color: var(--notion-text);
-  }
-
-  .offer-includes-icon.bonus {
-    background: transparent;
-    font-size: 14px;
-    width: 20px;
-    height: 20px;
-    margin-top: 0;
-  }
-
-  /* BONUS CARD */
-  .bonus-card {
-    background: var(--callout-yellow);
-    border-radius: 8px;
-    padding: 22px 22px 20px;
-    margin: 14px 0 4px;
-    border: 1.5px solid rgba(137, 99, 42, 0.18);
-    position: relative;
-  }
-
-  .bonus-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-
-  .bonus-emoji {
-    font-size: 28px;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-
-  .bonus-header-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .bonus-tag {
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--callout-yellow-text);
-  }
-
-  .bonus-title {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--notion-text);
-    letter-spacing: -0.01em;
-  }
-
-  .bonus-body {
-    font-size: 14.5px;
-    line-height: 1.55;
-    color: var(--notion-text);
-    margin-bottom: 14px;
-  }
-
-  .bonus-body strong {
-    font-weight: 700;
-    color: var(--notion-text);
-  }
-
-  .bonus-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .bonus-chip {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(137, 99, 42, 0.22);
-    border-radius: 100px;
-    padding: 5px 12px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--callout-yellow-text);
-    letter-spacing: -0.005em;
-  }
-
-  .bonus-footnote {
-    font-size: 12.5px;
-    color: var(--callout-yellow-text);
-    font-style: italic;
-    font-weight: 500;
-    padding-top: 12px;
-    border-top: 1px dashed rgba(137, 99, 42, 0.22);
-  }
-
-  .offer-divider {
-    border: none;
-    border-top: 1px solid rgba(173, 26, 114, 0.18);
-    margin: 22px 0;
-  }
-
-  .offer-price-block {
-    text-align: center;
-    margin-bottom: 26px;
-  }
-
-  .offer-price-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-
-  .offer-price-currency {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--callout-pink-text);
-  }
-
-  .offer-price-num {
-    font-size: 78px;
-    font-weight: 800;
-    color: var(--notion-text);
-    letter-spacing: -0.04em;
-    line-height: 1;
-    font-style: italic;
-  }
-
-  .offer-terms {
-    font-size: 13px;
-    color: var(--notion-text-mute);
-    font-weight: 500;
-    text-align: center;
-  }
-
-  .offer-payments {
-    margin-top: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 12px;
-    color: var(--notion-text-mute);
-    font-weight: 500;
-  }
-
-  .offer-pay-emoji {
-    font-size: 16px;
-    line-height: 1;
-  }
-
-  .offer-pay-label {
-    margin-left: 4px;
-  }
-
   .cta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    display: block;
     width: 100%;
-    background: var(--notion-text);
-    color: white;
-    font-family: inherit;
-    font-size: 15.5px;
-    font-weight: 600;
-    padding: 17px 22px;
+    background: var(--pink);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .03em;
+    text-transform: uppercase;
     text-decoration: none;
-    border-radius: 7px;
+    padding: 22px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 0 var(--pink-dark);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { transform: translateY(3px); box-shadow: 0 2px 0 0 var(--pink-dark); }
+  .cta-solo { max-width: 440px; margin: 0 auto; }
+
+  .secure {
+    margin-top: 18px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--text-mute);
+  }
+  .secure svg { width: 13px; height: 13px; }
+
+  .price-box {
+    margin: 36px auto 0;
+    max-width: 480px;
+    border: 2px solid var(--pink);
+    border-radius: 28px;
+    padding: 30px 24px 26px;
+    background: var(--white);
+    color: var(--text);
+    box-shadow: 0 24px 50px -20px rgba(233, 30, 99, .35);
+  }
+
+
+  /* legenda dos prints */
+
+
+  /* ========== MURAL DE PROVAS (bagunçado) ========== */
+  .wall {
+    columns: 3 200px;
+    column-gap: 14px;
+    margin: 36px auto 0;
+    max-width: 680px;
+    text-align: left;
+  }
+  .shot {
+    break-inside: avoid;
+    margin: 0 0 14px;
+    background: var(--white);
+    border: 2px solid var(--pink);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 10px 24px -14px rgba(0,0,0,.25);
+  }
+  .shot img { width: 100%; height: auto; border-radius: 8px; }
+  .shot:nth-child(4n+1) { transform: rotate(-1.6deg); }
+  .shot:nth-child(4n+2) { transform: rotate(1.2deg) translateX(4px); }
+  .shot:nth-child(4n+3) { transform: rotate(-0.6deg); }
+  .shot:nth-child(4n)   { transform: rotate(1.8deg) translateX(-3px); }
+  .shot.empty {
+    border: 2px dotted var(--text);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .shot.empty.tall { min-height: 300px; }
+  .shot.empty.mid { min-height: 220px; }
+  .shot.empty.short { min-height: 150px; }
+
+
+  /* ========== MOCKUPS ==========
+     Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
+     Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
+  .mock { position: relative; margin: 36px auto 0; width: 100%; }
+  .mock img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .mock.wide { width: min(100vw - 24px, 960px); margin-left: 50%; transform: translateX(-50%); }
+  .mock.tall { max-width: 460px; }
+  .mock .ph { display: none; }
+  .mock.empty {
+    border: 2px dotted var(--text); border-radius: 22px; background: var(--white);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .mock.empty.wide { transform: none; margin-left: auto; width: 100%; }
+  .mock.empty .ph { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; }
+  .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
+  .offer-card .mock { margin: 24px auto; }
+
+  /* ========== CARD DA OFERTA ========== */
+  .offer-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--white);
     border: none;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    line-height: 1.2;
-    letter-spacing: -0.005em;
+    border-radius: 28px;
+    padding: 40px 28px 30px;
+    box-shadow: 0 30px 60px -28px rgba(233, 30, 99, .4);
   }
-
-  .cta:active {
-    background: #1F1E1B;
-    transform: scale(0.985);
-  }
-
-  .cta-arrow { width: 14px; height: 14px; flex-shrink: 0; }
-
-  .cta-sub {
-    margin-top: 14px;
-    font-size: 12px;
-    color: var(--notion-text-mute);
-    text-align: center;
-    font-weight: 500;
-  }
-
-  .cta-sub-icon {
-    width: 11px;
-    height: 11px;
-    display: inline-block;
-    vertical-align: -1px;
-    margin-right: 3px;
-  }
-
-  /* DECLINE */
-  .decline-block {
-    margin: 18px 0 8px;
-    text-align: center;
-  }
-
-  .decline-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: transparent;
-    color: var(--notion-text-mute);
-    font-family: inherit;
-    font-size: 14.5px;
-    font-weight: 600;
-    padding: 12px 18px;
-    text-decoration: none;
-    border-radius: 6px;
-    border: 1.5px solid var(--notion-divider);
-    cursor: pointer;
-    transition: all 0.15s ease;
-    line-height: 1.2;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .decline-btn:active {
-    background: var(--notion-hover);
-    transform: scale(0.985);
-  }
-
-  .decline-btn:hover {
-    color: var(--notion-text);
-    border-color: rgba(55, 53, 47, 0.2);
-  }
-
-  /* SIGNATURE */
-  .signature-block {
-    margin: 28px 0 8px;
-    padding: 3px 2px;
-    color: var(--notion-text-mute);
-    font-size: 14px;
-    font-style: italic;
-  }
-
-  .signature-name {
-    font-weight: 700;
-    color: var(--notion-text);
-    font-style: normal;
-  }
-
-  /* BOTTOM TAB BAR */
-  .tab-bar {
-    height: 56px;
-    border-top: 1px solid var(--notion-divider);
-    background: var(--notion-bg);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 8px 4px;
-    position: sticky;
-    bottom: 0;
-    z-index: 50;
-  }
-
-  .tab {
+  .offer-card h2 { font-size: clamp(24px, 3.8vw, 32px); }
+  .offer-card .media { margin: 24px auto; }
+  .offer-card .media.empty { min-height: 0; aspect-ratio: 4 / 5; }
+  .perks {
+    list-style: none;
+    display: grid;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2px;
-    padding: 6px 10px;
-    color: var(--notion-text-light);
-    font-size: 10px;
-    font-weight: 500;
-    flex: 1;
-    cursor: pointer;
+    gap: 10px;
+    text-align: left;
+    margin: 22px auto 0;
+    width: fit-content;
+  }
+  .perks li { display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+  .perks .ck {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--pink); color: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800;
+  }
+  .pay { display: flex; justify-content: center; gap: 10px; margin-top: 22px; }
+  .pay-badge {
+    height: 36px; min-width: 62px; padding: 0 12px;
+    border: 1px solid var(--hairline); border-radius: 8px; background: var(--white);
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    font-size: 14px; color: #32BCAD;
+  }
+  .pay-badge b { color: var(--text); font-weight: 700; }
+
+  /* ========== HERO ========== */
+  .hero { padding: 64px 0 72px; }
+  .hero .media { margin: 32px auto 0; }
+
+  /* ========== RESPONSIVO ========== */
+  @media (max-width: 640px) {
+    .block { padding: 56px 0; }
+    .hero { padding: 48px 0 56px; }
+    .media { padding: 14px 12px; border-radius: 22px; }
+    .reels { gap: 8px; }
+    .reels .media { padding: 6px; border-radius: 14px; }
+    .proofs { gap: 8px; }
+    .proofs figure { padding: 6px; border-radius: 14px; }
+    .proofs img { border-radius: 9px; }
+    .offer-card { padding: 30px 18px 24px; border-radius: 24px; }
+    .wall { columns: 2; column-gap: 10px; }
+    .shot { padding: 5px; border-radius: 10px; margin-bottom: 10px; }
+    .perks li { font-size: 13.5px; }
   }
 
-  .tab.active { color: var(--notion-text); }
-
-  .tab svg { width: 22px; height: 22px; display: block; }
-
-  /* DESKTOP framing */
-  @media (min-width: 600px) {
-    body {
-      padding: 32px 0;
-      background: linear-gradient(180deg, #E8E8E7 0%, #DEDEDD 100%);
-      min-height: 100vh;
-    }
-    .phone-shell {
-      border-radius: 38px;
-      overflow: hidden;
-      min-height: auto;
-      box-shadow:
-        0 0 0 10px #1A1A1A,
-        0 0 0 11px #2A2A2A,
-        0 30px 80px rgba(0, 0, 0, 0.3);
-    }
-    .status-bar, .notion-nav {
-      border-radius: 38px 38px 0 0;
-    }
-    .notion-nav {
-      padding-top: 8px;
-      height: 56px;
-    }
-  }
-
-  .block:last-child { margin-bottom: 0; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
 </style>
 </head>
 <body>
 
-<div class="phone-shell">
+<main>
 
-  <!-- Notion top nav -->
-  <nav class="notion-nav">
-    <div class="nav-left">
-      <div class="nav-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="15 18 9 12 15 6"/>
-        </svg>
-      </div>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Nunca mais acordei <span class="pk">sem saber o que postar</span>. O meu Modelo de Reels tá aqui 👇</h1>
+      <!-- MOCKUP1 (1800x1132) -->
+      <figure class="mock wide" style="aspect-ratio:1800/1132">
+        <img src="mockup1.webp" alt="O Modelo de Reels no celular, com páginas do material e Reels reais" width="1800" height="1132" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 1</b>mockup1.webp · 1800×1132</figcaption>
+      </figure>
     </div>
-    <div class="nav-breadcrumb">
-      <span class="breadcrumb-emoji">📓</span>
-      <span class="breadcrumb-text">Escola da Leislin / O jeito de gravar reels</span>
+  </section>
+
+  <!-- ============ EU USO ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <h2>Eu não tô te vendendo um Modelo que eu acho que funciona. <span class="pk">Eu tô te entregando o que eu uso.</span></h2>
+      <p class="big-line">Eu sou a aluna número 1 do meu próprio Modelo de Reels.</p>
+      <p class="sub" style="margin-top:22px"><strong>95 mil pessoas novas chegaram no meu perfil em 90 dias</strong> (talvez você seja uma delas) usando o meu Modelo de Reels.</p>
+      <!-- MOCKUP2 (1800x1073) -->
+      <figure class="mock wide" style="aspect-ratio:1800/1073">
+        <img src="mockup2.webp" alt="Métricas do perfil: +95.764 seguidores em 90 dias" width="1800" height="1073" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 2</b>mockup2.webp · 1800×1073</figcaption>
+      </figure>
     </div>
-    <div class="nav-right">
-      <div class="nav-btn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="7"/>
-          <line x1="21" y1="21" x2="16.5" y2="16.5"/>
-        </svg>
-      </div>
-      <div class="nav-btn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-          <circle cx="5" cy="12" r="1.8"/>
-          <circle cx="12" cy="12" r="1.8"/>
-          <circle cx="19" cy="12" r="1.8"/>
-        </svg>
-      </div>
+  </section>
+
+  <!-- ============ O MODELO POR DENTRO ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <h2>Eu peguei o jeito que eu crio meus Reels e transformei em um <span class="pk">Modelo pronto pra qualquer pessoa usar.</span></h2>
+      <p class="sub">É só adaptar ao seu trabalho e criar os seus próprios Reels.</p>
+      <!-- MOCKUP3 (1600x1248) -->
+      <figure class="mock wide" style="aspect-ratio:1600/1248">
+        <img src="mockup3.webp" alt="O Modelo de Reels por dentro, no celular e no tablet" width="1600" height="1248" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 3</b>mockup3.webp · 1600×1248</figcaption>
+      </figure>
     </div>
-  </nav>
+  </section>
 
-  <article class="page-content">
-
-    <div class="page-icon">🎬</div>
-
-    <h1 class="page-title">O jeito da Leislin de gravar reels</h1>
-
-    <div class="page-meta">
-      <span class="page-meta-item">
-        <svg class="page-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Leislin
-      </span>
-      <span class="page-meta-divider">·</span>
-      <span class="page-meta-item">
-        <svg class="page-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Mini curso
-      </span>
+  <!-- ============ PROVAS SOCIAIS ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <h2>Eu não sou mais a única usando meu Modelo de Reels. <span class="pk">Outras 4.015 pessoas já usam ele também.</span></h2>
+      <!-- MOCKUP4 (1600x804) -->
+      <figure class="mock " style="aspect-ratio:1600/804">
+        <img src="mockup4.webp" alt="4.015 membros já dentro do Modelo de Reels" width="1600" height="804" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 4</b>mockup4.webp · 1600×804</figcaption>
+      </figure>
+      <!-- MOCKUP5 (1000x2221) -->
+      <figure class="mock tall" style="aspect-ratio:1000/2221">
+        <img src="mockup5.webp" alt="Mensagens de quem já usa o Modelo de Reels" width="1000" height="2221" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 5</b>mockup5.webp · 1000×2221</figcaption>
+      </figure>
     </div>
+  </section>
 
-    <!-- OPENING -->
-    <p class="block">Gravar reels parece difícil. Parece chato. Parece que não cabe na rotina.</p>
+  <!-- ============ CARD DA OFERTA ============ -->
+  <section class="block reveal">
+    <div class="wrap">
+      <div class="offer-card">
+        <h2>Eu já sei o que vou postar. <span class="pk">Agora você também pode saber</span> com o meu Modelo de Reels.</h2>
 
-    <p class="block">A gente posta um, posta outro, e na terceira semana já não dá mais conta. Sempre falta tempo, falta energia, falta vontade de ligar a câmera.</p>
+        <!-- MOCKUP6 (1600x933) -->
+      <figure class="mock " style="aspect-ratio:1600/933">
+        <img src="mockup6.webp" alt="O Modelo de Reels no celular com as páginas do material" width="1600" height="933" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 6</b>mockup6.webp · 1600×933</figcaption>
+      </figure>
 
-    <div class="quote quote-large">
-      <em>E se eu te disser</em> que eu tenho uma forma mais fácil de gravar reels?
-    </div>
+        <div class="price" style="margin-bottom:22px"><small>R$</small>47</div>
 
-    <!-- REVEAL -->
-    <p class="block">Eu gravo <strong>todos os reels da minha semana</strong> de uma vez só. Numa tarde. Num dia. E o resto da semana fica livre pra mim.</p>
+        <a href="https://lastlink.com/p/C3BB102B8/checkout-payment/" class="cta" onclick="try{if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Modelo de Reels',content_ids:['modelo-reels'],value:47.00,currency:'BRL'});}catch(e){}try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'final_cta',value:47.00,currency:'BRL'});}catch(e){}return true;">Quero o meu Modelo de Reels</a>
 
-    <p class="block">Pra te mostrar como, <em>eu liguei a câmera e gravei eu gravando</em>. Você vai ver, do meu lado, exatamente como eu faço. Sem decorar nada, sem aquela cara de quem treinou cada frase.</p>
+        <ul class="perks">
+          <li><span class="ck">✓</span>Acesso imediato</li>
+          <li><span class="ck">✓</span>7 dias de garantia</li>
+          <li><span class="ck">✓</span>Funciona para qualquer assunto</li>
+        </ul>
 
-    <div class="callout">
-      <div class="callout-icon">💡</div>
-      <div class="callout-body">
-        <span class="strike-px">Não é aula.</span> É um <strong>mini curso</strong> com o meu jeito de gravar, pra você consultar <span class="green-bg">pra sempre</span>.
-      </div>
-    </div>
-
-    <!-- IMAGINE -->
-    <h3 class="h3">Imagina…</h3>
-
-    <div class="num-list">
-      <div class="num-item">
-        <span class="num-marker">1.</span>
-        <span class="num-text">Sentar pra gravar uma vez na semana, e <strong>sair com todos os reels prontos antes do almoço</strong>.</span>
-      </div>
-      <div class="num-item">
-        <span class="num-marker">2.</span>
-        <span class="num-text">Não ter mais que <em>"arrumar tempo pra gravar hoje"</em> todos os dias. A semana inteira já tá feita.</span>
-      </div>
-      <div class="num-item">
-        <span class="num-marker">3.</span>
-        <span class="num-text">Ver, do meu lado, exatamente como eu faço. E <strong>descobrir que gravar pode ser muito mais simples do que parece</strong>.</span>
-      </div>
-    </div>
-
-    <!-- DELIVERABLES -->
-    <h3 class="h3">📂 O que tem dentro</h3>
-
-    <details class="toggle">
-      <summary class="toggle-summary">
-        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
-        <span>Tudo que eu penso antes de gravar os meus reels</span>
-      </summary>
-      <div class="toggle-content">
-        <p>Abro o que eu cuido, como eu estruturo na minha cabeça, e as dicas que eu gostaria de saber quando fosse gravar a minha primeira série.</p>
-      </div>
-    </details>
-
-    <details class="toggle">
-      <summary class="toggle-summary">
-        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
-        <span>A minha forma de gravar (eu gravando um reels, na prática)</span>
-      </summary>
-      <div class="toggle-content">
-        <p>Você vê exatamente como eu quase não erro, como eu não preciso decorar, e como isso torna minha vida mais fácil.</p>
-      </div>
-    </details>
-
-    <details class="toggle">
-      <summary class="toggle-summary">
-        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
-        <span>Os equipamentos que eu uso e porque eles valem o seu dinheiro</span>
-      </summary>
-      <div class="toggle-content">
-        <p>O setup completo. O que vale a pena, o que não vale, e por quê.</p>
-      </div>
-    </details>
-
-    <details class="toggle">
-      <summary class="toggle-summary">
-        <svg class="toggle-arrow" viewBox="0 0 16 16" fill="currentColor"><path d="M5.5 3.5L10.5 8L5.5 12.5V3.5Z"/></svg>
-        <span>Como editar seus vídeos usando IA + CapCut em minutos</span>
-      </summary>
-      <div class="toggle-content">
-        <p>Gastando minutos pra editar um reels inteiro. Sem ficar preso horas em frente ao computador.</p>
-      </div>
-    </details>
-
-    <hr class="divider">
-
-    <!-- BRIDGE -->
-    <div class="quote">
-      <span style="text-decoration: line-through; text-decoration-color: var(--notion-pink); text-decoration-thickness: 1.5px; color: var(--notion-text-light); font-style: italic; display: block; margin-bottom: 4px; font-size: 15px;">você não precisa de mais um curso de Instagram</span>
-      <strong style="font-size: 18px; line-height: 1.35;">precisa de <span class="berry-bg">um jeito mais fácil</span> de gravar toda semana.</strong>
-    </div>
-
-    <!-- CONTINUITY -->
-    <div class="callout green">
-      <div class="callout-icon">✨</div>
-      <div class="callout-body">
-        Sem teoria, sem tutorial gigante. <strong>É o meu jeito real, gravado, pra você assistir e fazer igual.</strong>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- OFFER -->
-    <div class="offer-card" id="oferta">
-      <div class="offer-card-head">
-        <span class="offer-emoji">🎬</span>
-        <span class="offer-tag">Mini curso</span>
-      </div>
-
-      <div class="offer-title">
-        <em>O jeito da Leislin de gravar reels</em>
-      </div>
-
-      <ul class="offer-includes">
-        <li>
-          <span class="offer-includes-icon">▶</span>
-          <span>Tudo que eu penso antes de gravar: o que eu cuido, como eu estruturo na minha cabeça, e as dicas que eu queria saber quando gravei minha primeira série</span>
-        </li>
-        <li>
-          <span class="offer-includes-icon">▶</span>
-          <span>A minha forma de gravar (eu gravando um reels, na prática) pra você ver como quase não erro, não decoro nada e torno minha vida mais fácil</span>
-        </li>
-        <li>
-          <span class="offer-includes-icon">▶</span>
-          <span>Os equipamentos que eu uso e porque eles valem o seu dinheiro</span>
-        </li>
-        <li>
-          <span class="offer-includes-icon">▶</span>
-          <span>Como editar seus vídeos usando IA + CapCut, gastando minutos pra editar um reels inteiro</span>
-        </li>
-        <li>
-          <span class="offer-includes-icon">▶</span>
-          <span>Acesso pra sempre, no celular ou computador</span>
-        </li>
-      </ul>
-
-      <hr class="offer-divider">
-
-      <div class="offer-price-block">
-        <div class="offer-price-row">
-          <span class="offer-price-currency">R$</span>
-          <span class="offer-price-num">27</span>
+        <div class="pay">
+          <span class="pay-badge" aria-label="Visa">
+            <svg viewBox="0 0 48 16" width="44" height="15"><text x="24" y="13" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="900" font-style="italic" fill="#1A1F71">VISA</text></svg>
+          </span>
+          <span class="pay-badge" aria-label="Mastercard">
+            <svg viewBox="0 0 38 24" width="34" height="22"><circle cx="14" cy="12" r="9" fill="#EB001B"/><circle cx="24" cy="12" r="9" fill="#F79E1B"/><path d="M19 4.8a9 9 0 0 1 0 14.4a9 9 0 0 1 0-14.4z" fill="#FF5F00"/></svg>
+          </span>
+          <span class="pay-badge" aria-label="Pix">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l4.2 4.2-2.6 2.6a2.3 2.3 0 0 0-3.2 0L7.8 6.7zM2.5 12l4.2-4.2 2.6 2.6a2.3 2.3 0 0 0 0 3.2l-2.6 2.6zM21.5 12l-4.2 4.2-2.6-2.6a2.3 2.3 0 0 0 0-3.2l2.6-2.6zM12 21.5l-4.2-4.2 2.6-2.6a2.3 2.3 0 0 0 3.2 0l2.6 2.6z" fill="#32BCAD"/></svg>
+            <b>Pix</b>
+          </span>
         </div>
-        <div class="offer-terms">pagamento único · acesso vitalício</div>
-      </div>
 
-      <div id="llupsell-CFD57ECF7-" class="cta">
-        Quero gravar tão fácil quanto a Leislin
-        <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"/>
-          <polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </div>
-
-      <div class="offer-payments">
-        <span class="offer-pay-emoji" title="Cartão">💳</span>
-        <span class="offer-pay-emoji" title="Pix">⚡</span>
-        <span class="offer-pay-label">Cartão ou Pix · acesso imediato</span>
+        <div class="secure">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 10V7a6 6 0 1 1 12 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+          Pagamento 100% seguro
+        </div>
       </div>
     </div>
+  </section>
 
-    <hr class="divider">
+</main>
 
-    <!-- GUARANTEE -->
-    <div class="callout green">
-      <div class="callout-icon">🛡️</div>
-      <div class="callout-body">
-        <strong>Garantia de 7 dias.</strong>
-      </div>
-    </div>
-
-  </article>
-
-  <!-- BOTTOM TAB BAR -->
-  <div class="tab-bar">
-    <div class="tab active">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="7"/>
-        <line x1="21" y1="21" x2="16.5" y2="16.5"/>
-      </svg>
-      <span>Pesquisar</span>
-    </div>
-    <div class="tab">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 12L12 4L21 12"/>
-        <path d="M5 10v10h14V10"/>
-      </svg>
-      <span>Início</span>
-    </div>
-    <div class="tab">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/>
-        <path d="M13.7 21a2 2 0 0 1-3.4 0"/>
-      </svg>
-      <span>Notif.</span>
-    </div>
-    <div class="tab">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"/>
-        <line x1="5" y1="12" x2="19" y2="12"/>
-      </svg>
-      <span>Nova</span>
-    </div>
-  </div>
-
-</div>
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 
 </body>
 </html>
