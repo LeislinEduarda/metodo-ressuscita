@@ -252,9 +252,7 @@
     box-shadow: 0 24px 50px -20px rgba(138, 43, 226, .35);
   }
 
-
   /* legenda dos prints */
-
 
   /* ========== MURAL DE PROVAS (bagunçado) ========== */
   .wall {
@@ -286,7 +284,6 @@
   .shot.empty.mid { min-height: 220px; }
   .shot.empty.short { min-height: 150px; }
 
-
   /* ========== MOCKUPS ==========
      Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
      Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
@@ -304,6 +301,7 @@
   .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
   .offer-card .mock { margin: 24px auto; }
 
+  .hero-line { margin-top: 4px; margin-bottom: 22px; }
   .bar { width: 160px; height: 8px; border-radius: 8px; background: var(--grad); margin: 0 auto 22px; }
 
   .combo { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0 auto 22px; }
@@ -311,7 +309,6 @@
   .combo .c-st { background: var(--purple); color: var(--white); }
   .combo .c-ca { background: var(--lime); color: var(--text); }
   .combo b { font-size: 20px; font-weight: 800; line-height: 1; }
-
 
   /* ========== UPSELL ========== */
   .confirm {
@@ -365,7 +362,6 @@
   @media (max-width: 640px) {
     .trio { grid-template-columns: 1fr; }
   }
-
 
   .combo .c-gift {
     display: inline-flex; align-items: center; gap: 8px;
@@ -459,7 +455,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap">
-      <h1>Tudo bem, sem carrosséis. Mas não deixe os seus <span class="pk">stories travados.</span> Os meus Modelos de Stories tão aqui 👇</h1>
+      <h1>O Modelo de Reels que tu acabou de comprar é <span class="pk">só um dos três que eu uso.</span> ↓</h1>
+      <p class="sub hero-line">Se os carrosséis não são pra agora, tudo bem. Mas o meu Modelo de Stories, pode ser.</p>
       <div class="bar"></div>
       <!-- MOCKUP (1800x1122) -->
       <figure class="mock wide" style="aspect-ratio:2000/1257">
@@ -481,7 +478,7 @@
           <p>Pra atrair gente nova.</p>
         </div>
         <div class="tri ca">
-          <div class="tag">+ Só nessa página</div>
+          <div class="tag">+ Leve também</div>
           <h3>Modelos de Stories</h3>
           <p>Pra vender todos os dias nos stories.</p>
         </div>
@@ -520,8 +517,10 @@
   <section class="block reveal">
     <div class="wrap">
       <div class="offer-card">
-        <div class="only">Última oferta</div>
-        <h2>Leve só os <span class="pk">Modelos de Stories</span> com desconto.</h2>
+        <div class="only">Antes de finalizar</div>
+        <h2>E como tu acabou de garantir meu Modelo de Reels, quero te dar a oportunidade de levar <span class="pk">o meu Modelo de Stories</span> também.</h2>
+
+        <div class="combo"><span class="c-st">Modelos de Stories · R$47</span></div>
 
         <!-- MOCKUP (1600x933) -->
         <figure class="mock " style="aspect-ratio:2000/1560">
@@ -530,11 +529,11 @@
         </figure>
 
         <div class="deal">
-          <div class="deal-top"><span>De</span><s>R$47</s><span>por</span></div>
-          <div class="price"><small>R$</small>17</div>
+          <div class="deal-top"><span>Por apenas</span></div>
+          <div class="price"><small>R$</small>47</div>
         </div>
 
-        <a href="https://lastlink.com/p/CCBFE68C6/checkout-payment/" class="cta" onclick="try{if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Downsell Modelos de Stories',content_ids:['downsell-modelo-stories'],value:17.00,currency:'BRL'});}catch(e){}try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'downsell_stories_sim',value:17.00,currency:'BRL'});}catch(e){}return true;">Sim, quero os Modelos de Stories</a>
+        <a href="https://lastlink.com/p/CCBFE68C6/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'downsell_stories_sim',value:47.00,currency:'BRL'});}catch(e){}return true;">Sim, quero os Modelos de Stories</a>
 
         <ul class="perks">
           <li><span class="ck">✓</span>Acesso imediato, no mesmo e-mail</li>
