@@ -256,9 +256,7 @@
     box-shadow: 0 24px 50px -20px rgba(150, 175, 20, .35);
   }
 
-
   /* legenda dos prints */
-
 
   /* ========== MURAL DE PROVAS (bagunçado) ========== */
   .wall {
@@ -290,7 +288,6 @@
   .shot.empty.mid { min-height: 220px; }
   .shot.empty.short { min-height: 150px; }
 
-
   /* ========== MOCKUPS ==========
      Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
      Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
@@ -308,6 +305,8 @@
   .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
   .offer-card .mock { margin: 24px auto; }
 
+  .hero-line { margin-top: 4px; margin-bottom: 22px; }
+  .pk.soft { background: linear-gradient(transparent 22%, var(--lime) 22%, var(--lime) 86%, transparent 86%) !important; padding: 0 .1em; border-radius: .12em; }
   .bar { width: 160px; height: 8px; border-radius: 8px; background: var(--grad); margin: 0 auto 22px; }
 
   .combo { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0 auto 22px; }
@@ -315,7 +314,6 @@
   .combo .c-st { background: var(--purple); color: var(--white); }
   .combo .c-ca { background: var(--lime); color: var(--text); }
   .combo b { font-size: 20px; font-weight: 800; line-height: 1; }
-
 
   /* ========== UPSELL ========== */
   .confirm {
@@ -369,7 +367,6 @@
   @media (max-width: 640px) {
     .trio { grid-template-columns: 1fr; }
   }
-
 
   .combo .c-gift {
     display: inline-flex; align-items: center; gap: 8px;
@@ -463,7 +460,8 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap">
-      <h1>Tudo bem, sem combo. Mas não deixe o seu <span class="pk">feed travado.</span> Os meus Modelos de Carrosséis tão aqui 👇</h1>
+      <h1>O Modelo de Reels que tu acabou de comprar é <span class="pk soft">só um dos três que eu uso.</span> ↓</h1>
+      <p class="sub hero-line">Se o combo não é pra agora, tudo bem. Mas leva pelo menos o meu Modelo de Carrosséis, que uso pra criar conteúdo e vender todos os dias no feed.</p>
       <div class="bar"></div>
       <!-- MOCKUP (1800x1122) -->
       <figure class="mock wide" style="aspect-ratio:1800/1122">
@@ -485,7 +483,7 @@
           <p>Pra atrair gente nova.</p>
         </div>
         <div class="tri ca">
-          <div class="tag">+ Só nessa página</div>
+          <div class="tag">+ Leve também</div>
           <h3>Modelos de Carrosséis</h3>
           <p>Pra vender todos os dias no feed.</p>
         </div>
@@ -524,8 +522,10 @@
   <section class="block reveal">
     <div class="wrap">
       <div class="offer-card">
-        <div class="only">Última oferta</div>
-        <h2>Leve só os <span class="pk">Modelos de Carrosséis</span> com desconto.</h2>
+        <div class="only">Antes de finalizar</div>
+        <h2>E como tu acabou de garantir meu Modelo de Reels, quero te dar a oportunidade de levar <span class="pk soft">o meu Modelo de Carrosséis</span> também.</h2>
+
+        <div class="combo"><span class="c-ca">Modelos de Carrosséis · R$47</span></div>
 
         <!-- MOCKUP (1600x933) -->
         <figure class="mock " style="aspect-ratio:1600/933">
@@ -534,11 +534,11 @@
         </figure>
 
         <div class="deal">
-          <div class="deal-top"><span>De</span><s>R$47</s><span>por</span></div>
-          <div class="price"><small>R$</small>27</div>
+          <div class="deal-top"><span>Por apenas</span></div>
+          <div class="price"><small>R$</small>47</div>
         </div>
 
-        <a href="https://lastlink.com/p/C88E90033/checkout-payment/" class="cta" onclick="try{if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Downsell Modelos de Carrosséis',content_ids:['downsell-modelo-carrosseis'],value:27.00,currency:'BRL'});}catch(e){}try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'downsell_sim',value:27.00,currency:'BRL'});}catch(e){}return true;">Sim, quero os Modelos de Carrosséis</a>
+        <a href="https://lastlink.com/p/C88E90033/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'downsell_sim',value:47.00,currency:'BRL'});}catch(e){}return true;">Sim, quero os Modelos de Carrosséis</a>
 
         <ul class="perks">
           <li><span class="ck">✓</span>Acesso imediato, no mesmo e-mail</li>
