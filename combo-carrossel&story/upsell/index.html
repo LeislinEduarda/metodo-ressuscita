@@ -256,9 +256,7 @@
     box-shadow: 0 24px 50px -20px rgba(138, 43, 226, .35);
   }
 
-
   /* legenda dos prints */
-
 
   /* ========== MURAL DE PROVAS (bagunçado) ========== */
   .wall {
@@ -290,7 +288,6 @@
   .shot.empty.mid { min-height: 220px; }
   .shot.empty.short { min-height: 150px; }
 
-
   /* ========== MOCKUPS ==========
      Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
      Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
@@ -308,6 +305,7 @@
   .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
   .offer-card .mock { margin: 24px auto; }
 
+  .hero-line { margin-top: 4px; margin-bottom: 22px; }
   .bar { width: 160px; height: 8px; border-radius: 8px; background: var(--grad); margin: 0 auto 22px; }
 
   .combo { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0 auto 22px; }
@@ -315,7 +313,6 @@
   .combo .c-st { background: var(--purple); color: var(--white); }
   .combo .c-ca { background: var(--lime); color: var(--text); }
   .combo b { font-size: 20px; font-weight: 800; line-height: 1; }
-
 
   /* ========== UPSELL ========== */
   .confirm {
@@ -368,7 +365,6 @@
     .trio { grid-template-columns: 1fr; }
   }
 
-
   .combo .c-gift {
     display: inline-flex; align-items: center; gap: 8px;
     background: var(--white); color: var(--text);
@@ -379,6 +375,8 @@
     font-style: normal; font-size: 10.5px; letter-spacing: .1em;
     background: var(--purple); color: var(--white); padding: 3px 7px; border-radius: 100px;
   }
+  .pk.soft { background: linear-gradient(transparent 22%, var(--lime) 22%, var(--lime) 86%, transparent 86%) !important; padding: 0 .1em; border-radius: .12em; }
+  .offer-text { font-size: 16px; margin: 4px auto 20px; }
   .deal {
     margin: 4px auto 22px; padding: 18px 16px 16px; border-radius: 20px;
     background: linear-gradient(135deg, rgba(138,43,226,.08), rgba(221,232,50,.22));
@@ -461,12 +459,13 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap">
-      <h1>Não deixe seus <span class="pu">stories</span> e <span class="pk">carrosséis</span> travados. Os meus modelos tão aqui pra destravar todos os seus formatos de conteúdo 👇</h1>
+      <h1>O Modelo de Reels que tu acabou de comprar é <span class="pu">só um dos três que eu uso.</span> ↓</h1>
+      <p class="sub hero-line">Eu também tenho meus próprios Modelos de Stories e Carrosséis, que uso pra criar conteúdo e vender todos os dias no meu Instagram.</p>
       <div class="bar"></div>
       <!-- MOCKUP (1800x1122) -->
       <figure class="mock wide" style="aspect-ratio:1800/1122">
-        <img src="/mockup-upsell-combo1.webp" alt="Os Modelos de Stories e de Carrosséis" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
-        <figcaption class="ph"><b>Mockup</b>/mockup-upsell-combo1.webp · 1800×1122</figcaption>
+        <img src="mockup-upsell-combo1.webp" alt="Os Modelos de Stories e de Carrosséis" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup</b>mockup-upsell-combo1.webp · 1800×1122</figcaption>
       </figure>
     </div>
   </section>
@@ -495,16 +494,6 @@
         </div>
       </div>
 
-      <!-- É COMO SE EU TE DEVOLVESSE OS R$47 -->
-      <div class="refund">
-        <h3>Você ganhou <span class="pu">R$47 de cashback.</span></h3>
-        <p class="sub"><strong>O valor do seu Modelo de Reels volta como desconto no combo. Você leva os 3 pelo preço de 2.</strong></p>
-        <div class="math">
-          <div class="row free"><span>Modelo de Reels <em class="cb">cashback</em></span><span class="v"><s>R$47</s>R$0</span></div>
-          <div class="row"><span>Modelos de Stories</span><span class="v">R$47</span></div>
-          <div class="row"><span>Modelos de Carrosséis</span><span class="v">R$47</span></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -513,23 +502,23 @@
     <div class="wrap">
       <div class="offer-card">
         <div class="only">Só nessa página</div>
-        <h2>Adicione o combo de <span class="pu">Stories</span> + <span class="pk">Carrosséis</span> ao seu pedido.</h2>
+        <h2>E como tu acabou de garantir meu Modelo de Reels, quero te dar a oportunidade de levar <span class="pu">os outros dois</span> por um <span class="pk soft">preço especial.</span></h2>
 
-        <div class="combo"><span class="c-st">Modelos de Stories</span><b>+</b><span class="c-ca">Modelos de Carrosséis</span><b>+</b><span class="c-gift"><i>💸</i>Modelo de Reels <em>cashback</em></span></div>
+        <div class="combo"><span class="c-st">Modelos de Stories · R$47</span><b>+</b><span class="c-ca">Modelos de Carrosséis · R$47</span></div>
 
         <!-- MOCKUP (1600x933) -->
       <figure class="mock " style="aspect-ratio:1600/933">
-        <img src="/mockup-upsell-combo2.webp" alt="O combo de Stories e Carrosséis" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
-        <figcaption class="ph"><b>Mockup</b>/mockup-upsell-combo2.webp · 1600×933</figcaption>
+        <img src="mockup-upsell-combo2.webp" alt="O combo de Stories e Carrosséis" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup</b>mockup-upsell-combo2.webp · 1600×933</figcaption>
       </figure>
 
         <div class="deal">
-          <div class="deal-top"><span>Os 3 modelos por</span><s>R$141</s></div>
-          <div class="price"><small>R$</small>94</div>
-          <div class="deal-note">Seus R$47 do Reels voltam como cashback. <b>Falta só R$47.</b></div>
+          <div class="deal-top"><span>De</span><s>R$94</s><span>por</span></div>
+          <div class="price"><small>R$</small>77</div>
+          <div class="deal-note">Modelos de Stories + Modelos de Carrosséis</div>
         </div>
 
-        <a href="https://lastlink.com/p/C3B564EF8/checkout-payment/" class="cta" onclick="try{if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Upsell Combo Stories + Carrosséis',content_ids:['upsell-combo-stories-carrosseis'],value:47.00,currency:'BRL'});}catch(e){}try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'upsell_sim',value:47.00,currency:'BRL'});}catch(e){}return true;">Sim, quero adicionar o combo</a>
+        <a href="https://lastlink.com/p/C3B564EF8/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'upsell_sim',value:77.00,currency:'BRL'});}catch(e){}return true;">Sim, quero adicionar o combo</a>
 
         <ul class="perks">
           <li><span class="ck">✓</span>Acesso imediato, no mesmo e-mail</li>
