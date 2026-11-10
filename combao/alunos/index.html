@@ -275,8 +275,9 @@
      Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
      Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
   .mock { position: relative; margin: 36px auto 0; width: 100%; }
-  .mock img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .mock.wide { width: min(100vw - 24px, 960px); margin-left: 50%; transform: translateX(-50%); }
+  .mock img { width: 100%; height: auto; display: block; }
+  .mock.loaded { aspect-ratio: auto !important; }
+  .mock.wide { width: min(100vw, 1100px); margin-left: 50%; transform: translateX(-50%); }
   .mock.tall { max-width: 460px; }
   .mock .ph { display: none; }
   .mock.empty {
@@ -286,7 +287,8 @@
   .mock.empty.wide { transform: none; margin-left: auto; width: 100%; }
   .mock.empty .ph { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; }
   .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
-  .offer-card .mock { margin: 24px auto; }
+  .offer-card .mock { margin: 20px -28px; width: calc(100% + 56px); }
+  @media (max-width: 640px) { .offer-card .mock { margin: 16px -18px; width: calc(100% + 36px); } }
 
   .bar { width: 160px; height: 8px; border-radius: 8px; background: var(--grad); margin: 0 auto 22px; }
 
@@ -528,7 +530,7 @@
       <div class="date-tag">Dia do Combão da Leislin</div>
       <h1>Eu juntei os meus <span class="pk">10 modelos</span> de tudo que eu uso pra criar conteúdo e vender aqui no meu perfil em um único <span class="pk">COMBÃO</span> e dei um <span class="pk">DESCONTÃO</span> que não vai continuar amanhã. 👇</h1>
       <figure class="mock wide" style="aspect-ratio:1800/1134">
-        <img src="/mockup-10-modelo-hero1.webp" alt="Os 10 modelos da Leislin" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <img src="/mockup-10-modelo-hero1.webp" onload="this.parentElement.classList.add('loaded')" alt="Os 10 modelos da Leislin" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
         <figcaption class="ph"><b>Mockup 1 · os 10 modelos juntos, sem preço</b>/mockup-10-modelo-hero1.webp</figcaption>
       </figure>
     </div>
@@ -695,7 +697,7 @@
 
         <!-- MOCKUP 5 · os 10 modelos juntos, com destaque para a oferta -->
         <figure class="mock " style="aspect-ratio:1800/1134">
-          <img src="/mockup-10-modelo-hero1.webp" alt="O Combão da Leislin" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+          <img src="/mockup-10-modelo-hero1.webp" onload="this.parentElement.classList.add('loaded')" alt="O Combão da Leislin" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
           <figcaption class="ph"><b>Mockup 5 · destaque para a oferta</b>/mockup-10-modelo-hero1.webp</figcaption>
         </figure>
 
