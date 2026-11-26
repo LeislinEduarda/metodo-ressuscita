@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Black | Os outros 9 modelos</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTGK16VC79"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    ad_storage: 'granted',
+    analytics_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted'
+  });
+  gtag('set', 'linker', { domains: ['lastlink.com'] });
+  gtag('config', 'G-XTGK16VC79');
+</script>
+
+<link rel="preconnect" href="https://lastlink.com">
+<link rel="dns-prefetch" href="//lastlink.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  /* ==========================================================
+     CORES — troque aqui pra ajustar ao verde exato da Lastlink
+     ========================================================== */
+  :root {
+    --green: #00B964;
+    --green-dark: #00904E;
+    --green-soft: #E8F8EF;
+    --green-line: #BDEBD2;
+    --white: #FFFFFF;
+    --bg-offwhite: #FFFFFF;  /* branco */
+    --bg-pink: #FFFFFF;
+    --bg-yellow: #FFFFFF;
+    --text: #111111;         /* texto escuro (dentro dos cards brancos) */
+    --text-mute: #111111;
+    --black: #0D0D0D;        /* fundo da página (Black) */
+    --cream: #F8F5F2;        /* off-white dos cards */
+    --pink: #E10600;         /* vermelho (destaques e botão) */
+    --pink-dark: #9E0400;
+    --red: #E10600;          /* vermelho (letreiro, timer, riscos, selos) */
+    --matcha: #E10600;
+    --grad: linear-gradient(90deg, #E10600, #9E0400);
+    --hairline: #E4E9E6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: clip; }
+
+  body {
+    font-family: 'Open Sans', system-ui, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; text-align: center; }
+  .block { padding: 72px 0; }
+  .bg-offwhite { background: var(--bg-offwhite); }
+  .bg-pink { background: var(--bg-pink); }
+  .bg-yellow { background: var(--bg-yellow); }
+
+  h1 {
+    font-size: clamp(34px, 6.4vw, 56px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: clamp(26px, 4.4vw, 38px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 18px;
+  }
+  h1 em, h2 em { font-style: italic; font-weight: 800; color: var(--text); }
+  em.pk, .pk { color: var(--pink) !important; }
+
+  .sub {
+    font-size: clamp(17px, 2.2vw, 19px);
+    color: var(--text-mute);
+    max-width: 560px;
+    margin: 0 auto 18px;
+  }
+  .hero-sub { font-size: clamp(20px, 3vw, 24px); font-weight: 700; color: var(--text); }
+  .sub strong { color: var(--text); font-weight: 700; }
+
+  .big-line {
+    font-size: clamp(20px, 3vw, 24px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    max-width: 560px;
+    margin: 28px auto 0;
+  }
+  .big-line em { font-style: italic; font-weight: 800; color: var(--text); }
+
+  /* ========== ESPAÇOS DE IMAGEM ==========
+     Cada .media tenta carregar a imagem do src.
+     Se o arquivo ainda não existir, aparece o placeholder com a instrução. */
+  .media {
+    position: relative;
+    margin: 36px auto;
+    border-radius: 28px;
+    background: var(--white);
+    border: 2px dotted var(--text);
+    padding: 24px 20px;
+    overflow: hidden;
+  }
+  .media img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .12));
+  }
+  .media .ph { display: none; }
+  .media.empty {
+    border: 2px dotted var(--text);
+    min-height: 260px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .media.empty .ph {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    max-width: 380px;
+    line-height: 1.5;
+  }
+  .media.empty .ph b {
+    display: block;
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .media.tall.empty { min-height: 380px; }
+  .media.sales { max-width: 680px; margin: 32px auto 8px; }
+  .media.sales.empty { min-height: 0; aspect-ratio: 16 / 7; }
+
+  /* 3 reels lado a lado */
+  .reels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 36px auto;
+  }
+  .reels .media { margin: 0; padding: 10px; border-radius: 20px; }
+  .reels .media img { aspect-ratio: 9/16; object-fit: cover; border-radius: 12px; }
+  .reels .media.empty { min-height: 0; aspect-ratio: 9/16; }
+  .reels .media.empty .ph { font-size: 12px; padding: 0 6px; }
+
+  /* prints das alunas */
+  .proofs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 36px auto 0;
+  }
+  .proofs figure {
+    background: var(--white);
+    border: 1px solid var(--hairline);
+    border-radius: 20px;
+    padding: 12px;
+  }
+  .proofs img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--hairline);
+  }
+
+  /* ========== PREÇO + BOTÃO ========== */
+  .buy { max-width: 440px; margin: 0 auto; }
+  .price {
+    font-size: clamp(64px, 12vw, 92px);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price small {
+    font-size: .32em; font-weight: 700; color: var(--text);
+    vertical-align: top; position: relative; top: .5em; margin-right: 4px; letter-spacing: 0;
+  }
+  .terms {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    margin-bottom: 22px;
+  }
+
+  .cta {
+    display: block;
+    width: 100%;
+    background: var(--pink);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 22px 20px;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 0 var(--pink-dark);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .cta:hover { transform: translateY(3px); box-shadow: 0 2px 0 0 var(--pink-dark); }
+  .cta-solo { max-width: 440px; margin: 0 auto; }
+
+  .secure {
+    margin-top: 18px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--text-mute);
+  }
+  .secure svg { width: 13px; height: 13px; }
+
+  .price-box {
+    margin: 36px auto 0;
+    max-width: 480px;
+    border: 2px solid var(--pink);
+    border-radius: 28px;
+    padding: 30px 24px 26px;
+    background: var(--white);
+    color: var(--text);
+    box-shadow: 0 24px 50px -20px rgba(255, 31, 142, .35);
+  }
+
+  /* legenda dos prints */
+
+  /* ========== MURAL DE PROVAS (bagunçado) ========== */
+  .wall {
+    columns: 3 200px;
+    column-gap: 14px;
+    margin: 36px auto 0;
+    max-width: 680px;
+    text-align: left;
+  }
+  .shot {
+    break-inside: avoid;
+    margin: 0 0 14px;
+    background: var(--white);
+    border: 2px solid var(--pink);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 10px 24px -14px rgba(0,0,0,.25);
+  }
+  .shot img { width: 100%; height: auto; border-radius: 8px; }
+  .shot:nth-child(4n+1) { transform: rotate(-1.6deg); }
+  .shot:nth-child(4n+2) { transform: rotate(1.2deg) translateX(4px); }
+  .shot:nth-child(4n+3) { transform: rotate(-0.6deg); }
+  .shot:nth-child(4n)   { transform: rotate(1.8deg) translateX(-3px); }
+  .shot.empty {
+    border: 2px dotted var(--text);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .shot.empty.tall { min-height: 300px; }
+  .shot.empty.mid { min-height: 220px; }
+  .shot.empty.short { min-height: 150px; }
+
+  /* ========== MOCKUPS ==========
+     Cada espaço já tem a proporção do mockup correspondente (aspect-ratio).
+     Sem a imagem, aparece o quadro branco pontilhado com o nome do arquivo. */
+  .mock { position: relative; margin: 36px auto 0; width: 100%; }
+  .mock img { width: 100%; height: auto; display: block; }
+  .mock.loaded { aspect-ratio: auto !important; }
+  .mock.wide { width: min(100vw, 1100px); margin-left: 50%; transform: translateX(-50%); }
+  .mock.tall { max-width: 460px; }
+  .mock .ph { display: none; }
+  .mock.empty {
+    border: 2px dotted var(--text); border-radius: 22px; background: var(--white);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .mock.empty.wide { transform: none; margin-left: auto; width: 100%; }
+  .mock.empty .ph { display: block; font-size: 14px; font-weight: 600; line-height: 1.5; }
+  .mock.empty .ph b { display: block; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px; }
+  .offer-card .mock { margin: 20px -28px; width: calc(100% + 56px); }
+  @media (max-width: 640px) { .offer-card .mock { margin: 16px -18px; width: calc(100% + 36px); } }
+
+  .bar { width: 160px; height: 8px; border-radius: 8px; background: var(--grad); margin: 0 auto 22px; }
+
+  /* ========== 11.11 ========== */
+  .promo-bar {
+    background: var(--matcha); color: var(--text);
+    overflow: hidden; white-space: nowrap;
+    font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    padding: 11px 0;
+  }
+  .promo-bar .track { display: inline-block; animation: marquee 22s linear infinite; }
+  .promo-bar .track span { margin: 0 18px; }
+  .promo-bar .track i { font-style: normal; color: var(--pink); }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .hero-1111 { padding-top: 40px; }
+  .date-1111 {
+    font-size: clamp(96px, 26vw, 200px); font-weight: 800; line-height: .9; letter-spacing: -0.06em;
+    background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent;
+    margin-bottom: 6px;
+  }
+  .date-tag {
+    display: inline-block; background: var(--pink); color: var(--matcha);
+    font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+    padding: 8px 16px; border-radius: 100px; margin-bottom: 20px; transform: rotate(-2deg);
+  }
+  .hero-price { display: flex; align-items: baseline; justify-content: center; gap: 14px; margin: 6px 0 18px; }
+  .hero-price s { font-size: 22px; font-weight: 700; opacity: .45; }
+  .hero-price b { font-size: clamp(56px, 13vw, 84px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; }
+  .hero-price b small { font-size: .35em; vertical-align: top; position: relative; top: .45em; margin-right: 4px; letter-spacing: 0; }
+  .hero-price em { font-style: normal; background: #DDE832; color: var(--text); font-size: 15px; font-weight: 800; padding: 6px 10px; border-radius: 10px; transform: rotate(3deg); align-self: center; }
+
+  .countdown { display: inline-flex; gap: 8px; align-items: center; margin: 4px auto 0; }
+  .countdown .lbl { font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-right: 4px; }
+  .countdown .u { background: var(--pink); color: var(--matcha); border-radius: 12px; min-width: 58px; padding: 8px 6px 6px; text-align: center; }
+  .countdown .u b { display: block; font-size: 24px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+  .countdown .u small { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .9; }
+  .countdown-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 6px; }
+
+  .top-timer { margin: 0 0 14px; }
+  .offer-old { font-size: 22px; font-weight: 800; margin-bottom: 2px; }
+  .offer-old s { text-decoration: none; position: relative; color: var(--text); padding: 0 2px; }
+  .offer-old s::after { content: ""; position: absolute; left: -2px; right: -2px; top: 52%; height: 4px; background: var(--pink); border-radius: 4px; transform: rotate(-6deg); }
+  .offer-price { font-size: clamp(84px, 20vw, 120px) !important; color: var(--pink); }
+  .offer-price small { color: var(--text); }
+
+  .total-big { margin: 44px auto 0; text-align: center; }
+  .tb-lbl { font-size: clamp(18px, 2.6vw, 22px); font-weight: 800; }
+  .tb-val { font-size: clamp(88px, 24vw, 150px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; margin: 4px 0 10px; }
+  .tb-val s { text-decoration: none; position: relative; color: #8C8798; display: inline-block; }
+  .tb-val s::after { content: ""; position: absolute; left: -4%; right: -4%; top: 50%; height: .09em; background: var(--pink); border-radius: 8px; transform: rotate(-7deg); }
+  .tb-sub { font-size: clamp(19px, 2.8vw, 24px); font-weight: 800; }
+
+  .offer-card.has-strip { padding-top: 0; overflow: hidden; }
+  .card-strip {
+    display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap;
+    margin: 0 -28px 26px; padding: 14px 22px;
+    background: var(--pink); color: var(--white);
+    font-size: 12.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  }
+  .card-strip .cs-time b { display: inline-block; background: var(--white); color: var(--pink); border-radius: 6px; padding: 3px 6px; font-size: 15px; letter-spacing: 0; font-variant-numeric: tabular-nums; margin: 0 1px; }
+  @media (max-width: 640px) { .card-strip { margin: 0 -18px 22px; padding: 12px 16px; justify-content: center; } }
+
+  .off-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 26px auto 0; max-width: 620px; }
+  .off-strip div { border-radius: 18px; padding: 16px 8px; background: #F4F3F7; }
+  .off-strip div.hot { background: var(--pink); color: var(--white); }
+  .off-strip b { display: block; font-size: clamp(22px, 6vw, 34px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.05; }
+  .off-strip span { font-size: 12px; font-weight: 700; line-height: 1.3; display: block; }
+  .off-strip s { opacity: .55; }
+
+  /* ========== LISTA DOS 10 MODELOS ========== */
+  .list-head { margin-bottom: 30px; }
+  .models { display: flex; flex-direction: column; gap: 22px; max-width: 900px; margin: 0 auto; padding: 0 16px; }
+  .model {
+    --c: var(--pink); --c-soft: #FDE8EF; --c-ink: #fff;
+    display: grid; grid-template-columns: 44% 1fr; align-items: center; gap: 28px;
+    background: var(--c-soft);
+    border: 3px solid var(--c);
+    border-radius: 26px;
+    padding: 22px;
+    box-shadow: 8px 8px 0 0 var(--c);
+    text-align: left;
+  }
+  .model:nth-child(even) { grid-template-columns: 1fr 44%; }
+  .model:nth-child(even) .m-img { order: 2; }
+  .m-img { position: relative; aspect-ratio: 16 / 11; border-radius: 16px; background: var(--white); overflow: hidden; }
+  .m-img img { width: 100%; height: 100%; object-fit: contain; }
+  .m-img .ph { display: none; }
+  .m-img.empty { border: 2px dotted var(--c); display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; }
+  .m-img.empty .ph { display: block; font-size: 12.5px; font-weight: 600; line-height: 1.4; }
+  .m-num {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--c); color: var(--c-ink);
+    font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    padding: 7px 14px 7px 7px; border-radius: 100px; margin-bottom: 12px;
+  }
+  .m-num b { width: 28px; height: 28px; border-radius: 50%; background: var(--white); color: var(--text); display: inline-flex; align-items: center; justify-content: center; font-size: 14px; letter-spacing: 0; }
+  .model h3 { font-size: clamp(22px, 3vw, 28px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .model p { font-size: 16px; line-height: 1.55; margin-bottom: 14px; }
+  .m-price { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 800; }
+  .m-price s { opacity: .5; font-weight: 600; }
+  .m-price span { background: var(--c); color: var(--c-ink); padding: 5px 11px; border-radius: 100px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+
+  .m-reels    { --c: #E91E63; --c-soft: #FDECF2; }
+  .m-semfalar { --c: #129DA2; --c-soft: #E6FBF8; }
+  .m-teste    { --c: #FF7A1A; --c-soft: #FFF1E6; }
+  .m-stories  { --c: #8A2BE2; --c-soft: #F3EAFD; }
+  .m-carrossel{ --c: #C9D41F; --c-soft: #FAFCE0; --c-ink: #1C2106; }
+  .m-perfil   { --c: #2F6BFF; --c-soft: #EAF0FF; }
+  .m-pagina   { --c: #15121C; --c-soft: #F1F0F4; }
+  .m-dm       { --c: #00A86B; --c-soft: #E5F7EF; }
+  .m-anuncios { --c: #FF3D3D; --c-soft: #FFECEC; }
+  .m-produto  { --c: #B8860B; --c-soft: #FBF4E2; }
+
+  .total-line { margin: 40px auto 0; max-width: 560px; font-size: clamp(20px, 3vw, 24px); font-weight: 800; line-height: 1.3; }
+  .total-line s { opacity: .45; }
+
+  @media (max-width: 700px) {
+    .model, .model:nth-child(even) { grid-template-columns: 1fr; gap: 16px; padding: 16px; box-shadow: 6px 6px 0 0 var(--c); }
+    .model:nth-child(even) .m-img { order: 0; }
+  }
+
+  /* vitrine do Combão */
+  .vitrine { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px auto 0; max-width: 960px; text-align: left; }
+  .tile { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 14px 34px -18px rgba(0,0,0,.28); display: flex; flex-direction: column; transition: transform .25s ease; }
+  .tile:hover { transform: translateY(-4px); }
+  .t-img { position: relative; aspect-ratio: 4 / 3; background: transparent; }
+  .t-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .t-img .ph { display: none; }
+  .t-img.empty { display: flex; align-items: center; justify-content: center; border-bottom: 2px dotted var(--c); }
+  .t-img.empty .ph { display: block; font-size: 12px; font-weight: 800; color: var(--c); letter-spacing: .1em; text-transform: uppercase; }
+  .t-num { position: absolute; top: 10px; left: 10px; background: var(--c); color: #fff; font-size: 12px; font-weight: 800; padding: 4px 9px; border-radius: 100px; letter-spacing: .04em; }
+  .t-in { position: absolute; bottom: 10px; right: 10px; background: var(--matcha); color: #1A1F06; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 5px 9px; border-radius: 100px; box-shadow: 0 4px 10px rgba(0,0,0,.12); }
+  .t-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+  .t-body h3 { font-size: 18px; font-weight: 800; line-height: 1.2; color: var(--c); margin-bottom: 6px; letter-spacing: -0.01em; }
+  .t-body p { font-size: 14px; line-height: 1.45; color: var(--text); margin: 0 0 12px; flex: 1; }
+  .t-price s { font-size: 17px; font-weight: 800; color: #8C8C8C; text-decoration-color: var(--matcha); text-decoration-thickness: 3px; }
+  .vit-total { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 22px auto 0; }
+  .vt-but { font-style: normal; font-size: clamp(20px, 3.4vw, 26px); font-weight: 800; color: var(--red); margin-top: 6px; }
+  .vit-total span { font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .vit-total s { font-size: clamp(76px, 20vw, 120px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: var(--matcha); text-decoration: none; position: relative; display: inline-block; }
+  .vit-total s::after { content: ""; position: absolute; left: -4%; right: -4%; top: 52%; height: .09em; background: var(--pink); border-radius: 8px; transform: rotate(-7deg); }
+  @media (max-width: 860px) { .vitrine { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) {
+    .vitrine { gap: 10px; }
+    .tile { border-radius: 16px; }
+    .t-body { padding: 10px 11px 12px; }
+    .t-body h3 { font-size: 15px; }
+    .t-body p { font-size: 12.5px; margin-bottom: 8px; }
+    .t-price s { font-size: 15px; }
+    .t-in { font-size: 9px; padding: 4px 7px; bottom: 7px; right: 7px; }
+    .t-num { top: 7px; left: 7px; font-size: 11px; }
+  }
+  .eyebrow-black { display: inline-block; background: var(--pink); color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; padding: 9px 16px; border-radius: 100px; margin-bottom: 18px; }
+  .eyebrow-black i { font-style: normal; color: var(--matcha); margin: 0 6px; }
+  .card-title { font-size: clamp(30px, 7vw, 40px) !important; text-transform: uppercase; letter-spacing: -0.02em; color: var(--pink); margin-bottom: 4px; }
+  .por-lbl { font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--pink); margin-bottom: 8px; }
+
+
+  .early { display: inline-block; background: var(--matcha); color: var(--text); font-size: clamp(16px, 2.6vw, 19px); font-weight: 700; line-height: 1.35; padding: 10px 16px; border-radius: 14px; margin: 0 auto 18px; max-width: 520px; }
+  .early b { font-weight: 800; }
+  .date-stack { display: flex; flex-direction: column; align-items: center; }
+  .date-old { font-size: clamp(40px, 11vw, 80px); font-weight: 800; letter-spacing: -0.05em; line-height: 1; color: #9A9A9A; margin: -4px 0 12px; }
+  .date-old s { text-decoration: none; position: relative; display: inline-block; }
+  .date-old s::after { content: ""; position: absolute; left: -6%; right: -6%; top: 52%; height: .12em; background: var(--matcha); border-radius: 8px; transform: rotate(-8deg); }
+  .coupon { margin: 0 auto 22px; border: 2px dashed var(--pink); border-radius: 18px; padding: 16px 14px; background: #FFF4FA; }
+  .cp-top { font-size: 15px; line-height: 1.45; margin-bottom: 10px; }
+  .cp-top b { color: var(--pink); }
+  .cp-code { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+  .cp-code span { display: inline-block; background: var(--matcha); color: var(--text); padding: 4px 10px; border-radius: 8px; font-size: 16px; letter-spacing: .12em; margin: 0 4px; }
+  .cp-final { margin-top: 10px; font-size: 18px; font-weight: 800; }
+  .cp-final b { color: var(--pink); font-size: 26px; }
+
+
+  .cp-copy { font: inherit; cursor: pointer; border: 2px dashed var(--text); background: var(--matcha); color: var(--text); padding: 6px 12px; border-radius: 10px; font-size: 17px; font-weight: 800; letter-spacing: .12em; margin: 4px; transition: transform .15s ease; }
+  .cp-copy:active { transform: scale(.96); }
+  .cp-copy i { font-style: normal; font-size: 14px; letter-spacing: 0; margin-left: 4px; }
+  .cp-copy.ok { background: var(--text); color: var(--matcha); }
+  .cp-hint { font-size: 12px; color: #6B6B6B; margin-top: 6px; }
+  .stack-price { margin-bottom: 4px; }
+  .stack-price { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .sp-row { font-size: clamp(36px, 9vw, 46px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; }
+  .sp-197 { position: relative; padding-top: 30px; }
+  .sp-tag { position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-5deg); white-space: nowrap; background: var(--matcha); color: var(--text); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; box-shadow: 0 3px 8px rgba(0,0,0,.12); }
+  .sp-row s { text-decoration: none; position: relative; display: inline-block; color: var(--text); }
+  .sp-row s::after { content: ""; position: absolute; left: -4px; right: -4px; top: 52%; height: 5px; background: var(--pink); border-radius: 4px; transform: rotate(-6deg); }
+  .sp-row small { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #6B6B6B; margin-left: 6px; }
+  .sp-por { font-size: 22px; font-weight: 800; margin-top: 4px; }
+
+  /* ========== CARD DA OFERTA ========== */
+  .offer-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--white);
+    border: none;
+    border-radius: 28px;
+    padding: 40px 28px 30px;
+    box-shadow: 0 30px 60px -28px rgba(255, 31, 142, .4);
+  }
+  .offer-card h2 { font-size: clamp(24px, 3.8vw, 32px); }
+  .offer-card .media { margin: 24px auto; }
+  .offer-card .media.empty { min-height: 0; aspect-ratio: 4 / 5; }
+  .perks {
+    list-style: none;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin: 22px auto 0;
+    width: fit-content;
+  }
+  .perks li { display: flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+  .perks .ck {
+    flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--matcha); color: #1A1F06;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800;
+  }
+  .pay { display: flex; justify-content: center; gap: 10px; margin-top: 22px; }
+  .pay-badge {
+    height: 36px; min-width: 62px; padding: 0 12px;
+    border: 1px solid var(--hairline); border-radius: 8px; background: var(--white);
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    font-size: 14px; color: #32BCAD;
+  }
+  .pay-badge b { color: var(--text); font-weight: 700; }
+
+  /* ========== HERO ========== */
+  .hero { padding: 64px 0 72px; }
+  .hero .media { margin: 32px auto 0; }
+
+  /* ========== RESPONSIVO ========== */
+  @media (max-width: 640px) {
+    .block { padding: 56px 0; }
+    .hero { padding: 48px 0 56px; }
+    .media { padding: 14px 12px; border-radius: 22px; }
+    .reels { gap: 8px; }
+    .reels .media { padding: 6px; border-radius: 14px; }
+    .proofs { gap: 8px; }
+    .proofs figure { padding: 6px; border-radius: 14px; }
+    .proofs img { border-radius: 9px; }
+    .offer-card { padding: 30px 18px 24px; border-radius: 24px; }
+    .wall { columns: 2; column-gap: 10px; }
+    .shot { padding: 5px; border-radius: 10px; margin-bottom: 10px; }
+    .perks li { font-size: 13.5px; }
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ========== TEMA BLACK · SER BOA NO INSTAGRAM (fundo branco, vermelho + rosa) ========== */
+  body { background: #fff; color: var(--text); }
+  .promo-bar { background: var(--red) !important; color: #fff !important; }
+  .promo-bar .track i { color: #fff !important; opacity: .8; }
+  .countdown .u { background: var(--red) !important; color: #fff !important; }
+  .countdown .u small { color: #fff; opacity: .85; }
+  .mock.empty { border-color: var(--text) !important; }
+  .tile { background: #fff; color: var(--text); }
+  .offer-card { background: #fff; color: var(--text); box-shadow: 0 30px 70px -30px rgba(225,6,0,.35) !important; }
+  .card-strip { background: var(--red) !important; color: #fff !important; }
+  .card-strip .cs-time b { background: #fff !important; color: var(--red) !important; }
+  .vit-total s { color: var(--text) !important; }
+  .vit-total s::after { background: var(--red) !important; }
+  .t-price s { text-decoration-color: var(--red) !important; }
+  .perks .ck { background: var(--pink) !important; color: #fff !important; }
+
+  /* selo BLACK no lugar do 11.11 */
+  .big-black { font-size: clamp(36px, 10vw, 84px); font-weight: 800; line-height: 1; letter-spacing: -0.04em; color: var(--red); text-transform: uppercase; margin: 10px auto 22px; max-width: 760px; }
+  .black-stack { position: relative; display: inline-block; margin: 14px auto 40px; }
+  .black-word { font-size: clamp(92px, 25vw, 190px); font-weight: 800; letter-spacing: -0.06em; line-height: .9; color: var(--text); }
+  .black-word span { color: var(--red); }
+  .sticker { position: absolute; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 7px 12px; border-radius: 100px; white-space: nowrap; box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+  .sticker.s1 { top: -6px; right: -10px; background: var(--red); color: #fff; transform: rotate(9deg); }
+  .sticker.s2 { bottom: -30px; left: 4px; background: var(--text); color: #fff; transform: rotate(-7deg); }
+  .eyebrow-black { background: var(--red) !important; color: #fff !important; }
+  .eyebrow-black i { color: #fff !important; }
+  .date-tag { background: var(--text) !important; color: #fff !important; }
+  .bridge-p { max-width: 600px; margin: 18px auto 0; font-size: clamp(17px, 2.4vw, 19px); color: #3A3A3A; line-height: 1.6; }
+  .card-eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--pink); margin-bottom: 6px; }
+  .card-h2 { font-size: clamp(24px, 5vw, 32px) !important; line-height: 1.15; margin-bottom: 12px; }
+  .card-p { font-size: 16px; line-height: 1.55; margin: 0 auto 8px; max-width: 480px; }
+  .card-all { font-size: 17px; font-weight: 800; color: var(--text) !important; margin: 4px 0 10px; }
+  .card-de { font-size: 24px; font-weight: 800; }
+  .card-de s { text-decoration: none; position: relative; display: inline-block; }
+  .card-de s::after { content: ""; position: absolute; left: -4px; right: -4px; top: 52%; height: 4px; background: var(--red); border-radius: 4px; transform: rotate(-6deg); }
+
+  .vlist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 22px auto 0; width: fit-content; max-width: 100%; text-align: left; }
+  .vlist li { display: flex; align-items: center; gap: 12px; font-size: clamp(16px, 2.4vw, 18px); font-weight: 700; line-height: 1.35; background: #F6F6F6; border-radius: 14px; padding: 12px 16px; }
+  .vlist .vi { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--red); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; }
+  .vlist .vi-emoji { background: none; font-size: 22px; width: 28px; height: 28px; }
+  .vlist-card { margin: 14px auto 0; gap: 8px; }
+  .vlist-card li { font-size: 15.5px; padding: 10px 14px; }
+  .punch { margin: 22px auto 0; max-width: 560px; font-size: clamp(20px, 3.2vw, 26px); font-weight: 800; line-height: 1.25; letter-spacing: -0.015em; }
+  .punch-card { font-size: clamp(19px, 4.6vw, 22px); margin: 18px auto 6px; color: var(--text) !important; }
+  .cta { background: #00A63E !important; color: #fff !important; box-shadow: 0 5px 0 0 #00702A !important; }
+  .cta:hover { box-shadow: 0 2px 0 0 #00702A !important; }
+  footer.site { text-align: center; color: #6B6B6B; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 26px 16px 34px; }
+
+  /* ===== UPSELL ===== */
+  .confirm { background: var(--text); color: #fff; text-align: center; font-size: 14.5px; font-weight: 700; line-height: 1.4; padding: 12px 16px; }
+  .confirm b { font-weight: 800; }
+  .cashback { display: inline-flex; align-items: center; gap: 8px; background: #E9F9EF; color: #00702A; border: 2px solid #00A63E; font-weight: 800; font-size: clamp(14px, 3.8vw, 16px); padding: 9px 16px; border-radius: 100px; margin: 4px auto 8px; transform: rotate(-1.5deg); }
+  .hero-sub { font-size: clamp(17px, 4.4vw, 20px); line-height: 1.45; max-width: 620px; margin: 14px auto 22px; color: #333; }
+  .hero-sub b { color: var(--text); }
+  .t-have { background: #111 !important; color: #fff !important; }
+  .stack-price { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 4px; }
+  .sp-row { font-size: clamp(34px, 9vw, 44px); font-weight: 800; line-height: 1.05; letter-spacing: -0.03em; position: relative; }
+  .sp-row s { text-decoration: none; position: relative; display: inline-block; color: var(--text); }
+  .sp-row s::after { content: ""; position: absolute; left: -4px; right: -4px; top: 52%; height: 5px; background: var(--red); border-radius: 4px; transform: rotate(-6deg); }
+  .sp-197 { padding-top: 28px; }
+  .sp-tag { position: absolute; top: 0; left: 50%; transform: translateX(-50%) rotate(-5deg); white-space: nowrap; background: var(--text); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; box-shadow: 0 3px 8px rgba(0,0,0,.12); }
+  .sp-back { background: #E9F9EF; color: #00702A; border: 2px dashed #00A63E; font-weight: 800; font-size: 15px; padding: 8px 14px; border-radius: 12px; line-height: 1.35; max-width: 320px; }
+  .sp-back b { font-size: 19px; }
+  .sp-por { font-size: 22px; font-weight: 800; margin-top: 2px; }
+  .sp-147 { position: relative; padding-top: 26px; }
+  .sp-tag-red { background: var(--red); }
+  .vitrine .tile:last-child { grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center; }
+  @media (max-width: 480px) { .vitrine .tile:last-child { width: calc(50% - 5px); } }
+  .no { display: block; margin-top: 20px; font-size: 14px; color: #6B6B6B; text-decoration: underline; text-underline-offset: 3px; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="promo-bar"><div class="track"><span>Black Ser Boa no Instagram 🔥 Black Friday 🔥</span><span>Insuportável de tão boa 🔥</span><span>Black Ser Boa no Instagram 🔥 Black Friday 🔥</span><span>Insuportável de tão boa 🔥</span><span>Black Ser Boa no Instagram 🔥 Black Friday 🔥</span><span>Insuportável de tão boa 🔥</span><span>Black Ser Boa no Instagram 🔥 Black Friday 🔥</span><span>Insuportável de tão boa 🔥</span></div></div>
+<div class="confirm"><b>Espera, sua compra ainda não está completa...</b></div>
+
+<main>
+
+  <!-- ============ DOBRA 1 ============ -->
+  <section class="hero hero-1111">
+    <div class="wrap">
+      <div class="countdown-wrap top-timer">
+        <div class="countdown" data-countdown>
+          <span class="lbl" data-lbl>A Black 🔥 acaba em</span>
+          <div class="u"><b data-h>00</b><small>horas</small></div>
+          <div class="u"><b data-m>00</b><small>min</small></div>
+          <div class="u"><b data-s>00</b><small>seg</small></div>
+        </div>
+      </div>
+      <div class="big-black">Black Ser Boa no <span style="white-space:nowrap">Instagram 🔥</span></div>
+      <div class="cashback">💸 Os R$47 do seu Modelo de Reels voltaram pra você</div>
+      <h1>O Modelo de Reels foi só o começo pra você ficar <span class="pk">insuportável de tão boa no Instagram.</span></h1>
+      <p class="hero-sub">Como você acabou de comprar ele, na Black eu te devolvo os R$47 que você pagou e você leva <b>os outros 9 modelos por só mais R$147.</b></p>
+      <figure class="mock wide" style="aspect-ratio:1800/1134">
+        <img src="/mockup-upsell-9-modelos1.webp" onload="this.parentElement.classList.add('loaded')" alt="Os outros nove modelos juntos" loading="eager" onerror="this.parentElement.classList.add('empty');this.remove()">
+        <figcaption class="ph"><b>Mockup 1 · os 9 modelos juntos, sem preço</b>/mockup-upsell-9-modelos1.webp</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ VITRINE ============ -->
+  <section class="block reveal" style="padding-bottom:24px">
+    <div class="wrap">
+      <h2 style="max-width:680px;margin-left:auto;margin-right:auto">O Reels você já tem. Aqui está <span class="pk">todo o resto que me faz ficar insuportável de tão boa no Instagram</span>, em modelos prontos pra você só adaptar:</h2>
+      <div class="vitrine">
+        <article class="tile" style="--c:#FF7A1A">
+          <div class="t-img">
+            <img src="/mockup-modelo-reelsteste1.webp" alt="Meu Modelo de Reels de Teste" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 2</span>
+            <span class="t-num">01</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Reels de Teste</h3>
+            <p>Pra até quem não te segue começar a cansar de te ver no Instagram.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#129DA2">
+          <div class="t-img">
+            <img src="/mockup-reels-sem-falar1.webp" alt="Meu Modelo de Reels sem Falar" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 3</span>
+            <span class="t-num">02</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Reels sem Falar</h3>
+            <p>Pra você conseguir ter Reels dando certo sem precisar falar uma única palavra.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#8E9A00">
+          <div class="t-img">
+            <img src="/mockup-carrosseis1.webp" alt="Modelos de Carrosséis" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 4</span>
+            <span class="t-num">03</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelos de Carrosséis</h3>
+            <p>Pra você virar aquela pessoa que dá vontade de salvar tudo que posta.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#8A2BE2">
+          <div class="t-img">
+            <img src="/mockup-stories1.webp" alt="Modelos de Stories" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 5</span>
+            <span class="t-num">04</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelos de Stories</h3>
+            <p>Pra você aprender a transformar até as coisas que faz no seu dia em Stories que vendem.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#2F6BFF">
+          <div class="t-img">
+            <img src="/mockup-modelo-perfil1.webp" alt="Meu Modelo de Perfil" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 6</span>
+            <span class="t-num">05</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Perfil</h3>
+            <p>Pra quem descobrir seu Instagram encontrar um motivo pra te seguir.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#00A86B">
+          <div class="t-img">
+            <img src="/mockup-modelo-mensagens1.webp" alt="Modelos de Mensagens Automáticas" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 7</span>
+            <span class="t-num">06</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelos de Mensagens Automáticas</h3>
+            <p>Pra você aprender a transformar comentários em oportunidades de venda sem responder um por um.</p>
+            <div class="t-price"><s>R$47</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#E03131">
+          <div class="t-img">
+            <img src="/mockup-modelo-anuncios1.webp" alt="Meu Modelo de Anúncios" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 8</span>
+            <span class="t-num">07</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Anúncios</h3>
+            <p>Pra aprender a levar o que você vende a ainda mais pessoas.</p>
+            <div class="t-price"><s>R$67</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#B8860B">
+          <div class="t-img">
+            <img src="/mockup-modelo-produto1.webp" alt="Meu Modelo de Produto" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 9</span>
+            <span class="t-num">08</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Produto</h3>
+            <p>Pra você aprender a ganhar dinheiro com coisas que já sabe fazer.</p>
+            <div class="t-price"><s>R$67</s></div>
+          </div>
+        </article>
+        <article class="tile" style="--c:#111111">
+          <div class="t-img">
+            <img src="/mockup-modelo-pagina1.webp" alt="Meu Modelo de Página de Vendas" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+            <span class="ph">Foto 10</span>
+            <span class="t-num">09</span>
+            <span class="t-in">✓ Incluso na Black</span>
+          </div>
+          <div class="t-body">
+            <h3>Modelo de Página de Vendas</h3>
+            <p>Pra você ser tão boa em vender o seu produto quanto é em entregar ele.</p>
+            <div class="t-price"><s>R$67</s></div>
+          </div>
+        </article>
+      </div>
+      <div class="vit-total"><span>Os 9 dariam</span><s>R$483</s><em class="vt-but">mas hoje vai ser diferente.</em></div>
+    </div>
+  </section>
+
+  <!-- ============ PONTE ============ -->
+  <section class="block reveal" style="padding-top:24px;padding-bottom:28px">
+    <div class="wrap">
+      <div class="eyebrow-black">Black Ser Boa no Instagram 🔥</div>
+      <h2>Eu quero que antes do fim de 2026 tenha gente <span class="pk">cansada de te ver dando certo no Instagram.</span></h2>
+      <ul class="vlist">
+        <li><span class="vi vi-emoji">😡</span>Cansada de te ver ganhando tantos seguidores.</li>
+        <li><span class="vi vi-emoji">😡</span>Cansada de te ver vendendo tanto.</li>
+        <li><span class="vi vi-emoji">😡</span>Cansada de te ver crescendo tanto.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CARD DA OFERTA ============ -->
+  <section class="block reveal" style="padding-top:0">
+    <div class="wrap">
+      <div class="offer-card has-strip">
+        <div class="card-strip" data-countdown>
+          <span>Condição especial da Black 🔥</span>
+          <span class="cs-time"><span data-lbl>Acaba em</span> <b data-h>00</b>:<b data-m>00</b>:<b data-s>00</b></span>
+        </div>
+
+        <div class="card-eyebrow">Black Friday 🔥</div>
+        <h2 class="card-h2">Imagina ser tão boa no Instagram que <span class="pk">até quem não gosta de você sabe o que você faz.</span> 👀</h2>
+        <p class="punch punch-card">É esse tipo de <span class="pk">insuportável</span> que eu quero que você se torne.</p>
+
+        <!-- MOCKUP 5 · os 10 modelos juntos, com destaque para a oferta -->
+        <figure class="mock " style="aspect-ratio:1800/1134">
+          <img src="/mockup-upsell-9-modelos2.webp" onload="this.parentElement.classList.add('loaded')" alt="Os nove modelos da Black" loading="lazy" onerror="this.parentElement.classList.add('empty');this.remove()">
+          <figcaption class="ph"><b>Mockup 2 · os 9 modelos, destaque para a oferta</b>/mockup-upsell-9-modelos2.webp</figcaption>
+        </figure>
+
+        <div class="stack-price">
+          <div class="sp-row"><s>R$483</s></div>
+          <div class="sp-row sp-197"><span class="sp-tag">preço da Black</span><s>R$197</s></div>
+          <div class="sp-back">💸 <b>−R$47</b> que voltaram pra você<br>pelo Modelo de Reels</div>
+          <div class="sp-por">por só mais</div>
+          <div class="sp-147"><span class="sp-tag sp-tag-red">só nessa página</span><div class="price offer-price" style="margin-bottom:22px"><small>R$</small>147</div></div>
+        </div>
+
+        <!-- TROCAR: link do checkout do upsell (R$147) -->
+        <a href="https://lastlink.com/p/C582F00C5/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'upsell_black_sim',value:147.00,currency:'BRL'});}catch(e){}return true;">Sim, quero os outros 9 modelos</a>
+
+        <ul class="perks">
+          <li><span class="ck">✓</span>Acesso imediato, no mesmo e-mail</li>
+          <li><span class="ck">✓</span>7 dias de garantia</li>
+          <li><span class="ck">✓</span>Adaptável ao seu assunto</li>
+        </ul>
+
+        <div class="pay">
+          <span class="pay-badge" aria-label="Visa">
+            <svg viewBox="0 0 48 16" width="44" height="15"><text x="24" y="13" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="900" font-style="italic" fill="#1A1F71">VISA</text></svg>
+          </span>
+          <span class="pay-badge" aria-label="Mastercard">
+            <svg viewBox="0 0 38 24" width="34" height="22"><circle cx="14" cy="12" r="9" fill="#EB001B"/><circle cx="24" cy="12" r="9" fill="#F79E1B"/><path d="M19 4.8a9 9 0 0 1 0 14.4a9 9 0 0 1 0-14.4z" fill="#FF5F00"/></svg>
+          </span>
+          <span class="pay-badge" aria-label="Pix">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.5l4.2 4.2-2.6 2.6a2.3 2.3 0 0 0-3.2 0L7.8 6.7zM2.5 12l4.2-4.2 2.6 2.6a2.3 2.3 0 0 0 0 3.2l-2.6 2.6zM21.5 12l-4.2 4.2-2.6-2.6a2.3 2.3 0 0 0 0-3.2l2.6-2.6zM12 21.5l-4.2-4.2 2.6-2.6a2.3 2.3 0 0 0 3.2 0l2.6 2.6z" fill="#32BCAD"/></svg>
+            <b>Pix</b>
+          </span>
+        </div>
+
+        <div class="secure">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6 10V7a6 6 0 1 1 12 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+          Pagamento 100% seguro
+        </div>
+
+        <!-- TROCAR: link pra onde vai quem recusar -->
+        <a href="https://www.leislin.com.br/combo-carrossel&story/upsell/" class="no">Não, obrigada. Vou ficar só com o Modelo de Reels.</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+
+  // Contador da Black — acaba sábado, 28/11/2026, às 10h (horário de Brasília)
+  (function () {
+    var end = new Date('2026-11-28T10:00:00-03:00').getTime();
+    var boxes = document.querySelectorAll('[data-countdown]');
+    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    function tick() {
+      var d = Math.max(0, end - Date.now());
+      var h = Math.floor(d / 3600000), m = Math.floor(d % 3600000 / 60000), s = Math.floor(d % 60000 / 1000);
+      boxes.forEach(function (b) {
+        b.querySelector('[data-h]').textContent = pad(h);
+        b.querySelector('[data-m]').textContent = pad(m);
+        b.querySelector('[data-s]').textContent = pad(s);
+      });
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+
+
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
