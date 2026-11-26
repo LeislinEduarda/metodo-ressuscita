@@ -592,9 +592,11 @@
   footer.site { text-align: center; color: #6B6B6B; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 26px 16px 34px; }
 
   /* ========== WIDGET WHATSAPP (alunos) ========== */
+  .wa { pointer-events: none; }
+  .wa > * { pointer-events: auto; }
   .wa { position: fixed; right: 16px; bottom: 16px; z-index: 50; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-family: inherit; }
   .wa-card { width: min(300px, calc(100vw - 32px)); background: #fff; color: #111; border-radius: 18px; box-shadow: 0 18px 44px -12px rgba(0,0,0,.35); overflow: hidden; transform-origin: bottom right; transition: transform .2s ease, opacity .2s ease; }
-  .wa-card[hidden] { display: block; opacity: 0; transform: scale(.9) translateY(8px); pointer-events: none; }
+  .wa-card[hidden] { display: none; }
   .wa-head { background: #075E54; color: #fff; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
   .wa-head b { font-size: 14px; display: block; }
   .wa-head small { font-size: 11.5px; opacity: .85; }
@@ -813,7 +815,7 @@
         <div class="card-de">De <s>R$530</s></div>
         <div class="price offer-price" style="margin-bottom:22px"><small>R$</small>197</div>
 
-        <a href="https://lastlink.com/p/C44ABDD8D/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'final_cta',value:197.00,currency:'BRL'});}catch(e){}return true;">Quero ser insuportável de tão boa no Instagram</a>
+        <a href="https://lastlink.com/p/CB6F39FB1/checkout-payment/" class="cta" onclick="try{if(typeof gtag==='function')gtag('event','begin_checkout',{button:'final_cta',value:197.00,currency:'BRL'});}catch(e){}return true;">Quero ser insuportável de tão boa no Instagram</a>
 
         <ul class="perks">
           <li><span class="ck">✓</span>Acesso imediato</li>
